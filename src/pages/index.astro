@@ -1,16 +1,18 @@
 ---
-import Header from '../components/Header.tsx';
+import Header from '../components/Index/Header/Header';
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.tsx';
-import ImgHero from '../components/ImgHero.astro';
-import VideoHero from '../components/VideoHero.astro';
+import Navbar from '../components/Index/Navbar/Navbar';
+import VideoHero from '../components/Index/VideoHero.astro';
+import Sections from '../components/Index/Sections/Sections.astro';
+import Slider from '../components/Index/Slider/Slider';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="El País de las 7 luminarias.">
 	<main>
 		<Header />
-		<ImgHero />
 		<Navbar />
 		<VideoHero />
+		<Sections />
+		<Slider client:visible />
 	</main>
 </Layout>

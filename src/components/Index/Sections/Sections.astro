@@ -1,0 +1,25 @@
+---
+import { sections } from './Sections-data';
+---
+<div class="grid grid-cols-1 md:grid-cols-4 my-12">
+  {sections.map(section => (
+    <a class="hidden md:block" href={section.link}>
+      <article class={`relative ${section.className} h-[500px] transition-colors`}>
+        <img 
+          decoding="async"
+          loading="lazy"
+          src={section.image} 
+          alt={section.title}
+          title={section.title} 
+          class="absolute inset-0 h-full -z-10 opacity-80"
+        />
+
+        <h2 class="text-4xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+        font-semibold text-primary drop-shadow z-30 [text-shadow:2px_2px_4px_var(--tw-shadow-color)]
+        shadow-primary text-center font-Kalnia">
+          {section.title}
+        </h2>
+      </article>
+    </a>
+  ))}
+</div>
