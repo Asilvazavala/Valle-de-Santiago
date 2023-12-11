@@ -1,5 +1,6 @@
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
+import React from 'react';
 
 interface headerProps {
   title: string;
