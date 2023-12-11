@@ -55,7 +55,7 @@ export default function Slider() {
         {sliderDataImages.map(({id, image}) => (
           <SwiperSlide key={id}>
             <img 
-              src={`public/images/sections/${image}`}
+              src={`images/sections/${image}`}
               alt='Valle-de-santiago'
               title='Valle-de-santiago'
               className='w-auto h-72 rounded-xl cursor-pointer'

@@ -9,25 +9,25 @@ export const sections: sectionsProps[] = [
   {
     title: 'Descargas',
     className: 'bg-blue-300/30 hover:bg-blue-300/0',
-    image: 'public/images/sections/descargas.webp',
+    image: 'images/sections/descargas.webp',
     link: '/' 
   },
   {
     title: 'Foro de visitas',
     className: 'bg-yellow-300/30 hover:bg-yellow-300/0',
-    image: 'public/images/sections/foro.webp',
+    image: 'images/sections/foro.webp',
     link: '/' 
   },
   {
     title: 'Mapa',
     className: 'bg-green-300/30 hover:bg-green-300/0',
-    image: 'public/images/sections/mapa.webp',
+    image: 'images/sections/mapa.webp',
     link: '/' 
   },
   {
     title: 'Enlaces',
     className: 'bg-orange-300/30 hover:bg-orange-300/0',
-    image: 'public/images/sections/enlaces.webp',
+    image: 'images/sections/enlaces.webp',
     link: '/' 
   },
 ]

@@ -7,7 +7,7 @@ export default function Navbar() {
       <section className="flex gap-x-60">
       <a href="/">
         <img 
-          src="public/images/LogoValle.jpg" 
+          src="images/LogoValle.jpg" 
           alt="Logo-valle" 
           title="Logo-valle"
           className="w-24 h-12"
