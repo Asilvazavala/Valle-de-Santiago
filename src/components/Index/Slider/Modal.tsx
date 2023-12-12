@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface ModalProps {
   imageUrl: string;
   onClose: () => void;
