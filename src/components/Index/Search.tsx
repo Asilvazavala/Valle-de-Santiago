@@ -1,4 +1,5 @@
-import { FaSearch } from "react-icons/fa";
+import pkg from 'react-icons/fa';
+const { FaSearch } = pkg;
 
 export default function Search () {
   const handleSubmit = () => {
