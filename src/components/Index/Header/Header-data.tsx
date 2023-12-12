@@ -1,6 +1,7 @@
-import { FaPhone } from "react-icons/fa6";
 import { IoLocationSharp } from "react-icons/io5";
 import type { ReactNode } from 'react';
+import pkg from 'react-icons/fa6';
+const { FaPhone } = pkg;
 
 interface headerProps {
   title: string;
