@@ -16,7 +16,7 @@ export const itemsHeader: headerProps[] = [
   },
   {
     title: 'CP: 38400',
-    icon: <FaPhone />,
+    icon: <IoLocationSharp />,
     href: 'tel:1234567890'
   }
 ]
