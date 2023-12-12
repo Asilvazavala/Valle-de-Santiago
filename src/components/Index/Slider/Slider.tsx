@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import pkg from 'react-icons/gr'
-const { GrGallery } = pkg;
 import { sliderDataImages } from './Slider-data';
 import Modal from './Modal';
 
@@ -29,7 +27,7 @@ export default function Slider() {
       <h2 
         className='font-Kalnia mb-12 font-semibold text-3xl py-4 px-12 md:px-28 text-primary flex
         items-center gap-x-4 rounded shadow-3xl'>
-        <span><GrGallery /></span>
+        <span><i className='bx bx-images'></i></span>
         GALERÍA
       </h2>
 
