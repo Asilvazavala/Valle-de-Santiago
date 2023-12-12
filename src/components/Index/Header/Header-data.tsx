@@ -1,4 +1,4 @@
-// import { FaPhone } from "react-icons/fa6";
+import { FaPhone } from "react-icons/fa6";
 import { IoLocationSharp } from "react-icons/io5";
 import React from 'react';
 
@@ -16,7 +16,7 @@ export const itemsHeader: headerProps[] = [
   },
   {
     title: 'CP: 38400',
-    icon: <IoLocationSharp />,
+    icon: <FaPhone />,
     href: 'tel:1234567890'
   }
 ]

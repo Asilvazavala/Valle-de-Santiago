@@ -1,4 +1,4 @@
-// import { FaSearch } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 
 export default function Search () {
   const handleSubmit = () => {
@@ -17,7 +17,7 @@ export default function Search () {
         className="p-2 w-96 rounded-sm outline-none"
       />
       <button className="bg-secondary text-xl p-[11px] text-white rounded-sm">
-        {/* <FaSearch /> */}
+        <FaSearch />
       </button>
     </form>
   )
