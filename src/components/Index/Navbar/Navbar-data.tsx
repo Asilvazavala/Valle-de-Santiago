@@ -1,4 +1,3 @@
-import { IoIosArrowDown } from "react-icons/io";
 import type { ReactNode } from 'react';
 
 interface NavbarProps {
@@ -16,26 +15,26 @@ export const linksNavbar: NavbarProps[] = [
   {
     title: 'Sobre Valle',
     href: '',
-    icon: <IoIosArrowDown />
+    icon: <i className='bx bx-chevron-down'></i>
   },
   {
     title: 'Historia',
     href: '',
-    icon: <IoIosArrowDown />
+    icon: <i className='bx bx-chevron-down'></i>
   },
   {
     title: 'Sitios de interés',
     href: '',
-    icon: <IoIosArrowDown />
+    icon: <i className='bx bx-chevron-down'></i>
   },
   {
     title: 'Actualizaciones',
     href: '',
-    icon: <IoIosArrowDown />
+    icon: <i className='bx bx-chevron-down'></i>
   },
   {
     title: 'Sobre el Autor',
     href: '',
-    icon: <IoIosArrowDown />
+    icon: <i className='bx bx-chevron-down'></i>
   }
 ]
