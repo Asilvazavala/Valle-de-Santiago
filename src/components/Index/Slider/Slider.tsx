@@ -1,12 +1,14 @@
 import { useState } from 'react';
+import pkg from 'react-icons/gr'
+const { GrGallery } = pkg;
+import { sliderDataImages } from './Slider-data';
+import Modal from './Modal';
+
 import { Navigation, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { sliderDataImages } from './Slider-data';
-import { GrGallery } from "react-icons/gr";
-import Modal from './Modal';
 
 export default function Slider() {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
