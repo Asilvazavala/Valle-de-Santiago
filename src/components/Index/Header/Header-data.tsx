@@ -1,10 +1,10 @@
 import { FaPhone } from "react-icons/fa6";
 import { IoLocationSharp } from "react-icons/io5";
-import React from 'react';
+import type { ReactNode } from 'react';
 
 interface headerProps {
   title: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
   href: string;
 }
 

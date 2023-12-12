@@ -1,9 +1,10 @@
 import { IoIosArrowDown } from "react-icons/io";
+import type { ReactNode } from 'react';
 
 interface NavbarProps {
   title: string;
   href: string;
-  icon: React.ReactNode | string;
+  icon: ReactNode | string;
 }
 
 export const linksNavbar: NavbarProps[] = [
