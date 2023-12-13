@@ -28,13 +28,13 @@ export default function Slider() {
   const nextImage = () => {
     const nextIndex = (selectedImageIndex + 1) % sliderDataImages.length;
     setSelectedImageIndex(nextIndex);
-    setSelectedImage(`public/images/sections/${sliderDataImages[nextIndex].image}`);
+    setSelectedImage(`images/sections/${sliderDataImages[nextIndex].image}`);
   };
   
   const prevImage = () => {
     const prevIndex = (selectedImageIndex - 1 + sliderDataImages.length) % sliderDataImages.length;
     setSelectedImageIndex(prevIndex);
-    setSelectedImage(`public/images/sections/${sliderDataImages[prevIndex].image}`);
+    setSelectedImage(`images/sections/${sliderDataImages[prevIndex].image}`);
   };
 
   return (
