@@ -75,7 +75,7 @@ export default function Slider() {
               alt='Valle-de-santiago'
               title='Valle-de-santiago'
               className='w-72 h-72 rounded-xl cursor-pointer'
-              onClick={() => openModal(`public/images/sections/${image}`, id)}
+              onClick={() => openModal(`images/sections/${image}`, id)}
             />
           </SwiperSlide>
         ))}
