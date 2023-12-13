@@ -1,9 +1,8 @@
-import type { ReactNode } from 'react';
-
+---
 interface NavbarProps {
   title: string;
   href: string;
-  icon: ReactNode | string;
+  icon: string;
 }
 
 export const linksNavbar: NavbarProps[] = [
@@ -15,26 +14,27 @@ export const linksNavbar: NavbarProps[] = [
   {
     title: 'Sobre Valle',
     href: '',
-    icon: <i className='bx bx-chevron-down'></i>
+    icon: '<i class="bx bx-chevron-down"></i>'
   },
   {
     title: 'Historia',
     href: '',
-    icon: <i className='bx bx-chevron-down'></i>
+    icon: '<i class="bx bx-chevron-down"></i>'
   },
   {
     title: 'Sitios de interés',
     href: '',
-    icon: <i className='bx bx-chevron-down'></i>
+    icon: '<i class="bx bx-chevron-down"></i>'
   },
   {
     title: 'Actualizaciones',
     href: '',
-    icon: <i className='bx bx-chevron-down'></i>
+    icon: '<i class="bx bx-chevron-down"></i>'
   },
   {
     title: 'Sobre el Autor',
     href: '',
-    icon: <i className='bx bx-chevron-down'></i>
+    icon: '<i class="bx bx-chevron-down"></i>'
   }
 ]
+---

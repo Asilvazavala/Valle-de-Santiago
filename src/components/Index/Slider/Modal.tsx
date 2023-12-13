@@ -9,7 +9,7 @@ const Modal: React.FC<ModalProps> = ({ imageUrl, onClose }) => {
       <aside className="relative max-w-screen-md w-full max-h-screen overflow-hidden">
         <img
           src={imageUrl}
-          alt="Large Image"
+          alt={imageUrl}
           className="object-cover w-full max-h-[500px]"
         />
         <button

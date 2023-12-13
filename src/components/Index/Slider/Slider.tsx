@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import Title from '../../Shared/Title';
 
 export default function Slider() {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
@@ -24,12 +25,10 @@ export default function Slider() {
 
   return (
     <section className='my-12 flex flex-col items-center justify-center'>
-      <h2 
-        className='font-Kalnia mb-12 font-semibold text-3xl py-4 px-12 md:px-28 text-primary flex
-        items-center gap-x-4 rounded shadow-3xl'>
-        <span><i className='bx bx-images'></i></span>
-        GALERÍA
-      </h2>
+      <Title 
+        title='GALERÍA' 
+        image= {<i className='bx bx-images'></i>} 
+      />
 
       <Swiper
         spaceBetween={15}
@@ -66,7 +65,10 @@ export default function Slider() {
       </Swiper>
 
       {modalOpen && selectedImage && (
-        <Modal imageUrl={selectedImage} onClose={closeModal} />
+        <Modal 
+          imageUrl={selectedImage} 
+          onClose={closeModal} 
+        />
       )}
     </section>
   )

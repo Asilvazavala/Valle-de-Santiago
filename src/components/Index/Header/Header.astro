@@ -1,0 +1,21 @@
+---
+import { itemsHeader } from './Header-data.astro';
+---
+
+<header class="bg-primary">
+  <section class="py-[0.65rem] text-white font-medium flex items-center gap-x-8">
+    {itemsHeader.map(item => (
+      <a 
+        class="flex items-center justify-center gap-x-2" 
+        href={item.href} 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        <div class='flex items-center justify-center gap-x-2'>
+          <span class='text-xl' set:html={item.icon}></span>
+          <span>{item.title}</span>
+        </div>
+      </a>
+    ))}
+  </section>
+</header>

@@ -1,13 +1,12 @@
 ---
-import { sections } from './Sections-data';
+import { sections } from './Sections-data.astro';
 ---
+
 <div class="grid grid-cols-1 md:grid-cols-4 my-12">
   {sections.map(section => (
     <a class="lg:group" href={section.link}>
       <article class={`relative ${section.className} h-[300px] md:h-[500px] transition-colors`}>
         <img 
-          decoding="async"
-          loading="lazy"
           src={section.image} 
           alt={section.title}
           title={section.title} 
@@ -15,7 +14,7 @@ import { sections } from './Sections-data';
         />
 
         <h2 class="text-4xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-        font-semibold text-black/80 drop-shadow z-30 text-center font-Kalnia lg:group-hover:text-black/30">
+        font-semibold text-black/80 drop-shadow z-30 text-center font-MontserratAlternates lg:group-hover:text-black/30">
           {section.title}
         </h2>
       </article>

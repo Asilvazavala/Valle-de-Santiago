@@ -1,0 +1,37 @@
+---
+import { linksNavbar } from './Navbar-data.astro';
+---
+
+<div class="hidden lg:block shadow-lg">
+  <section class="flex gap-x-60">
+  <a href="/">
+    <img 
+      src="images/LogoValle.jpg" 
+      alt="Logo-valle" 
+      title="Logo-valle"
+      class="w-24 h-12"
+    />
+  </a>
+
+    <nav class="flex items-end justify-between w-full">
+        {linksNavbar.map(link => (
+        <ul class="text-sm text-secondary font-semibold">
+            {link.href !== ''
+              ? <a href={link.href}>
+                  <li class="flex justify-between items-center gap-x-1 py-3
+                    border-transparent border-b-[3px] lg:hover:border-b-secondary transition-colors">
+                    {link.title}
+                    <span set:html={link.icon}></span>
+                  </li>
+                </a>
+              : <li class="flex justify-between items-center gap-x-1 py-3
+                  border-transparent border-b-[3px] lg:hover:border-b-secondary transition-colors">
+                  {link.title}
+                  <span set:html={link.icon}></span>
+                </li>
+            }
+          </ul>
+        ))}
+    </nav>
+  </section>
+</div>

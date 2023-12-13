@@ -12,10 +12,11 @@ export default {
 				primary: "#9E3451",
 				secondary: "#691D33",
 				blueLight: "#008dff",
-				blueStrong: "#02256A"
+				blueStrong: "#02256A",
+				gray: "#A0A0A0"
 			},
 			fontFamily: {
-        "Kalnia": ['Kalnia', 'sans-serif']
+        "MontserratAlternates": ['Montserrat Alternates', 'sans-serif']
       },
 		},
 	},
