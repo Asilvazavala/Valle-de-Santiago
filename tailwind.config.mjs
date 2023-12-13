@@ -4,9 +4,13 @@ export default {
 	theme: {
 		extend: {
 			boxShadow: {
-        '3xl': `
-					-0.4px -20.3px 22.4px -2.7px rgb(0 0 0 / 0.1), 
-					0px 10px 35px 5px rgb(0 0 0 / 0.1);`,
+        '3xl': 
+				`
+					0 0 2px rgb(0 0 0 / 0.1),
+					0 0 6px rgb(0 0 0 / 0.1),
+					0 0 18px rgb(0 0 0 / 0.1),
+					0 0 54px rgb(0 0 0 / 0.1);
+				`
       },
 			colors: {
 				primary: "#9E3451",
@@ -18,6 +22,9 @@ export default {
 			fontFamily: {
         "MontserratAlternates": ['Montserrat Alternates', 'sans-serif']
       },
+			transitionDuration: {
+				'10000': '10000ms',
+			},
 		},
 	},
 	plugins: [],

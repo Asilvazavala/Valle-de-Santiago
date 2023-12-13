@@ -1,4 +1,7 @@
 ---
+import Footer from '../components/Shared/Footer.astro';
+import Header from '../components/Shared/Header/Header.astro';
+import Navbar from '../components/Shared/Navbar/Navbar.astro';
 interface Props {
 	title: string;
 }
@@ -21,7 +24,10 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<Header />
+		<Navbar />
 		<slot />
+		<Footer />
 	</body>
 </html>
 <style is:global>
@@ -42,9 +48,34 @@ const { title } = Astro.props;
 		margin: 0 64px;
 	}
 
+	.containerSpace {
+		width: 80%;
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 	@media screen and (width < 768px) {
 		section {
 			margin: 0 16px;
+		}
+	}
+
+	@media screen and (width > 1700px) {
+		.containerSpace {
+			max-width: 1500px;
+		}
+	}
+
+	@media screen and (width > 2200px) {
+		.containerSpace {
+			max-width: 2000px;
+		}
+	}
+
+	@media screen and (width > 2700px) {
+		.containerSpace {
+			max-width: 2500px;
 		}
 	}
 </style>

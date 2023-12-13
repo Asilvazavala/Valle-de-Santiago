@@ -1,18 +1,16 @@
 ---
-import Header from '../components/Index/Header/Header.astro';
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Index/Navbar/Navbar.astro';
 import VideoHero from '../components/Index/VideoHero.astro';
 import Sections from '../components/Index/Sections/Sections.astro';
 import Slider from '../components/Index/Slider/Slider';
+import AboutPage from '../components/Index/AboutPage.astro';
 ---
 
 <Layout title="El País de las 7 luminarias.">
 	<main>
-		<Header />
-		<Navbar />
 		<VideoHero />
 		<Sections />
 		<Slider client:visible />
+		<AboutPage />
 	</main>
 </Layout>
