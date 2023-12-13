@@ -2,6 +2,7 @@
 import Footer from '../components/Shared/Footer.astro';
 import Header from '../components/Shared/Header/Header.astro';
 import Navbar from '../components/Shared/Navbar/Navbar.astro';
+import NavbarMobile from '../components/Shared/NavbarMobile/NavbarMobile.astro';
 interface Props {
 	title: string;
 }
@@ -25,6 +26,7 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<Header />
+		<NavbarMobile />
 		<Navbar />
 		<slot />
 		<Footer />
@@ -55,9 +57,13 @@ const { title } = Astro.props;
 		margin-right: auto;
 	}
 
-	@media screen and (width < 768px) {
+	@media screen and (width < 800px) {
 		section {
 			margin: 0 16px;
+		}
+
+		.containerSpace {
+			width: 90%;
 		}
 	}
 
