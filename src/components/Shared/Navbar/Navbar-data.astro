@@ -1,40 +1,83 @@
 ---
+interface SubmenuItem {
+  label: string;
+  link: string;
+}
+
 interface NavbarProps {
   title: string;
   href: string;
   icon: string;
+  submenu: SubmenuItem[];
 }
 
 export const linksNavbar: NavbarProps[] = [
   {
     title: 'Inicio',
     href: '/',
-    icon: ''
+    icon: '',
+    submenu: []
   },
   {
     title: 'Sobre Valle',
     href: '',
-    icon: '<i class="bx bx-chevron-down"></i>'
+    icon: '<i class="bx bx-chevron-down"></i>',
+    submenu: [
+      { label: 'Localización', link: '/localizacion' },
+      { label: 'Medio físico', link: '/medio-fisico' },
+      { label: 'Población', link: '/poblacion' },
+      { label: 'Museo local', link: '/poblacion' },
+      { label: 'Hoteles', link: '/localizacion' },
+      { label: 'Restaurantes', link: '/medio-fisico' },
+      { label: 'La alameda', link: '/medio-fisico' },
+      { label: 'Presidencia municipal', link: '/medio-fisico' },
+    ],
   },
   {
     title: 'Historia',
     href: '',
-    icon: '<i class="bx bx-chevron-down"></i>'
+    icon: '<i class="bx bx-chevron-down"></i>',
+    submenu: [
+      { label: 'Y la historia dijo', link: '/localizacion' },
+      { label: 'Cronología', link: '/medio-fisico' },
+      { label: 'Las cabañuelas', link: '/poblacion' },
+      { label: 'Santiago apóstol', link: '/localizacion' },
+      { label: 'Hombres ilustres', link: '/medio-fisico' },
+      { label: 'Galería de alcaldes municipales', link: '/poblacion' },
+      { label: 'Monografía por Fulgencio Vargas (1935)', link: '/localizacion' },
+      { label: 'Monografía por Higinio Vpazquez Vera (1973)', link: '/medio-fisico' },
+      { label: 'Monografía por Oscar Cortés Toledo (2002)', link: '/poblacion' },
+    ]
   },
   {
     title: 'Sitios de interés',
     href: '',
-    icon: '<i class="bx bx-chevron-down"></i>'
+    icon: '<i class="bx bx-chevron-down"></i>',
+    submenu: [
+      { label: 'Introducción', link: '/localizacion' },
+      { label: 'Mapa de Sitios', link: '/medio-fisico' },
+      { label: 'Volcanes y Hoyas', link: '/poblacion' },
+      { label: 'Santuario de las mariquitas', link: '/localizacion' },
+      { label: 'Parroquia de Santiago Apóstol', link: '/medio-fisico' },
+      { label: 'Templo de la merced', link: '/poblacion' },
+      { label: 'Centro histórico y jardín principal', link: '/localizacion' },
+    ]
   },
   {
     title: 'Actualizaciones',
     href: '',
-    icon: '<i class="bx bx-chevron-down"></i>'
+    icon: '<i class="bx bx-chevron-down"></i>',
+    submenu: []
   },
   {
     title: 'Sobre el Autor',
     href: '',
-    icon: '<i class="bx bx-chevron-down"></i>'
+    icon: '<i class="bx bx-chevron-down"></i>',
+    submenu: [
+      { label: 'Autoría', link: '/localizacion' },
+      { label: 'Detalles', link: '/medio-fisico' },
+      { label: 'Precandidato diputado federal', link: '/poblacion' },
+    ]
   }
 ]
 ---

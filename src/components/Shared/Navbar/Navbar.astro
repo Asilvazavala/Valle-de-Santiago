@@ -1,37 +1,54 @@
 ---
+import NavbarMobile from '../NavbarMobile/NavbarMobile.astro';
 import { linksNavbar } from './Navbar-data.astro';
 ---
 
-<div class="hidden lg:block shadow-lg">
-  <section class="flex gap-x-60">
-  <a href="/">
-    <img 
-      src="images/LogoValle.png" 
-      alt="Logo-valle" 
-      title="Logo-valle"
-      class="w-24 h-12"
-    />
-  </a>
+<>
+  <div class="shadow-lg">
+    <section class="lg:flex gap-x-60 hidden">
+    <a href="/">
+      <img 
+        src="images/LogoValle.png" 
+        alt="Logo-valle" 
+        title="Logo-valle"
+        class="w-24 h-12"
+      />
+    </a>
 
-    <nav class="flex gap-x-10 items-end w-full">
-        {linksNavbar.map(link => (
-        <ul class="text-sm text-secondary font-semibold">
-            {link.href !== ''
-              ? <a href={link.href}>
-                  <li class="flex items-center gap-x-1 py-3
+      <nav class="flex gap-x-10 items-end w-full">
+          {linksNavbar.map(link => (
+          <ul class="text-sm text-secondary font-semibold">
+              {link.href !== ''
+                ? <a href={link.href}>
+                    <li class="flex items-center gap-x-1 py-3
+                      border-transparent border-b-[3px] lg:hover:border-b-secondary transition-colors">
+                      {link.title}
+                    </li>
+                  </a>
+                : <li class="flex items-center gap-x-1 py-3 group relative
                     border-transparent border-b-[3px] lg:hover:border-b-secondary transition-colors">
                     {link.title}
                     <span set:html={link.icon}></span>
+                    
+                    {link.submenu.length > 0 && (
+                      <ul class="group-hover:block absolute hidden top-10 left-0 bg-primary 
+                      shadow-md z-50 text-white mt-3">
+                        {link.submenu.map((item, index) => (
+                          <a href={item.link}>
+                            <li class={`px-4 py-2 hover:bg-secondary lg:w-40
+                              ${index === link.submenu.length - 1 ? '' : 'border-b border-white/20'}`}>
+                              {item.label}
+                            </li>
+                          </a>
+                        ))}
+                      </ul>
+                    )}
                   </li>
-                </a>
-              : <li class="flex items-center gap-x-1 py-3
-                  border-transparent border-b-[3px] lg:hover:border-b-secondary transition-colors">
-                  {link.title}
-                  <span set:html={link.icon}></span>
-                </li>
-            }
-          </ul>
-        ))}
-    </nav>
-  </section>
-</div>
+              }
+            </ul>
+          ))}
+      </nav>
+    </section>
+  </div>
+  <NavbarMobile />
+</>
