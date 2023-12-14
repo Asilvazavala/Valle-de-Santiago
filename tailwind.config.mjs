@@ -3,6 +3,15 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+			keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-15deg)' },
+          '50%': { transform: 'rotate(15deg)' },
+        },
+			},
+			animation: {
+        wiggle: 'wiggle 4s ease-in-out infinite',
+      },
 			boxShadow: {
         '3xl': 
 				`

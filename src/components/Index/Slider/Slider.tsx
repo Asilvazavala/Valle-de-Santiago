@@ -51,7 +51,7 @@ export default function Slider() {
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         modules={[Navigation, Scrollbar]}
-        className='h-[240px] md:h-[320px] w-[300px] md:w-full'
+        className='h-[240px] md:h-[320px] w-full'
         grabCursor
         breakpoints={{
           300: {

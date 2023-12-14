@@ -3,19 +3,8 @@ import Search from "./Search.astro";
 import SocialIcons from '../Shared/SocialIcons.astro'
 ---
 
-<style>
-  @keyframes pulseAnimation {
-    0%, 25%, 75%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
-    }
-  }
-</style>
-
-<article class="containerSpace bg-black my-8 lg:my-12 p-2 relative">
-  <div class="hidden lg:block"><SocialIcons /></div>
+<article class="containerSpace bg-black mt-20 lg:my-12 p-2 relative">
+  <SocialIcons />
 
   <video 
     class="w-full h-[50vh] mx-auto opacity-50 md:h-auto object-cover"
@@ -29,20 +18,20 @@ import SocialIcons from '../Shared/SocialIcons.astro'
 
   <aside class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-xs md:max-w-md">
     <h2 class="text-white font-semibold text-xl sm:text-4xl md:text-5xl font-MontserratAlternates text-center">EL PAÍS DE LAS 7 LUMINARIAS</h2>
-    <div class="hidden md:block mt-4">
+    <div class="hidden lg:block mt-4">
       <Search />
     </div>
   </aside>
 
   <div
     id="yearsPage"
-    style="animation: pulseAnimation 6s infinite, pulseAnimation 6s 2s infinite alternate"
-    class="absolute top-0 -right-[6.5rem] rounded-full bg-primary p-10 lg:flex flex-col justify-center 
-    items-center text-white font-semibold font-MontserratAlternates hidden cursor-pointer shadow-3xl 
-    shadow-primary">
+    class="absolute -top-[4.5rem] lg:top-0 right-0 lg:-right-[6.5rem] rounded-full 
+    bg-primary p-[1.85rem] lg:p-10 flex flex-col justify-center items-center text-white font-semibold 
+    font-MontserratAlternates cursor-pointer shadow-3xl shadow-primary animate-wiggle 
+    animate-infinite animate-duration-[3000ms]">
     <div class="flex flex-col justify-center items-center relative">
-      <span class="text-2xl absolute bottom-0">28</span>
-      <span class="text-xl absolute top-0">años</span>
+      <span class="lg:text-2xl text-lg absolute bottom-0">28</span>
+      <span class="lg:text-xl absolute top-0">años</span>
     </div>
   </div>  
 </article>

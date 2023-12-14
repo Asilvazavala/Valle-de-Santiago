@@ -2,7 +2,30 @@
 import { sections } from './Sections-data.astro';
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-4 my-12">
+<div class="grid grid-cols-1 md:grid-cols-4 containerSpace md:pl-[4.5rem] my-12">
+  {sections.map(section => (
+    <a class="group" href={section.link}>
+      <article class="relative h-[300px] md:h-[500px] m-1 transition duration-300 ease-in-out 
+        delay-150 transform shadow-2xl rounded-xl md:w-[18.5rem] md:-ml-16 md:hover:-translate-x-16 
+        md:hover:-translate-y-8">
+        <img 
+          src={section.image} 
+          alt={section.title}
+          title={section.title} 
+          class="absolute inset-0 w-full h-full -z-10 opacity-80 lg:group-hover:opacity-100 rounded-xl"
+        />
+
+        <h2 class="text-4xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+          font-semibold text-black/80 drop-shadow z-30 text-center font-MontserratAlternates
+            lg:group-hover:text-black/60">
+          {section.title}
+        </h2>
+      </article>
+    </a>
+  ))}
+</div>
+
+<!-- <div class="grid grid-cols-1 md:grid-cols-4 my-12">
   {sections.map(section => (
     <a class="lg:group" href={section.link}>
       <article class={`relative ${section.className} h-[300px] md:h-[500px] transition-colors`}>
@@ -20,4 +43,4 @@ import { sections } from './Sections-data.astro';
       </article>
     </a>
   ))}
-</div>
+</div> -->

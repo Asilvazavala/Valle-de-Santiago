@@ -4,6 +4,7 @@ import VideoHero from '../components/Index/VideoHero.astro';
 import Sections from '../components/Index/Sections/Sections.astro';
 import Slider from '../components/Index/Slider/Slider';
 import AboutPage from '../components/Index/AboutPage.astro';
+import Carousel from '../components/Index/Carousel/Carousel.tsx';
 ---
 
 <Layout title="El País de las 7 luminarias.">
@@ -11,6 +12,7 @@ import AboutPage from '../components/Index/AboutPage.astro';
 		<VideoHero />
 		<Sections />
 		<Slider client:visible />
+		<Carousel client:visible />
 		<AboutPage />
 	</main>
 </Layout>
