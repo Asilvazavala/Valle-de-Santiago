@@ -1,5 +1,4 @@
 import { carouselData } from './Carousel-data.astro';
-import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { useState, useEffect  } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import Title from '../../Shared/Title';
@@ -63,16 +62,16 @@ const Carousel = () => {
 
         <button 
           onClick={prev} 
-          className='absolute top-1/2 left-5 transform -translate-y-1/2 text-2xl rounded-full p-2
+          className='absolute top-1/2 left-5 transform -translate-y-1/2 text-2xl rounded-full
            bg-black/40 text-white cursor-pointer hover:bg-black/70 transition-colors'>
-          <IoIosArrowBack  />
+          <i className='bx bxs-chevron-left p-2'></i>
         </button>
 
         <button 
           onClick={next}
-          className='absolute top-1/2 right-5 transform -translate-y-1/2 text-2xl rounded-full p-2 
+          className='absolute top-1/2 right-5 transform -translate-y-1/2 text-2xl rounded-full  
           bg-black/40 text-white cursor-pointer hover:bg-black/70 transition-colors'>
-          <IoIosArrowForward />
+          <i className='bx bxs-chevron-right p-2'></i>
         </button>
 
         <footer className='mt-2'>
