@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import VideoHero from '../components/Index/VideoHero.astro';
 import Sections from '../components/Index/Sections/Sections.astro';
-import Slider from '../components/Index/Slider/Slider';
+import Gallery from '../components/Index/Gallery/Gallery';
 import AboutPage from '../components/Index/AboutPage.astro';
 import Carousel from '../components/Index/Carousel/Carousel.tsx';
 ---
@@ -11,7 +11,7 @@ import Carousel from '../components/Index/Carousel/Carousel.tsx';
 	<main>
 		<VideoHero />
 		<Sections />
-		<Slider client:visible />
+		<Gallery client:visible />
 		<Carousel client:visible />
 		<AboutPage />
 	</main>

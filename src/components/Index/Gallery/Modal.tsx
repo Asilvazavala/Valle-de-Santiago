@@ -1,5 +1,6 @@
 interface ModalProps {
   imageUrl: string;
+  description: string;
   onClose: () => void;
   prevImage: () => void;
   nextImage: () => void;
@@ -7,6 +8,7 @@ interface ModalProps {
 
 const Modal: React.FC<ModalProps> = ({ 
   imageUrl, 
+  description,
   onClose,
   prevImage,
   nextImage
@@ -42,6 +44,10 @@ const Modal: React.FC<ModalProps> = ({
         >
           <i className='bx bxs-right-arrow-circle'></i>
         </button>
+
+        <span className="text-lg absolute bottom-0 backdrop-blur text-black">
+          {description}
+        </span>
       </aside>
     </article>
   );

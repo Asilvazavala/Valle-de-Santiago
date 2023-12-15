@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { sliderDataImages } from './Slider-data';
+import { GalleryImages } from './Gallery-data';
 import Modal from './Modal';
 
 import { Navigation, Scrollbar } from 'swiper/modules';
@@ -9,14 +9,16 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Title from '../../Shared/Title';
 
-export default function Slider() {
+export default function Gallery () {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedDescription, setSelectedDescription] = useState<string>('');
   const [selectedImageIndex, setSelectedImageIndex] = useState<number>(0);
 
-  const openModal = (imageUrl: string, imageIndex: number) => {
+  const openModal = (imageUrl: string, imageIndex: number, description: string) => {
     setSelectedImage(imageUrl);
     setSelectedImageIndex(imageIndex);
+    setSelectedDescription(description);
     setModalOpen(true);
   };
 
@@ -26,15 +28,17 @@ export default function Slider() {
   };
 
   const nextImage = () => {
-    const nextIndex = (selectedImageIndex + 1) % sliderDataImages.length;
+    const nextIndex = (selectedImageIndex + 1) % GalleryImages.length;
     setSelectedImageIndex(nextIndex);
-    setSelectedImage(`images/sections/${sliderDataImages[nextIndex].image}`);
+    setSelectedImage(`images/gallery/${GalleryImages[nextIndex].image}`);
+    setSelectedDescription(`${GalleryImages[nextIndex].description}`);
   };
   
   const prevImage = () => {
-    const prevIndex = (selectedImageIndex - 1 + sliderDataImages.length) % sliderDataImages.length;
+    const prevIndex = (selectedImageIndex - 1 + GalleryImages.length) % GalleryImages.length;
     setSelectedImageIndex(prevIndex);
-    setSelectedImage(`images/sections/${sliderDataImages[prevIndex].image}`);
+    setSelectedImage(`images/gallery/${GalleryImages[prevIndex].image}`);
+    setSelectedDescription(`${GalleryImages[prevIndex].description}`);
   };
 
   return (
@@ -68,14 +72,14 @@ export default function Slider() {
           },
         }}
       >
-        {sliderDataImages.map(({id, image}) => (
+        {GalleryImages.map(({id, image, description}) => (
           <SwiperSlide key={id}>
             <img 
-              src={`images/sections/${image}`}
+              src={`images/gallery/${image}`}
               alt='Valle-de-santiago'
               title='Valle-de-santiago'
-              className='w-72 h-72 rounded-xl cursor-pointer'
-              onClick={() => openModal(`images/sections/${image}`, id)}
+              className='w-72 h-52 md:h-72 rounded-xl cursor-pointer'
+              onClick={() => openModal(`images/gallery/${image}`, id, description)}
             />
           </SwiperSlide>
         ))}
@@ -87,6 +91,7 @@ export default function Slider() {
           onClose={closeModal} 
           nextImage={nextImage}
           prevImage={prevImage}
+          description={selectedDescription}
         />
       )}
     </section>
