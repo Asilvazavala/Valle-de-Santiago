@@ -15,12 +15,14 @@ export default function NavbarMobile() {
   return (
     <header className="lg:hidden bg-primary py-3 md:px-6">
       <section className="flex justify-between gap-3 items-center">
-        <img 
-          src="images/LogoValle.png" 
-          alt="Logo-Valle"
-          title="Logo-Valle"
-          className="w-14 h-8"
-        />
+        <a href="/">
+          <img 
+            src="images/LogoValle.png" 
+            alt="Logo-Valle"
+            title="Logo-Valle"
+            className="w-14 h-8"
+          />
+        </a>
 
         <Search />
 
@@ -32,12 +34,12 @@ export default function NavbarMobile() {
 
         <i
           onClick={() => setIsMenuOpen(!isMenuOpen)}  
-          className={`bx bx-x scale-0 text-4xl text-white z-50 absolute top-4 right-4 transition 
+          className={`bx bx-x scale-0 text-4xl text-white z-50 fixed top-4 right-4 transition 
           duration-700 ${isMenuOpen ?"scale-100 block delay-200" : "delay-0"}`}>
         </i>
         
-        <ul className={`z-40 w-full h-full fixed right-0 top-0 transition duration-700 
-        pt-20 flex flex-col gap-y-8 bg-gradient-to-r from-primary to-secondary 
+        <ul className={`z-40 w-full h-screen fixed right-0 top-0 transition duration-700 
+        pt-20 flex flex-col gap-y-8 bg-gradient-to-r from-primary to-secondary overflow-y-auto
         ${isMenuOpen ? "translate-x-0" : "translate-x-[-150%]"}`}>
           {linksNavbar.map((item, index) => (
             <div key={index}>
