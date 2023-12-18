@@ -56,7 +56,7 @@ export default function NavbarMobile() {
                       onClick={() => toggleSubmenu(index)}
                     >
                       <span>{item.title}</span>
-                      <span className="text-white" dangerouslySetInnerHTML={{ __html: item.icon }}></span>
+                      {/* <span className="text-white" dangerouslySetInnerHTML={{ __html: item.icon }}></span> */}
 
                     </article>
 
