@@ -1,4 +1,4 @@
-import Search from "../../Index/Search.astro";
+import Search from "../../Index/Search.tsx";
 import { linksNavbar } from '../Navbar/Navbar-data.astro';
 import { useState } from 'react';
 
@@ -22,18 +22,18 @@ export default function NavbarMobile() {
           className="w-14 h-8"
         />
 
-        {/* <Search /> */}
+        <Search />
 
         <i
           onClick={() => setIsMenuOpen(!isMenuOpen)} 
-          className={`bx bx-menu-alt-right text-4xl text-white z-50 transition duration-700 delay-150
+          className={`bx bx-menu-alt-right text-4xl text-white z-50 transition duration-700 delay-200
          ${isMenuOpen && "delay-0 scale-0"}`}>
         </i>
 
         <i
           onClick={() => setIsMenuOpen(!isMenuOpen)}  
           className={`bx bx-x scale-0 text-4xl text-white z-50 absolute top-4 right-4 transition 
-          duration-700 delay-0 ${isMenuOpen && "scale-100 block delay-150"}`}>
+          duration-700 delay-0 ${isMenuOpen && "scale-100 block delay-200"}`}>
         </i>
         
         <ul className={`z-40 translate-x-[-150%] w-full h-full fixed right-0 top-0 transition duration-700 
