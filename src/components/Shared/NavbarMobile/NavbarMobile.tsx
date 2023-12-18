@@ -26,19 +26,19 @@ export default function NavbarMobile() {
 
         <i
           onClick={() => setIsMenuOpen(!isMenuOpen)} 
-          className={`bx bx-menu-alt-right text-4xl text-white z-50 transition duration-700 delay-200
-         ${isMenuOpen && "delay-0 scale-0"}`}>
+          className={`bx bx-menu-alt-right text-4xl text-white z-50 transition duration-700
+         ${isMenuOpen ? "delay-0 scale-0" : "delay-200"}`}>
         </i>
 
         <i
           onClick={() => setIsMenuOpen(!isMenuOpen)}  
           className={`bx bx-x scale-0 text-4xl text-white z-50 absolute top-4 right-4 transition 
-          duration-700 delay-0 ${isMenuOpen && "scale-100 block delay-200"}`}>
+          duration-700 ${isMenuOpen ?"scale-100 block delay-200" : "delay-0"}`}>
         </i>
         
-        <ul className={`z-40 translate-x-[-150%] w-full h-full fixed right-0 top-0 transition duration-700 
+        <ul className={`z-40 w-full h-full fixed right-0 top-0 transition duration-700 
         pt-20 flex flex-col gap-y-8 bg-gradient-to-r from-primary to-secondary 
-        ${isMenuOpen && "translate-x-0"}`}>
+        ${isMenuOpen ? "translate-x-0" : "translate-x-[-150%]"}`}>
           {linksNavbar.map((item, index) => (
             <div key={index}>
               {item.href !== ''
@@ -56,7 +56,7 @@ export default function NavbarMobile() {
                       onClick={() => toggleSubmenu(index)}
                     >
                       <span>{item.title}</span>
-                      {/* <span className="text-white" dangerouslySetInnerHTML={{ __html: item.icon }}></span> */}
+                      <span className="text-white" dangerouslySetInnerHTML={{ __html: item.icon }}></span>
 
                     </article>
 
