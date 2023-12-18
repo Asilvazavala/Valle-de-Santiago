@@ -1,5 +1,5 @@
 ---
-import NavbarMobile from '../NavbarMobile/NavbarMobile.astro';
+import NavbarMobile from '../NavbarMobile/NavbarMobile.tsx';
 import { linksNavbar } from './Navbar-data.astro';
 ---
 
@@ -35,8 +35,12 @@ import { linksNavbar } from './Navbar-data.astro';
                       shadow-md z-50 text-white mt-2">
                         {link.submenu.map((item, index) => (
                           <a href={item.link}>
-                            <li class={`px-4 py-2 hover:bg-secondary lg:w-40
-                              ${index === link.submenu.length - 1 ? '' : 'border-b border-white/20'}`}>
+                            <li class:list={["px-4 py-2 hover:bg-secondary lg:w-40",
+                                {
+                                  "border-b border-white/20": index !== link.submenu.length - 1
+                                }
+                              ]}
+                            >
                               {item.label}
                             </li>
                           </a>
@@ -50,5 +54,5 @@ import { linksNavbar } from './Navbar-data.astro';
       </nav>
     </section>
   </div>
-  <NavbarMobile />
+  <NavbarMobile client:visible />
 </>

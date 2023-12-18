@@ -32,20 +32,20 @@ const Modal: React.FC<ModalProps> = ({
         </button>
 
        <button
-          className="absolute top-1/2 left-4 transform -translate-y-1/2 text-primary text-3xl opacity-70 hover:opacity-100 transition"
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 text-black text-3xl opacity-70 hover:opacity-100 transition"
           onClick={prevImage}
         >
           <i className='bx bxs-left-arrow-circle'></i>
         </button>
 
        <button
-          className="absolute top-1/2 right-4 transform -translate-y-1/2 text-primary text-3xl opacity-70 hover:opacity-100 transition"
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 text-black text-3xl opacity-70 hover:opacity-100 transition"
           onClick={nextImage}
         >
           <i className='bx bxs-right-arrow-circle'></i>
         </button>
 
-        <span className="text-lg absolute bottom-0 backdrop-blur text-black">
+        <span className="text-lg absolute bottom-0 backdrop-blur-xl text-black">
           {description}
         </span>
       </aside>

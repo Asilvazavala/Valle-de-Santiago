@@ -3,22 +3,22 @@ import { sections } from './Sections-data.astro';
 ---
 
 <div class="overflow-hidden">
-  <div class="hidden lg:grid grid-cols-4 containerSpace my-12 lg:pl-16">
+  <div class="hidden md:grid grid-cols-4 containerSpace my-12 md:pl-16">
     {sections.map(section => (
       <a class="group" href={section.link}>
-        <article class="relative h-[300px] lg:h-[500px] m-1 transition duration-300 ease-in-out 
-          delay-150 transform shadow-2xl rounded-xl lg:-ml-16 lg:hover:-translate-x-16 
+        <article class="relative h-[300px] md:h-[500px] m-1 transition duration-300 ease-in-out 
+          delay-150 transform shadow-2xl rounded-xl md:-ml-16 md:hover:-translate-x-16 
           md:hover:-translate-y-8">
           <img 
             src={section.image} 
             alt={section.title}
             title={section.title} 
-            class="absolute inset-0 w-full h-full -z-10 opacity-70 lg:group-hover:opacity-100 rounded-xl"
+            class="absolute inset-0 w-full h-full -z-10 opacity-70 md:group-hover:opacity-100 rounded-xl"
           />
 
           <h2 class="text-4xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
             font-semibold text-secondary/50 drop-shadow z-30 text-center font-MontserratAlternates
-              lg:group-hover:text-secondary/80 lg:group-hover:backdrop-blur-lg">
+              md:group-hover:text-secondary/80 md:group-hover:backdrop-blur-xl">
             {section.title}
           </h2>
         </article>
@@ -26,7 +26,7 @@ import { sections } from './Sections-data.astro';
     ))}
   </div>
 
-  <swiper-container class="block mx-auto w-[250px] h-[320px] lg:hidden mySwiper mt-16 mb-4" 
+  <swiper-container class="containerSpace mx-auto w-[250px] h-[320px] md:hidden mySwiper mt-16 mb-4" 
     effect="cards" 
     grab-cursor="true">
     {sections.map(section => (
@@ -38,9 +38,9 @@ import { sections } from './Sections-data.astro';
             title={section.title} 
             class="absolute inset-0 w-full h-full -z-10 rounded-xl"
           />
-          <span class="text-secondary/100 backdrop-blur-2xl z-10 font-MontserratAlternates">
+          <h2 class="text-secondary/100 backdrop-blur-xl z-10 font-MontserratAlternates">
             {section.title}
-          </span>
+          </h2>
         </a>
       </swiper-slide>
     ))}

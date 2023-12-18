@@ -7,13 +7,13 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import { FreeMode, Navigation, Thumbs, Autoplay } from 'swiper/modules';
 
 const Carousel = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <div className="containerSpace mt-28 flex flex-col justify-center items-center">
+    <div className="containerSpace mt-20 flex flex-col justify-center items-center">
       <Title 
         title='NOTICIAS' 
         image={<i className="bx bx-news"></i>}
@@ -24,10 +24,10 @@ const Carousel = () => {
         spaceBetween={10}
         navigation={true}
         thumbs={{ swiper: thumbsSwiper }}
-        modules={[FreeMode, Navigation, Thumbs]}
+        modules={[FreeMode, Navigation, Thumbs, Autoplay]}
         className="mySwiper2 w-full h-[80%]"
         autoplay={{
-          delay: 2500,
+          delay: 3500,
           disableOnInteraction: false,
         }}
       >
@@ -44,7 +44,7 @@ const Carousel = () => {
                   title={slide.description}
                 />
                 <span className='text-black/70 font-semibold absolute bottom-2 text-center left-1/2 
-                transform -translate-x-1/2 min-w-[250px] md:min-w-[400px] backdrop-blur text-sm md:text-lg'>
+                transform -translate-x-1/2 min-w-[250px] md:min-w-[400px] backdrop-blur-xl text-sm md:text-lg'>
                   {slide.description}
                 </span>
               </a>
