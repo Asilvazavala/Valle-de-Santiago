@@ -13,7 +13,7 @@ const Carousel = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <div className="containerSpace mt-20 flex flex-col justify-center items-center">
+    <div className="containerSpace mt-20 flex flex-col justify-center items-center scrollAnimation">
       <Title 
         title='NOTICIAS' 
         image={<i className="bx bx-news"></i>}

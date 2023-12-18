@@ -42,7 +42,7 @@ export default function Gallery () {
   };
 
   return (
-    <section className='my-12 flex flex-col items-center justify-center containerSpace'>
+    <section className='my-12 flex flex-col items-center justify-center containerSpace scrollAnimation'>
       <Title 
         title='GALERÍA' 
         image= {<i className='bx bx-images'></i>} 
