@@ -1,0 +1,54 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { enlaces } from '../../components/Sobre-el-autor/enlaces-data.astro';
+
+const url = Astro.url;
+const { pathname } = url;
+const pathParts = pathname.split('/').filter(Boolean);
+---
+
+<Layout title="Enlaces">
+  <section>
+    <p class="text-gray mt-2">
+      {pathParts.map((part, index) => (
+        <span>
+          {part}
+          {index < pathParts.length - 1 ? ' > ' : ''}
+        </span>
+      ))}
+    </p>
+
+    <main class="mt-8 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+      <article class="md:col-span-2">
+        <h2 class="text-3xl text-MontserratAlternates text-primary font-semibold uppercase">
+          Enlaces
+        </h2>
+        <h3 class="font-semibold text-lg mt-8 mb-4">Enlaces importantes y Cápsulas</h3>
+
+        <p>Semanario Día Siete, el semanario de Guanajuato del periodista Carlos Pérez Nieto. Información periodística inteligente sobre Valle de Santiago y la región.</p>
+        <a href="https://semanariodia7.com/" target="_blank" class="text-gray underline">Dia Siete</a>
+        <p class="mt-4">Noticiero Valles y Crestas de Tangerine Medios. Único noticioso radiofónico sobre Valle de Santiago y sus alrededores, profesionalmente conducido por el Lic. Guillermo Pérez Lara de lunes a viernes de 19:00 a 19:30 horas. Puede consultarse también programas de emisiones anteriores o escucharse en vivo en el 810 de AM Radio Salmantina o por internet en el link proporcionado a continuación.</p>
+        <a href="https://emisoras.com.mx/region/guanajuato/" target="_blank" class="text-gray underline">Radio Valle</a>
+        <h5 class="mt-4 text-lg font-semibold">CÁPSULAS "CIENCIA Y CONCIENCIA"</h5>
+        <p class="mt-4">Las cápsulas nacen de la necesidad de aportar una opinión crítica sobre la vida pública del municipio de Valle de Santiago, ubicado al sur del estado de Guanajuato (México).</p>
+        <p class="mt-4">El nombre de ciencia y conciencia se debe a la certeza de que, al menos, éstas dos cosas deben de sostener el quehacer de los individuos que pretendan contribuir con trabajo útil e influir positivamente en su comunidad</p>
+        <p class="mt-4">En efecto, sea ésta una labor individual o colectiva, desde las organizaciones de la sociedad civil o en la administración pública. Desde el papel de primera autoridad municipal, el Presidente, hasta el más humilde de los ciudadanos, su desempeño, para que sea útil, debe de tener ciencia y ser producto de la conciencia.</p>
+        <p class="mt-4">1. Ciencia, porque es a través del conocimiento y las habilidades adquiridas por el savoir faire como se puede aspirar a hacer bien las cosas. Que no sea el panadero quien se dedique a hacer zapatos, ni el herrero quien se dedique a fabricar muebles de madera. Que haga las cosas, si se desean hacerlas bien y a la primera, quien tenga las habilidades, destrezas y conocimientos necesarios. Nada más y nada menos.</p>
+        <p class="mt-4">2. Conciencia, porque no es suficientemente bueno el conocer bien del tema, el tener la ciencia y el conocimiento. Si este no se conduce por caminos éticos y no se actúa con moralidad y valores, muy pronto terriblemente pobre puede resultar la aportación. Quien no tiene bien cimentados, entendidos y actuados los más altos valores de la ética no debería de dedicarse a lo público, pues no solo se traiciona a sí mismo sino que termina traicionándonos a todos. Sin embargo, el actuar “buenamente”, tampoco es suficiente. Quizás en un monasterio aquello fuese más útil que en la vida pública, donde se requiere forzosamente de la pericia que da el conocimiento.</p>
+        <p class="mt-4">Por eso, y ya concluyo, se necesita al menos ciencia y conciencia, conocimiento y ética, para que el fruto producto del trabajo individual o comunitario, como ciudadanos o como funcionarios, sea bueno y útil.</p>
+        <p class="mt-4">Ciencia y conciencia para un mejor mañana, Antonio Silva Tavera, septiembre de 2010.</p>
+      </article>
+
+      <aside class="md:col-span-1 flex flex-col gap-y-8">
+        {enlaces.map(({title, image}) => (
+          <img 
+            src={`/images/sobre-el-autor/enlaces/${image}`} 
+            alt={title}
+            title={title}
+            class="w-full h-44 rounded"
+          />
+        ))}
+      </aside>
+    </main>
+  </section>
+</Layout>

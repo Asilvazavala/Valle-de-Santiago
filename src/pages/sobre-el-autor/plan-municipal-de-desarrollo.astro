@@ -1,0 +1,176 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { planMunicipalDesarrollo } from '../../components/Sobre el autor/plan-municipal-de-desarrollo-data.astro';
+
+const url = Astro.url;
+const { pathname } = url;
+const pathParts = pathname.split('/').filter(Boolean);
+---
+
+<Layout title="Plan municipal de desarrollo">
+  <section>
+    <p class="text-gray mt-2">
+      {pathParts.map((part, index) => (
+        <span>
+          {part}
+          {index < pathParts.length - 1 ? ' > ' : ''}
+        </span>
+      ))}
+    </p>
+
+    <main class="mt-8 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+      <article class="md:col-span-2">
+        <h2 class="text-3xl text-MontserratAlternates text-primary font-semibold uppercase mb-8">
+          SAM - SERVICIOS Y ASESORÍAS PARA MUNICIPIOS
+        </h2>
+
+        <h5 class="mb-4 text-lg font-semibold">Somos un organismo integrado por profesionales con alta capacitación y experiencia en las especialidades de:</h5>
+        <ul class="list-disc pl-8 mb-4">
+          <li>Planeación Estratégica y Jurídica del Desarrollo Municipal, Regional y Urbano.</li>
+          <li>Derecho Público, Urbanístico, Ambiental, Administrativo.</li>
+          <li>Gestión y Administración Pública Integral.</li>
+          <li>Estudios Socio Económicos, Demográficos, Jurídicos y del Medio Ambiente</li>
+          <li>Diseño Urbano y Arquitectónico</li>
+          <li>Estudios y Proyectos en Planes de Desarrollo, Planes de Gobierno, Desarrollo Urbano y Ordenamiento Territorial y Ecológico y de Imagen Urbana.</li>
+          <li>Obras Públicas.</li>
+          <li>Servicios Públicos Municipales.</li>
+          <li>Marketing Público y Político.</li>
+          <li>Programas de Capacitación a Servidores Públicos.</li>
+          <li>Gestión de Programas federales y Estatales para los municipios.</li>
+          <li>Asesorías en Entrega-Recepción.</li>
+        </ul>
+        <h5 class="mb-4 text-lg font-semibold">El Objetivo.</h5>
+        <p class="mb-4">Uno de los principales objetivos de la empresa es proporcionar a los gobiernos municipales los servicios de asesoría y consultoría integral que les permita un buen desempeño de su gestión, el desarrollo institucional de sus municipios y el mejoramiento de las condiciones de vida de la población, con pleno apego a derecho.</p>
+        <h5 class="mb-4 text-lg font-semibold">Los Medios.</h5>
+        <p class="mb-4">Para lograr este objetivo especifico, SAM cuenta con el personal, el equipo y los sistemas más competitivos del mercado, los cuales se encuentran a su servicio.</p>
+        <h5 class="mb-4 text-lg font-semibold">El Reto.</h5>
+        <p class="mb-4">Enfrentar exitosamente y de acuerdo con el marco jurídico aplicable, tanto las demandas sociales de la población en materia de salud, educación, servicios públicos, seguridad, etcétera, como los nuevos retos económicos que impone el proceso de modernización.</p>
+        <h5 class="mb-4 text-lg font-semibold">SERVICIOS PARA EL MUNICIPIO.</h5>
+        <ul class="list-disc pl-8 mb-4">
+          <li>Elaboración de Planes Municipales de Desarrollo.</li>
+          <li>Elaboración de Programas de Gobierno.</li>
+          <li>Elaboración de Programas o Esquemas de Desarrollo Urbano.</li>
+          <li>Elaboración de Programas Parciales de Desarrollo Urbano.</li>
+          <li>Elaboración de Programas de Ordenamiento Territorial y Ecológico.</li>
+          <li>Elaboración de Reglamentos, Acuerdos de cabildo y Ordenanzas municipales para todas las ramas de la Administración Municipal (incluye leyes de ingresos y presupuesto de egresos).</li>
+          <li>Gestión Jurídica, Técnica y Administración Pública Integral.</li>
+          <li>Asesoría técnica y jurídica para proyectos estratégicos (fideicomisos, expropiaciones, etcétera).</li>
+          <li>Modernización Catastral.</li>
+          <li>Finanzas Municipales.</li>
+          <li>Capacitación y Adiestramiento.</li>
+          <li>Estudios de Opinión.</li>
+          <li>Creación de páginas WEB.</li>
+          <li>Lobbying (*)</li>
+        </ul>
+        <h5 class="mb-4 text-lg font-semibold">GESTIÓN Y CONSULTORÍA JURÍDICA, ESTRATÉGICA Y TÉCNICA.</h5>
+        <ul class="list-disc pl-8 mb-4">
+          <li>Derecho Urbanístico.</li>
+          <li>Derecho Ambiental y Ecológico.</li>
+          <li>Urbanismo.</li>
+          <li>Planeación Económica.</li>
+          <li>Planeación y Administración del Desarrollo Urbano y Ordenamiento Territorial.</li>
+          <li>Planeación y Administración del Ordenamiento ecológico del Territorio.</li>
+          <li>Planeación y Administración de las obras y servicios públicos.</li>
+        </ul>
+        <h5 class="mb-4 text-lg font-semibold">MATERIAS DE ASESORÍA, CAPACITACIÓN O CONSULTORÍA.</h5>
+        <ul class="list-disc pl-8 mb-4">
+          <li>Planeación Urbana Municipal.</li>
+          <li>Planeación de Zonas Metropolitanas y Centros de Población.</li>
+          <li>Planeación Regional.</li>
+          <li>Reservas Territoriales.</li>
+          <li>Regulación de Zonas Federales.</li>
+          <li>Supervisión y control de obra.</li>
+          <li>Regulación del Uso del Suelo y Zonificación.</li>
+          <li>Límites Municipales y de Centros de Población.</li>
+          <li>Asentamientos Irregulares.</li>
+          <li>Vivienda.</li>
+          <li>Construcciones.</li>
+          <li>Uso del Suelo en Zonas de Monumentos.</li>
+          <li>Anuncios e imagen urbana.</li>
+          <li>Fraccionamientos.</li>
+          <li>Obras Públicas. (Expropiaciones, contrataciones, licitaciones, etcétera).</li>
+          <li>Servicios Públicos. (Alumbrado público, panteones, calles, parques y jardines, mercados, policía y tránsito, Protección Civil.</li>
+          <li>Ecología: Planeación Ecológica y Protección Ambiental (áreas naturales protegidas, programas de ordenamiento ecológico, impacto ambiental etcétera).</li>
+          <li>Diseño de Programas Sociales.</li>
+        </ul>
+        <h5 class="mb-4 text-lg font-semibold">DEPENDENCIAS ASESORADAS ADMINISTRATIVAMENTE.</h5>
+        <ul class="list-disc pl-8 mb-4">
+          <li>Presidencia Municipal.</li>
+          <li>Sindicatura Municipal.</li>
+          <li>Secretaría General.</li>
+          <li>Dirección de Desarrollo Urbano y Giros Comerciales.</li>
+          <li>Dirección de Ecología.</li>
+          <li>Policía Municipal.</li>
+          <li>Dirección de Gobernación.</li>
+          <li>Dirección de Ordenamiento Territorial.</li>
+          <li>Dirección de Obras y Servicios Públicos.</li>
+          <li>Dirección de Desarrollo Comunitario o Gestión Social.</li>
+          <li>Contraloría Municipal.</li>
+          <li>Tesorería y Catastro Municipal.</li>
+        </ul>
+        <h5 class="mb-4 text-lg font-semibold">DIRECCIÓN Y SUPERVISIÓN DE OBRAS PÚBLICAS</h5>
+        <ul class="list-disc pl-8 mb-4">
+          <li>Catálogos de Conceptos.</li>
+          <li>Presupuestos.</li>
+          <li>Programas de Obra.</li>
+          <li>Control de Obra.</li>
+          <li>Control de Calidad.</li>
+          <li>Asesoría Jurídica.</li>
+        </ul>
+        <p class="mb-4">(*) El llamado lobbying en los asuntos públicos es una serie de estrategias de negociación para influir eficazmente en las decisiones de los organismos públicos. Más específicamente, el lobbying es el nombre que recibe el conjunto de técnicas y estrategias para relacionarse con los poderes del estado, con la finalidad de conseguir que las decisiones de estos sean acordes con los intereses de quienes lo promueven.</p>
+        <p class="mb-4">Hay lobbying de un nivel de gobierno a otro nivel de gobierno y de una empresa, ONG o agrupación a un ente público (poder ejecutivo, legislativo o judicial; o a nivel federal, estatal o municipal).</p>
+        <p class="mb-4">Por lo tanto el lobbying se está convirtiendo así en una de las áreas de gestión y, en concreto, de comunicación de mayor evolución y con más proyección en los próximos años.</p>
+        <p class="mb-4">SAM enfoca multidisciplinariamente este entorno a través de los siguientes mecanismos básicos:</p>
+        <ul class="list-disc pl-8 mb-4">
+          <li>Comprender prácticas locales relativas a los asuntos públicos.</li>
+          <li>Comprender la mecánica legislativa y el sistema político en relación con la otra esfera de gobierno o la empresa.</li>
+          <li>Analizar situaciones políticas específicas y coyunturales que afecten a la organización que promueve.</li>
+          <li>Planificar estrategias y campañas de lobbying.</li>
+          <li>Desarrollar habilidades comunicacionales para desempeñarse eficazmente en acciones de asuntos públicos.</li>
+        </ul>  
+        <h5 class="mb-4 text-lg font-semibold">¿Quiénes somos?</h5>
+        <p class="mb-4">SAM es una empresa especializada en servicios y asesorías enfocada fundamentalmente a municipios con cobertura en el centro y sur del país.</p>
+        <h5 class="mb-4 text-lg font-semibold">¿Quiénes lo integramos?</h5>
+        <p class="mb-4">Estamos conformados por un equipo interdisciplinario encabezado por:</p>
+        <h5 class="mb-4 text-lg font-semibold">Antonio Silva Tavera</h5>
+        <ul class="list-disc pl-8 mb-4">
+          <li>Licenciado en arquitectura por la Universidad de Guanajuato con estadía en Quebéc, Canadá.</li>
+          <li>Maestría en Gestión Pública Aplicada por el ITESM con mención honorífica de excelencia.</li>
+          <li>Maestría en Administración de la Construcción por el ITC.</li>
+          <li>Especialidad en Ingeniería catastral por la Universidad Autónoma de Querétaro y el Lincoln Institute of Land Policy.</li>
+          <li>Diplomado en Marketing Político por el Instituto El Principe de Buenos Aires, Argentina y el George Washington University.</li>
+        </ul>  
+        <h5 class="mb-4 text-lg font-semibold">¿Qué ofrecemos?</h5>
+        <p class="mb-4">Contamos con una gama amplia de servicios a ofertar. El listado a continuación proporciona una idea general de los mismos por lo que es enunciativo y no limitativo:</p>
+        <ul class="list-disc pl-8 mb-4">
+          <li>Elaboración de Planes Municipales de Desarrollo.</li>
+          <li>Elaboración de Programas de Gobierno.</li>
+          <li>Elaboración de Programas o Esquemas de Desarrollo Urbano.</li>
+          <li>Elaboración de Programas Parciales de Desarrollo Urbano.</li>
+          <li>Elaboración de Programas de Ordenamiento Territorial y Ecológico.</li>
+          <li>Elaboración de Reglamentos, Acuerdos de cabildo y Ordenanzas municipales para todas las ramas de la Administración Municipal (incluye leyes de ingresos y presupuesto de egresos).</li>
+          <li>Planes de Gobierno.</li>
+          <li>Modernización Catastral.</li>
+          <li>Capacitación y Adiestramiento.</li>
+          <li>Estudios de Opinión.</li>
+          <li>Creación de páginas WEB.</li>
+          <li>Gestión de programas.</li>
+          <li>Proyectos arquitectónicos y de Obra Pública.</li>
+          <li>Marketing Político y Marketing Público.</li>
+        </ul>  
+      </article>
+
+      <aside class="md:col-span-1 flex flex-col gap-y-8">
+        {planMunicipalDesarrollo.map(({title, image}) => (
+          <img 
+            src={`/images/sobre-el-autor/plan-municipal-de-desarrollo/${image}`} 
+            alt={title}
+            title={title}
+            class="w-full h-48 rounded object-contain"
+          />
+        ))}
+      </aside>
+    </main>
+
+  </section>
+</Layout>

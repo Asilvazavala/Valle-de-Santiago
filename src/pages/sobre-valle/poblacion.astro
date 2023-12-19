@@ -1,10 +1,60 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { poblacion } from '../../components/sobre-valle/poblacion-data.astro';
 
+const url = Astro.url;
+const { pathname } = url;
+const pathParts = pathname.split('/').filter(Boolean);
 ---
 
 <Layout title="Población">
-  <div class="containerSpace h-screen">
-    <p>Población</p>
-  </div>
+  <section>
+    <p class="text-gray mt-2">
+      {pathParts.map((part, index) => (
+        <span>
+          {part}
+          {index < pathParts.length - 1 ? ' > ' : ''}
+        </span>
+      ))}
+    </p>
+
+    <main class="mt-8 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+      <article class="md:col-span-2">
+        <h2 class="text-3xl text-MontserratAlternates text-primary font-semibold uppercase">
+          Población
+        </h2>
+        <h3 class="font-semibold text-lg">DATOS GENERALES</h3>
+        <h4 class="text-black/60 text-sm mb-8">Por: Antonio Silva Tavera</h4>
+
+        <p class="mb-4">El municipio de Valle de Santiago tiene una población de 141,058 habitantes según el Censo General de Población y Vivienda 2010 que realizó el INEGI.</p>
+        <p class="mb-4">Los datos que arrojó dicho censo revelan que el municipio es, por primera vez, mayoritariamente compuesto por población urbana.</p>
+        <p class="mb-4">La población municipal representa el 2.5% de la población del estado, el 15.0% de la Región IV Sur y el 33.2% de la Subregión 9.</p>
+        <p class="mb-4">El municipio de Valle de Santiago ocupa el lugar número diez por población entre los 46 municipios que integran el estado de Guanajuato, y el lugar número nueve estatal de entre sus localidades.</p>
+        <h5 class="mb-4 text-lg font-semibold">RELACIÓN A NIVEL NACIONAL</h5>
+        <p class="mb-4">A nivel nacional, ocupa el lugar 148 por población de entre los 2,456 municipios de México y, la ciudad de Valle de Santiago, el lugar 172 de entre todas las localidades del país.</p>
+        <h5 class="mb-4 text-lg font-semibold">TASAS DE CRECIMIENTO POBLACIONAL Y PROYECCIONES A FUTURO</h5>
+        <p class="mb-4">La disminución de la población en los periodos 1990-1995, 1995-2000 y 2000-2005 representó valores negativos en la tasa de crecimiento, y únicamente en el último periodo de 2005-2010 se observó una tasa positiva al pasar de 127,945 a 141,058 habitantes en el municipio.</p>
+        <p class="mb-4">La situación anterior contrasta con las tasas de crecimiento de la cabecera municipal, que no han dejado de ser positivas y en aumento, como se muestra en la tabla correspondiente.</p>
+        <p class="mb-4">De permanecer constantes las condiciones, tendencias y contexto de crecimiento poblacional actual, para el año 2020 el municipio tendrá una población de 152,096 habitantes y la cabecera municipal 78,724; para el año 2030, estas serán de 163,998 y 91,062 respectivamente; y para el año umbral del presente plan, el 2035, la población municipal habrá llegado a 170,294 mientras que la de la cabecera será de 97,938.</p>
+        <h5 class="mb-4 text-lg font-semibold">DATOS FINALES</h5>
+        <p class="mb-4">El censo de 2010 arroja que el índice de masculinidad, que refleja la relación hombres-mujeres, es de 90.1, es decir hay 90 hombres por cada 100 mujeres, y la edad mediana de la población es de 25 años, lo que significa que la mitad de la población municipal tiene 25 años o menos.</p>
+        <p class="mb-4">Otro dato nos indica que en el año 2000, el promedio de edad era de 27 años y en el 2010 fue de 30 años. Para el año 2035 el promedio de edad en el municipio de Valle de Santiago será de 39 años, dato que remarca la tendencia de envejecimiento de la población, con las consecuencias inherentes en temas como la salud y el empleo.</p>
+        <p class="mb-4">A nivel estatal se estima que la esperanza de vida al 2030 alcance los 79.8 años, 77.5 años para los hombres y 82 años para las mujeres, y que en el futuro se de paso hacia un envejecimiento demográfico con un progresivo angostamiento de la base de la pirámide de edades y el desplazamiento de las generaciones más numerosas hacia las edades productivas, fenómeno llamado “bono demográfico”, y los grupos de mayor edad, tema del cual no está exento Valle de Santiago.</p>
+        <h5 class="mb-4 text-lg font-semibold">CONCLUSIONES</h5>
+        <p class="mb-4">En la anterior gráfica se compara la población por grupos quinquenales de edad correspondiente a los años 1990 y 2010, donde se aprecia que la población perteneciente a los grupos de edad ubicados de 0 a 24 años ha disminuido en un periodo de 20 años, mientras que la población de los grupos de edad a partir de los 25 años presentaron crecimiento. Esto abre para el municipio la oportunidad de tener una mayor cantidad de mano de obra y un alto potencial de ahorro, pero además trae consigo retos, particularmente en materia geriátrica, gerontológica y de empleo, como ya se señalaba.</p>
+        <p class="mb-4">La razón de dependencia es de 60.5, lo que quiere decir que por cada 100 personas en edad productiva, de 15 a 64 años, hay 60 en edad de dependencia, menores de 15 años y de 65 años y más.</p>
+      </article>
+
+      <aside class="md:col-span-1 flex flex-col gap-y-8">
+        {poblacion.map(({title, image}) => (
+          <img 
+            src={`/images/sobre-valle/poblacion/${image}`} 
+            alt={title}
+            title={title}
+            class="w-full h-44 rounded"
+          />
+        ))}
+      </aside>
+    </main>
+  </section>
 </Layout>

@@ -17,7 +17,7 @@ export default function NavbarMobile() {
       <section className="flex justify-between gap-3 items-center">
         <a href="/">
           <img 
-            src="images/LogoValle.png" 
+            src="/images/LogoValle.png" 
             alt="Logo-Valle"
             title="Logo-Valle"
             className="w-14 h-8"

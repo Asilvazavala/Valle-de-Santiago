@@ -1,0 +1,64 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { descubreCentroHistorico } from '../../components/Sitios-de-interes/descubre-tu-centro-historico-data.astro';
+
+const url = Astro.url;
+const { pathname } = url;
+const pathParts = pathname.split('/').filter(Boolean);
+---
+
+<Layout title="Descubre tu centro histórico">
+  <section>
+    <p class="text-gray mt-2">
+      {pathParts.map((part, index) => (
+        <span>
+          {part}
+          {index < pathParts.length - 1 ? ' > ' : ''}
+        </span>
+      ))}
+    </p>
+
+    <main class="mt-8 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+      <article class="md:col-span-2">
+        <h2 class="text-3xl text-MontserratAlternates text-primary font-semibold uppercase">
+          Descubre tu centro histórico
+        </h2>
+        <h3 class="font-semibold text-lg">¿DÓNDE ERA EL CENTRO DE NUESTRA CIUDAD?</h3>
+        <h4 class="text-black/60 text-sm mb-8">Por: Antonio Silva Tavera</h4>
+
+        <p class="mb-4">Nos relata Don J. Ascensión Baltasar (1), el profesor Chonito como cariñosamente lo conocíamos, que:"Nuestras calles principales formaban un punto de cruz en las esquinas de las calles que actualmente tienen el nombre de Av. Juárez y Av. Arteaga.</p>
+        <p class="mb-4">"Allí era el centro, donde se iniciaba lo que se llamaban cuarteles y en ese punto preciso cambiaban de nombre las calles que iban al norte, al sur, al oriente y al poniente, así que de este punto al sur la calle se llamaba del Valle, al norte Arteaga, al poniente Zaragoza y al oriente Juárez y anteriormente Calle Nacional".</p>
+        <p class="mb-4">Y se indigna por lo siguiente: "Pues sucede que en la Alameda era más ancho su trazo que el trazo del Jardín, ya que los dueños de los lotes del lado norte de la calle Ocampo se fueron extendiendo para sacar línea de calle directa del jardín, en lugar de respetar el trazo original, en el cual estaba contemplado que al unirse la calle Aldama con la Del reloj, cruzando con la Arteaga, quedara una cuadrita igual a la que quedó en el lado poniente del jardín o sea que los vecinos mencionados de la Ocampo, se adjudicaron una buena porción de terreno que correspondía para que la calle saliera recta de un lado a otro de la ciudad.</p>
+        <p class="mb-4">"De esta manera hubiera quedado completamente simétrico en el centro de nuestra ciudad, y sólo para comprobar lo que antes se dijo respecto a la nomenclatura, se dirá que la actual calle Emilio Carranza, del jardín rumbo al arroyo se llamaba Degollado y del jardín al norte se llamaba Porfirio Díaz, nombre que después de lo de Madero, cambió a Jesus Carranza, pero a la muerte del Sr. Madero se pugnó porque volviera a igual nombre, pero habiendo alguna oposición, hubo transacción y tampoco conserva el nombre de Don Jesús Carranza".</p>
+        <p class="mb-4">Allí concluye su crónica realizada en junio de 1998, aunque no cita sus fuentes, el apreciable maestro y amante irremisible de Valle de Santiago, Don J. Ascensión Baltasar Castillo (fallecido a la edad de 87 años el 4 de diciembre de 2006).</p>
+        <p class="mb-4">Y en efecto, tal cual nos relata el profesor Baltasar, aún se pueden apreciar algunas placas con la nomenclatura de las calles en el centro divididas ya no en "Cuarteles" sino en "Sectores". Así, a partir del centro, estaban los cuatro grandes cuadrantes principales de la ciudad: Sector Lascurain, Sector Guanajuato, Sector México y Sector Reforma. Más allá del primer cuadro, aparecían zonas pobladas que ya no merecieron estar en ninguno de estos cuatro originales cuadrantes sectorizados, como es el caso del populoso barrio alrededor del templo de La Merced, cuyo sector lleva ese nombre en honor de la virgen que celebramos cada 24 de septiembre.</p>
+        <p class="mb-4 text-sm">[1] El apellido "Baltasar" está escrito así, de esta manera, por así estar consignado en sus documentos oficiales.</p>
+        <h5 class="mb-4 text-lg font-semibold">DECLARATORIA DEL CENTRO HISTÓRICO</h5>
+        <p class="mb-4">El denominado centro histórico fue durante muchos años, todos, un esqueleto viviente. No existía ninguna norma que lo regulara o que señalara sus límites precisos.</p>
+        <p class="mb-4">Lleno de buenas intenciones y no tan buenas, el centro histórico languideció. Hubo administraciones municipales que jamás se preocuparon por la conservación del patrimonio construido y que, por contra, se dedicaron a demoler el patrimonio de los vallenses. Y, análogamente, como el Rey Midas quien todo lo que tocaba convertía en oro, todo lo que compraban convertían en polvo.</p>
+        <p class="mb-4">El patrimonio cultural de los vallenses, como el de cualquier otra ciudad, les pertenece a los mismos. La posesión y propiedad de los inmuebles es de quienes legalmente las tengan, pero su uso, que es de interés público, no.</p>
+        <p class="mb-4">Afortunadamente, al menos en papel, ese vacío ha sido llenado. En este 2013 se ha realizado, y publicado en el periódico oficial del gobierno del estado, el denominado Programa de Desarrollo Urbano y Ordenamiento Ecológico que señala claramente qué y hasta dónde se debe de considerar el centro histórico.</p>
+        <p class="mb-4">Basado en el Plan Municipal de Desarrollo 2013-2035, este programa sintetiza, al fin, el saber qué somos y de dónde venimos. Clara muestra de que una sociedad sin pasado visible no tiene futuro previsible.</p>
+        <h5 class="mb-4 text-lg font-semibold">EL CENTRO HISTÓRICO A TRAVÉS DEL TIEMPO</h5>
+        <p class="mb-4">Como todos los elementos de una ciudad, el propio centro histórico ha tenido varios y hasta curiosos cambios. Ciertamente, reflejo de las circunstancias y del dinamismo de las sociedades que albergan, los puntos centrales de las ciudades son marco principalísimo de la historia.</p>
+        <p class="mb-4">Un ejemplo muy claro de lo anterior es la primera imagen que mostramos abajo. Es un plan de fortificación, orientado con lis en rosa de cuatro vientos. En la parte inferior se aprecia una tabla explicativa de los principales puntos de la fortificación y de los caminos de comunicación con otras haciendas fortificadas, señalados en el plano por clave alfabética.</p>
+        <p class="mb-4">El manuscrito está dibujado a plumilla en tinta negra y sepia, e iluminado a la aguada en gris y verde, aunque presenta roturas en la parte superior izquierda.</p>
+        <p class="mb-4">Sumario: Se presenta un plano de la ciudad de Valle de Santiago con su fortificación, en la que se incluyen "la parroquia y varias capillas" e incluye las siguientes notas: "Todo lo que va de media tinta es lo que los rebeldes han destruido; y lo más obscuro es lo que está levantado. Por la parte del poniente sigue un arrabal adonde [está] situado el combento de la Merced, que por estar fuera de toda la fortificación no se han puesto". Al verso anotado en tinta de bugalla: "Santiago" y a lápiz: "Nº 58".</p>
+        <p class="mb-4">En la segunda imagen de abajo, es de advertirse que los nombres de las calles que aparecen son los actuales, se observa claramente la desolación que tenía el actual centro histórico a principios de 1818, producto de la guerra de independencia, la cual era terrible y evidente. Las áreas mostradas en negro eran las únicas que se mantenían, medianamente, en pie. Así, a principios del siglo XIX, más del 80 % del centro estaba en ruinas (destruido por los independentistas, a decir de los españoles).</p>
+        <p class="mb-4">Otro asunto interesante que se desprende del levantamiento de Manuel Sancho, es la descrita por nuestro citado Baltasar Castillo, en la extensión del ahora llamado Portal Hidalgo, donde se ubica la Presidencia Municipal, hacia el oriente. Coincide con uno de los bastiones que se edificaron para la defensa y, suponemos por ello, deben de existir algunos vestigios ahí.</p>
+      </article>
+
+      <aside class="md:col-span-1 flex flex-col gap-y-8">
+        {descubreCentroHistorico.map(({title, image}) => (
+          <img 
+            src={`/images/sitios-de-interes/descubre-tu-centro-historico/${image}`} 
+            alt={title}
+            title={title}
+            class="w-full h-48 rounded object-cover"
+          />
+        ))}
+      </aside>
+    </main>
+
+  </section>
+</Layout>
