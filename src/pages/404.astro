@@ -4,16 +4,16 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Error 404 not found">
-  <main class="containerSpace flex flex-col justify-center items-center">
+  <main class="flex flex-col justify-center items-center">
     <img 
       src="/images/404.gif" 
       alt="404"
       title="404"
-      class="w-[600px] h-[400px] -z-10"
+      class="w-full min-h-[300px] md:w-[600px] md:h-[400px] -z-10"
     />
     <article class="-mt-20 mb-20 flex flex-col gap-2 justify-center items-center">
       <h2 class="text-4xl font-semibold">Error 404</h2>
-      <p class="text-gray text-xl">Esta página no existe</p>
+      <p class="text-gray text-xl mb-2">Esta página no existe</p>
       <a href="/" class="px-6 py-2 bg-primary text-white rounded-full lg:hover:brightness-125 transition">Regresar a Inicio</a>
     </article>
   </main>
