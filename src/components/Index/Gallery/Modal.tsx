@@ -46,13 +46,23 @@ const Modal: React.FC<ModalProps> = ({
               />
 
               <button
-                className="absolute top-4 right-4 text-white text-2xl"
+                className="absolute top-4 right-4 text-white"
                 onClick={onClose}
               >
-                <span className='px-2 rounded-full bg-red-700 lg:hover:bg-red-500 transition-colors text-2xl'>
+                <span className='px-[7.7px] rounded-full bg-red-700 lg:hover:bg-red-500 transition-colors text-2xl'>
                   &times;
                 </span>
               </button>
+
+              <a
+                href={`images/gallery/${image}`} 
+                download={description || 'imagen'}
+                className="absolute top-16 right-4 text-white"
+              >
+                <span className='px-[5px] py-[2.3px] rounded-full bg-blue-700 lg:hover:bg-blue-500 transition-colors text-xl'>
+                  <i className='bx bxs-download'></i>
+                </span>
+              </a>
 
               <span className="text-lg absolute bottom-0 backdrop-blur-xl text-black">
                 {description}

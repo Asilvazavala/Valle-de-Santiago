@@ -1,0 +1,45 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const url = Astro.url;
+const { pathname } = url;
+const pathParts = pathname.split('/').filter(Boolean);
+---
+
+<Layout title="Santuario de las mariquitas">
+  <section>
+    <p class="text-gray mt-2">
+      {pathParts.map((part, index) => (
+        <span>
+          {part}
+          {index < pathParts.length - 1 ? ' > ' : ''}
+        </span>
+      ))}
+    </p>
+
+    <main class="mt-8 grid grid-cols-3 pb-20">
+      <article class="col-span-2">
+        <h2 class="text-3xl text-MontserratAlternates text-primary font-semibold">
+          SANTUARIO DE LAS MARIQUITAS
+        </h2>
+        <h3 class="font-medium text-lg">La Catarina: Maravillas de la naturaleza</h3>
+        <h4 class="text-gray text-sm mb-8">Por: Semanario Nuevo Milenio/Salvador Valadez González</h4>
+
+        <p class="mb-4">Recientemente, en este 2011, fue descubierto y de manera accidental un santuario donde se reproduce la Catarina o Mariquita como se le conoce a este insecto que ha sido considerada un regalo del cielo por su hábito (tanto en estado de larva como de adulto) de alimentarse de pulgones y otras plagas agrícolas. Incluso los agricultores liberan mariquitas para proteger las cosechas de las plagas.</p>
+        <p class="mb-4">Se constató que para llegar hasta este santuario, localizado en lo más alto de la serranía en los límites en los que convergen Jaral del Progreso, Yuriria y Valle de Santiago, se tienen que caminar alrededor de 4 horas para arribar al punto exacto. Pero es maravilloso ver a este insecto.</p>
+        <p class="mb-4">Está entre los cerros que limitan con Yuriria, por el rumbo de la Angostura, de Jaral del Progreso y de Valle de Santiago, a la altura de la comunidad de El Perico, pero cuesta arriba.</p>
+        <p class="mb-4">La expedición compuesta por habitantes de las Angostura, amantes de proteger la flora y fauna de la zona, acompañaron a periodistas del semanario Nuevo Milenio que acudieron hasta el lugar exacto.</p>
+        <p class="mb-4">Ahí se puede estar en contacto con este coleóptero. Que es amarillo por encima, con un único punto de gran tamaño en cada élitro (ala protectora externa). Tanto en su estadía de larva como de adulto eliminan los pulgones que invaden las plantas.</p>
+        <p class="mb-4">Su llamativa coloración negra y roja podría hacerlas una presa vulnerable, las mariquitas de dos puntos no constituyen un alimento exquisito para los depredadores, que optan por otros insectos.</p>
+      </article>
+
+      <aside class="col-span-1">
+        <img 
+          src="" 
+          alt=""
+        >
+      </aside>
+    </main>
+
+  </section>
+</Layout>

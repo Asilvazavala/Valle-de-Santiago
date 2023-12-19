@@ -70,7 +70,7 @@ export default function NavbarMobile() {
                       >
                         {item.submenu.map((link, index) => (
                           <a href={link.link} key={index}>
-                            <li className={`px-4 py-2 hover:bg-secondary lg:w-40                       
+                            <li className={`px-4 py-2 hover:bg-secondary lg:w-40 text-white/70                       
                             ${index !== item.submenu.length - 1 && "border-b border-white/20"}`}                          
                             >
                               {link.label}
