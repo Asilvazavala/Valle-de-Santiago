@@ -31,7 +31,6 @@ const Modal: React.FC<ModalProps> = ({
             shadowOffset: 20,
             shadowScale: 0.94,
           }}
-          pagination={true}
           modules={[EffectCube, Pagination, Thumbs, FreeMode]}
           className="mySwiper w-full h-full"
           initialSlide={selectedImage ?? 0}
@@ -40,7 +39,7 @@ const Modal: React.FC<ModalProps> = ({
             <SwiperSlide key={id} className='bg-center bg-cover'>
               <img 
                 className='w-full h-[50vh] lg:h-[80vh]' 
-                src={`images/gallery/${image}`} 
+                src={`/images/inicio/gallery/${image}`} 
                 title={description}
                 alt={description}
               />
@@ -49,17 +48,17 @@ const Modal: React.FC<ModalProps> = ({
                 className="absolute top-4 right-4 text-white"
                 onClick={onClose}
               >
-                <span className='px-[7.7px] rounded-full bg-red-700 lg:hover:bg-red-500 transition-colors text-2xl'>
+                <span className='px-[7.7px] rounded-full bg-red-500 lg:hover:bg-red-700 transition-colors text-2xl'>
                   &times;
                 </span>
               </button>
 
               <a
-                href={`images/gallery/${image}`} 
+                href={`/images/inicio/gallery/${image}`} 
                 download={description || 'imagen'}
                 className="absolute top-16 right-4 text-white"
               >
-                <span className='px-[5px] py-[2.3px] rounded-full bg-blue-700 lg:hover:bg-blue-500 transition-colors text-xl'>
+                <span className='px-[5px] py-[2.3px] rounded-full bg-cyan-500 lg:hover:bg-cyan-700 transition-colors text-xl'>
                   <i className='bx bxs-download'></i>
                 </span>
               </a>

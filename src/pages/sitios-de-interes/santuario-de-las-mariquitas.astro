@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { santuario } from '../../components/Sitios-de-interes/santuario-de-las-mariquitas-data.astro';
 
 const url = Astro.url;
 const { pathname } = url;
@@ -17,7 +18,7 @@ const pathParts = pathname.split('/').filter(Boolean);
       ))}
     </p>
 
-    <main class="mt-8 grid grid-cols-3 pb-20">
+    <main class="mt-8 grid grid-cols-3 pb-20 gap-x-20">
       <article class="col-span-2">
         <h2 class="text-3xl text-MontserratAlternates text-primary font-semibold">
           SANTUARIO DE LAS MARIQUITAS
@@ -31,13 +32,33 @@ const pathParts = pathname.split('/').filter(Boolean);
         <p class="mb-4">La expedición compuesta por habitantes de las Angostura, amantes de proteger la flora y fauna de la zona, acompañaron a periodistas del semanario Nuevo Milenio que acudieron hasta el lugar exacto.</p>
         <p class="mb-4">Ahí se puede estar en contacto con este coleóptero. Que es amarillo por encima, con un único punto de gran tamaño en cada élitro (ala protectora externa). Tanto en su estadía de larva como de adulto eliminan los pulgones que invaden las plantas.</p>
         <p class="mb-4">Su llamativa coloración negra y roja podría hacerlas una presa vulnerable, las mariquitas de dos puntos no constituyen un alimento exquisito para los depredadores, que optan por otros insectos.</p>
+        <p class="mb-4">Mariquita o Catarina, nombre común de cualquiera de las muchas especies emparentadas de escarabajos de brillantes colores que viven en las regiones templadas y tropicales del todo el mundo. La mariquita o Catarina mide menos de 1,2 cm de longitud máxima. Su cuerpo es casi hemisférico, redondeado por arriba y plano por abajo, y tiene una cabeza pequeña y patas cortas. Suelen ser rojas o anaranjadas por arriba, con puntos negros, blancos o amarillos. Algunas especies son negras, con o sin puntos. Las larvas son también de colores brillantes, por lo general azules con franjas anaranjadas o negras.</p>
+        <p class="mb-4">como en la larvaria, se alimentan de insectos dañinos para las plantas, como los pulgones y los insectos escama.</p>
+        <p class="mb-4">Debido a la ayuda que prestan en la destrucción de las plagas agrícolas, en la edad media estos coleópteros eran considerados instrumentos de la benevolente intervención de la Virgen María.</p>
+        <p class="mb-4">La mariquita de siete puntos es, sin duda, la mariquita mejor conocida, la más popular y la más abundante. Tiene color rojo o anaranjado con 7 manchas negras y pequeñas sobre los élitros. Esta mariquita es una especie muy beneficiosa como destructora de pulgones y cochinillas. Los adultos de la mariquita de dos puntos a menudo hibernan en las casas de los humanos.</p>
+        <p class="mb-4">Cuando estén fuera de sus refugios del invierno mas comunes (grietas profundas en las piedras, entré montones de hojarasca o bajo la corteza de los árboles) se dirigen hacia la vegetación buscando su alimento preferido (pulgones) que con la nueva savia disponible se reproducen con velocidad de vértigo, si tienen suerte y encuentran una colonia de hormigas que no esté protegida pueden comer hasta saciar completamente su apetito, empezarán a buscar pareja en la cual es muy importante el mensaje químico que excretan las hembras que se puede decir que envían un mensaje diciendo "¡aquí estoy!".</p>
+        <p class="mb-4">Una vez que se encuentra el macho con la hembra las hembras pueden poner cientos de huevos arracimados de un color amarillento en la base de las plantas después nacen pequeñas larvas con un feroz apetito, en cuestión de semanas y tras diferentes mudas, comienzan su ciclo de pupa (metamorfosis completada) y se convierten en una nueva mariquita.</p>
+        <p class="mb-4">¡Toda esta gran maravilla de la naturaleza la tenemos en Valle de Santiago, en el estado de Guanajuato!</p>
+        <p class="mb-4 text-sm font-medium">NOTA IMPORTANTE: No se coloca la ubicación exacta del sitio debido a la actual ausencia de controles legales, sustentables y ecológiicos que permitan la preservación y el manejo adecuado de la zona</p>
       </article>
 
-      <aside class="col-span-1">
-        <img 
-          src="" 
-          alt=""
-        >
+      <aside class="col-span-1 flex flex-col gap-y-8">
+        <iframe
+          class="w-full h-48"
+          src="https://www.youtube.com/embed/GTIGMBjV8Ac"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+
+        {santuario.map(({title, image}) => (
+          <img 
+            src={`/images/sitios-de-interes/santuario-de-las-mariquitas/${image}`} 
+            alt={title}
+            title={title}
+            class="w-full h-44 rounded"
+          />
+        ))}
       </aside>
     </main>
 

@@ -39,7 +39,7 @@ const Carousel = () => {
               <a href={slide.link}>
                 <img 
                   className="w-full h-[300px] md:h-[400px] rounded-xl" 
-                  src={`images/carousel/${slide.image}`} 
+                  src={`/images/inicio/carousel/${slide.image}`} 
                   alt={slide.description}
                   title={slide.description}
                 />
@@ -69,7 +69,7 @@ const Carousel = () => {
             bg-center w-[25%] h-full opacity-40 rounded-lg cursor-pointer">
             <img 
               className="w-full h-full rounded-lg" 
-              src={`images/carousel/${slide.image}`} 
+              src={`/images/inicio/carousel/${slide.image}`} 
               alt={slide.description}
               title={slide.description}
             />

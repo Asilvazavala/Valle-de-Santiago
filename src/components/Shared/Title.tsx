@@ -11,7 +11,7 @@ const Title: React.FC<TitleProps> = ({
   return (
     <div className="relative mb-12">
       <img 
-        src="images/BannerTitulo.png"
+        src="/images/BannerTitulo.png"
         alt="Banner"
         title="Banner"
         className="w-[25rem] h-20"
