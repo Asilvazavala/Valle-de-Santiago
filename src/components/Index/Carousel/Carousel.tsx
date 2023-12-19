@@ -63,18 +63,18 @@ const Carousel = () => {
         className="mySwiper w-full h-[100px] mx-auto mt-2"
       >
         {carouselData.map((slide, slideIndex) => (
-            <SwiperSlide 
-              key={slideIndex}
-              className="text-center text-lg bg-white flex justify-center items-center bg-cover 
-              bg-center w-[25%] h-full opacity-40 rounded-lg cursor-pointer">
-              <img 
-                className="w-full h-full rounded-lg" 
-                src={`images/carousel/${slide.image}`} 
-                alt={slide.description}
-                title={slide.description}
-              />
-            </SwiperSlide>
-          ))}
+          <SwiperSlide 
+            key={slideIndex}
+            className="text-center text-lg bg-white flex justify-center items-center bg-cover 
+            bg-center w-[25%] h-full opacity-40 rounded-lg cursor-pointer">
+            <img 
+              className="w-full h-full rounded-lg" 
+              src={`images/carousel/${slide.image}`} 
+              alt={slide.description}
+              title={slide.description}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   )
