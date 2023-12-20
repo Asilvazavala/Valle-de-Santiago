@@ -35,4 +35,24 @@ export const GalleryImages: GalleryProps[] = [
     image: "Vista interior de la cupula principal de la parroquia de Santiago Apostol.jpg",
     description: "Vista interior de la cúpula principal de la parroquia de Santiago Apóstol."
   },
+  {
+    id: 7,
+    image: "santiago-apostol.jpeg",
+    description: "Santiago apóstol."
+  },
+  {
+    id: 8,
+    image: "Santuario de las mariquitas1.jpg",
+    description: "Vista interior del santuario de las mariquitas."
+  },
+  {
+    id: 9,
+    image: "Verduras gigantes2.jpg",
+    description: "¡Increíbles verduras gigantes en nuestro municipio!"
+  },
+  {
+    id: 10,
+    image: "Verduras gigantes4.jpg",
+    description: "¡Increíbles verduras gigantes en nuestro municipio!"
+  },
 ];

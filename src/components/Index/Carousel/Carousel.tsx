@@ -44,7 +44,7 @@ const Carousel = () => {
                   title={slide.description}
                 />
                 <span className='text-black/70 font-semibold absolute bottom-2 text-center left-1/2 
-                transform -translate-x-1/2 min-w-[250px] md:min-w-[400px] backdrop-blur-xl text-sm md:text-lg'>
+                transform -translate-x-1/2 min-w-[250px] md:min-w-[400px] backdrop-blur-2xl text-sm md:text-lg'>
                   {slide.description}
                 </span>
               </a>

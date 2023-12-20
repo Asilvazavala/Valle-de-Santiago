@@ -1,0 +1,66 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { santiagoApostol } from '../../components/historia/santiago-apostol-data.astro';
+
+const url = Astro.url;
+const { pathname } = url;
+const pathParts = pathname.split('/').filter(Boolean);
+---
+
+<Layout title="Y la historia dijo">
+  <section>
+    <p class="text-gray mt-2">
+      {pathParts.map((part, index) => (
+        <span>
+          {part}
+          {index < pathParts.length - 1 ? ' > ' : ''}
+        </span>
+      ))}
+    </p>
+
+    <main class="mt-8 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+      <article class="md:col-span-2">
+        <h2 class="text-3xl text-MontserratAlternates text-primary font-semibold uppercase">
+          Y la historia dijo
+        </h2>
+        <h4 class="text-black/60 text-sm mb-8">Por: Antonio Silva Tavera</h4>
+        
+        <h3 class="font-semibold text-lg mb-4">ANTECEDENTES</h3>
+        <p class="mb-4">Ubicar el origen del rito y su ceremonial, exaltación de un sincretismo envolvente, nos puede ayudar para tratar de entender este fervor religioso netamente popular que nace en la misma cuna de nuestra historia comunal. Será menester hablar de Santiago Apóstol, santo patrono de la ciudad y destinatario de la ceremonia que nos convoca, para después ocuparnos de los que organizan dicha ceremonia a través de las mayordomías; de las preparaciones minuciosas, del corrido de gallo y de la exultante fiesta de la cerería. Prender los fuegos pirotécnicos que suelen utilizarse en estas ceremoniales equivale a reencender una tradición que nos da identidad, seamos creyentes o no. Que nos une y nos cobija bajo la capa santiaguera, la misma "apaga incendios" del supuesto milagro. La misma reconocida con respetuoso y entonado cántico:</p>
+        <p class="italic">Salve Santiago querido</p>
+        <p class="italic">noble Apóstol del Señor</p>
+        <p class="italic">a ti te fue concedido</p>
+        <p class="italic">ser de Valle el bienhechor.</p>
+        <h4 class="text-black/60 text-sm mb-4">(estrofa que suele cantarse durante las velaciones en honor a los santiaguitos)</h4>
+        <h5 class="text-lg font-semibold mb-4">SANTIAGO APÓSTOL</h5>
+        <p class="mb-4">Santiago, pacífico pescador de Galilea (*) y uno de los doce apóstoles de Jesucristo fue, según cuenta la leyenda, el evangelizador de España. Según la creencia de la época previa a la conquista de México, los santos peleaban junto a los españoles en las batallas. Así pues, durante las guerras de la Reconquista, el santo patrono se convirtió en un feroz caballero Matamoros y la invocación Santiago y a ellos daba inicio a cada una de las batallas.</p>
+        <p class="mb-4">La creencia en las milagrosas apariciones del santo se traslada a América, en donde el señor Santiago se transforma en Mataindios.</p>
+        <p class="mb-4">Tiago el mayor, quien pasó de modesto pescador en Galilea a jinete matamoros, era hijo de Zebedeo y Salomé y el hermano mayor de Juan el Apóstol. Su maestro Jesús les puso el sobrenombre de "hermanos boanergués" ("hijos del trueno"). Devenido en uno de los primeros mártires cristianos por su decapitación ordenada por Herodes Agripa I en Jerusalén, fue primero santo apóstol, más tarde falso evangelizador de Hispania y al fin patrono de sus cristianos, hubo de acostumbrarse -como buen hijo del trueno- al manejo de la rienda, la lanza y el estribo.</p>
+        <p class="mb-4">Así, en las inmediaciones de Cintla, poblado del señorío de Pochontán, contiguo a la desembocadura del río Tabasco, los caballos galoparon por primera vez en tierras de Mesoamérica. Sólo a 16 cupo tal honor, según nos relata Luis Fernando Granados Salinas en su artículo Santiago y la Yegua en la revista núm. 12 de Arqueología Mexicana, y salvo Rolandillo, Rey y Cabeza de Moro, ninguno tendrá la suerte de ser recordado por su nombre.</p>
+        <p class="mb-4">Sobre sus lomos se irguieron, ansiosos por acabar con la arrogancia de los indígenas tabasqueños, una quincena de soldados castellanos, los más principales discípulos de Hernán Cortés. El caballo restante, con seguridad el más brioso y el de estampa más galante -una yegua baya, qué duda cabe- debió de carecer de jinete hasta que la batalla entre indios y europeos alcanzó su momento más crítico, pues es francamente inverosímil, e incluso acaso sacrílego, pretender que además de santos, del cielo caigan caballos.</p>
+        <p class="mb-4">Montó Santiago la yegua que la Providencia dispuso para él en el llano de Cintla. Sólo más tarde los indios supieron que el primer caballero que apareció a sus espaldas era en realidad hermano del evangelista Juan, y años pasaron antes de que comprendieran la importancia de su intervención. Los hispanos, en cambio, identificaron al instante el porte distinguido y la furia cristianísima del muerto de Compostela.</p>
+        <p class="mb-4">¡Milagro no es que un santo se aparezca, es que alguien lo vea!</p>
+        <h5 class="text-lg font-semibold mb-4">SANTIAGO EN EL BAJÍO</h5>
+        <p class="mb-4">El año 2010 fue un año compostelano (cosa que no volverá a ocurrir sino hasta el año 2021), es decir, de adoración especial al santo de Santiago de Compostela ciudad de la provincia de La Coruña y capital de Galicia, en España y que tiene esa connotación cuando cae en domingo el 25 de julio. Hay que recordar que en 813, el santo Pelagio, absorto en sus plegarias, vislumbró una luz que desde el cielo iluminaba unos arbustos junto al Monte Libredón. De inmediato avisó al obispo Teodomiro. Tras excavar ahí encontraron los restos de un pequeño edificio que en sus arcas acogía los restos del Apóstol Santiago.</p>
+        <p class="mb-4">Bueno, así se cuenta en la historia. El hecho es que el hallazgo reavivó la fe de toda Europa. Atrajo peregrinos de todo el continente que seguían el ya famoso “Camino a Santiago”, y ensalzó el ánimo de los pueblos católicos del norte de España en contra de los musulmanes invasores. El Apóstol los acompañó en batalla inclinando la balanza a su favor cuando era necesario como hemos visto ya.</p>
+        <p class="mb-4">El Apóstol Santiago se convirtió en un verdadero caballero, protector y aliado español contra los infieles, por lo que no es de extrañar que en 1492, junto a los conquistadores, desembarcara en las tierras recién descubiertas.</p>
+        <p class="mb-4">Innumerables fueron las batallas en las que la tradición popular asegura haberlo visto. Sin embargo, según nos cuenta Don Nemesio Rodríguez Lois y que es aquí la que nos importa por tratarse de la zona de El Bajío, “el ejemplo más famoso será el de Querétaro en donde, el 25 julio de 1531 –casi por casualidad, recordemos es fiesta del apóstol–, cuando los españoles combatían contra los indios chichimecas, durante lo más álgido de la batalla, entre las nubes vieron al apóstol montado en su caballo.</p>
+        <p class="mb-4">“La batalla se decidió a favor de los cristianos. Los indios pidieron no sólo el bautismo, sino que les esculpiesen una cruz de piedra. Allí se fundó una ciudad cuyo nombre oficial es Santiago de Querétaro”. Conín, un caudillo chichimeca cuya estatua está a la entrada de aquella ciudad, se convirtió y a partir de ahí, bautizado al cristianismo con el nombre de Don Fernando de Tapia, fue uno de los principales impulsores del culto del Apóstol Santiago en el Bajío. Recordemos que Valle de Santiago no se funda sino 76 años después, justo hasta el año de 1607.</p>
+        <p class="mb-4">Sin embargo, obvia Don Nemesio, que ese mismo santo compostelano, al paso del tiempo fue visto luchando, en el primer cuarto del siglo XIX, al lado de los insurgentes y en contra de sus otrora protegidos. En efecto, en la misma zona de El Bajío y casi hasta con la misma yegua. Por lo que queda la interrogante sobre si Santiago abraza las mejores causas o simplemente ello es producto de su naturaleza belicosa.</p>
+        <p class="mb-4">Pero éstas no sería ni las primeras ni las últimas ciudades que en América se fundaran en nombre del apóstol, quien de hecho logró toda una conquista geográfica. Podemos encontrar más de 200 ciudades, provincias, iglesias, sierras, bahías, ríos, valles, haciendas y minas con su nombre. Por mencionar algunos: Santiago de Cuba, Santiago de Chile, Santiago de Sánchez en Argentina, y Santiago de Cusco en Perú. Incluso, encontramos uno de los primeros centros de estudio superior en la Nueva España: el Colegio de Santiago de Tlatelolco.</p>
+        <p class="mb-4">Así fue como la devoción por Santiago apóstol se extendió por toda Hispanoamérica y especialmente en esta zona de México. Devoción que nos sigue hasta nuestros días, y ha hecho del muerto de Compostela uno de los asuntos de encuentro entre católicos más importante del mundo.</p>
+      </article>
+
+      <aside class="md:col-span-1 flex flex-col gap-y-8">
+        {santiagoApostol.map(({title, image}) => (
+          <img 
+            src={`/images/historia/santiago-apostol/${image}`} 
+            alt={title}
+            title={title}
+            class="w-full h-44 rounded object-contain"
+          />
+        ))}
+      </aside>
+    </main>
+  </section>
+</Layout>
