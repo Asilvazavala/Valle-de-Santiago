@@ -1,0 +1,64 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { laHistoriaDijo } from '../../components/historia/y-la-historia-dijo-data.astro';
+
+const url = Astro.url;
+const { pathname } = url;
+const pathParts = pathname.split('/').filter(Boolean);
+---
+
+<Layout title="Y la historia dijo">
+  <section>
+    <p class="text-gray mt-2">
+      {pathParts.map((part, index) => (
+        <span>
+          {part}
+          {index < pathParts.length - 1 ? ' > ' : ''}
+        </span>
+      ))}
+    </p>
+
+    <main class="mt-8 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+      <article class="md:col-span-2">
+        <h2 class="text-3xl text-MontserratAlternates text-primary font-semibold uppercase">
+          Y la historia dijo
+        </h2>
+        <h4 class="text-black/60 text-sm mb-8">Por: Antonio Silva Tavera</h4>
+        
+        <h3 class="font-semibold text-lg mb-4">HISTORIA DE VALLE DE SANTIAGO</h3>
+        <p class="mb-4">El Valle de Santiago es fundado el 28 de mayo de 1607. Sus fundadores fueron Pedro Martínez Rincón, Pedro Rivera, Diego Tamayo, Francisco Gómez, Francisco Santoyo, Silvestre de Aguirre, Luis Fonseca, Antonio Estrada, Andrés Cuéllar y Juan Martínez. Mención destacada merecen Cristóbal Martín y Juan Fernández.</p>
+        <p class="mb-4">Su nombre autóctono era CAMÉMBARO que en purépecha quiere decir: lugar de ajenjo o estafiate. Por cierto, los europeos le decían al estafiate el "ajenjo mexicano" por el parecido a aquel pero, realmente, no es ajenjo. Otro nombre que recibe esta planta es altamisa y es utilizada en la herbolaria tradicional principalmente contra padecimientos digestivos: diarrea, disentería, parásitos y cólicos.</p>
+        <p class="mb-4">Cuando llegaron los españoles y los indígenas aliados a éstos -precisamente el 25 de julio de 1562 día que se celebra a Santiago Apóstol en la liturgia católica- la zona estaba habitada por "mezcla de otomíes, chichimecas y purépechas"; el grupo predominante, al parecer, era el de chichimecas-pames. Valle de Santiago se ubica a los 20 grados 23' 31" de longitud norte y a los 101 grados 11' 21" al oeste del meridiano de Greenwich. La altura sobre el nivel del mar es de 1723 metros. Sus límites geográficos son:</p>
+        <ul class="list-disc pl-8 mb-4">
+          <li>Al norte los municipios guanajuatenses de Pueblo Nuevo y Salamanca;</li>
+          <li>Al sur el municipio de Yuriria, Gto;</li>
+          <li>Al oriente con Jaral del Progreso, Gto;</li>
+          <li>Al poniente con Abasolo y Huanímaro municipios del estado de Guanajuato y con Puruándiro y Sixto Verduzco municipios del estado de Michoacán.</li>
+        </ul>
+        <h5 class="text-lg font-semibold">¿El País de las Siete Luminarias?</h5>
+        <h4 class="text-black/60 text-sm mb-4">por J. Ascensión Baltasar Castillo (QEPD)</h4>
+        <p class="mb-4">¿Por qué el País de las Siete Luminarias? Dícese que nuestra región, situada al occidente del eje neovolcánico, cuando estaba en actividad los volcanes, debieron de manifestarse a lo lejos como un juego múltiple de grandes luminarias y se cree que ese fue el principio de la denominación que ahora tenemos como el País de las Siete Luminarias.</p>
+        <p class="mb-4">Se debe de entender que no son únicamente siete los volcanes que aparecieron en la región, sino que todo el complejo cuenta con cerca de 30 aparatos de explosión.</p>
+        <p class="mb-4">Entonces, ¿por qué el número siete? Porque el número siete, desde tiempos pretéritos y en todas las civilizaciones se utilizaba para designar un número indefinido que contaba más de seis; y así tenemos que en el viejo Egipto el sueño del Faraón interpretado por José el hebreo, hablaba ya de las siete vacas gordas y las siete vacas flacas; en la antigüedad se habla de siete pecados capitales, siete maravillas, etc. Así que las siete luminarias de Valle fueron muchos volcanes que quedaron representados por oquedades y conos sineríticos que han formado el hermoso paisaje que distingue al Valle de Santiago. Qué diremos de los cráteres, algunos cráteres lagos, otros críteres secos; podríamos decir que cada uno de ellos tiene su propia belleza y que, igualmente, cada uno de ellos creó su propio ecosistema. Estos ecosistemas, desafortunadamente, no han sido permanentes; han ido cambiando a la medida que los seres humanos han intervenido en ellos.</p>
+        <p class="mb-4">Si recordamos, por ejemplo, la Hoya de Rincón de Parangueo, en sus tiempos felices anteriores al 1972, en ese cuenco de aguas salobres su ecosistema dió en criar un insecto que llamábamos mosco y que era una maravilla de la creación, pues aunque tenía alas para volar, prefería nadar sumergido y ahí hacer su reproducción, que dada su fertilidad, poblaba en exceso las tranquilas aguas de ese cráter-lago, esta bonanza la aprovechaban las aves migratorias, que huyendo del invierno, abandonaban el país canadiense, el país de los grandes lagos, para venir a alimentarse y disfrutar de las tibias aguas del Rincón de Parangueo. Y en esta forma, el paisaje se enriquecía con los miles de palmípedas que se concentraban a distancia de los cazadores que los esperaban, silenciosos, a que se orillaran empujados por el viento suave de los meses primaverales. Era tal la cantidad de aves que se alimentaban con el mosco manso dorado, que sus carnes engordaban de manera que cuando un escopetazo los alborotaba, volaban haciendo círculos, ganando poco a poco las alturas de los bordes del cuenco volcánico y así pasaban rozando los matorrales, donde se escondían cazadores sin escopeta, armados de un solo varejón de casahuate y que a veces llevaban más carne a sus casas que los que traían escopeta de perdigones.</p>
+        <h5 class="mb-4 text-lg font-semibold">¿El País de las Siete Luminarias?</h5>
+        <p class="mb-4">Un ejemplo claro, síntesis muda de un pueblo heroico y valiente como es el de este Valle de Santiago, es el que muestra un par de placas que se ubican, una en el intradós y otra sobre un pilar, de la troje de San Javier al oriente de la ciudad.</p>
+        <h5 class="text-lg font-semibold">RELACIÓN EXTRACTADA DE LOS DERECHOS DE LOS LABRADORES DEL VALLE DE SANTIAGO, (GTO.), AL USO DE LAS AGUAS DEL RÍO GRANDE O DE LERMA, Y A LAS QUE SE DEPOSITAN EN LA LAGUNA DE YURIRIA</h5>
+        <h4 class="text-black/60 text-sm mb-4">por el Sr. Arturo Ramírez (QEPD)</h4>
+        <p class="mb-4">Por Real Cédula cometida el octavo Virrey de México, don Luis de Velasco II, (Primera época), el primero de noviembre de 1591 se promulgó en Nueva España la primera disposición legal relativa a ventas y composiciones de tierras, creándose el entonces "Ramo de Hacienda Pública". Un grupo de vecinos de "Camémbaro" (actualmente el Valle de Santiago y la Sagrada Provincia de Agustinos de Yuririapúndaro, adquirieron tierras y aguas a título de "terrenos realengos" tomando las aguas del llamado río Grande (hoy Lerma), por ambas márgenes mediante un primitivo sistema de diques con ramas y tierra, para contener la corriente y llevar de esa manera sus aguas a los terrenos adquiridos.</p>
+        <p class="mb-4">Posteriormente, en 1606, el Ayuntamiento de Salamanca les dió merced y posesión real llamado "Valle de Salamanca" a los indios que ya figuraban como dueños de una parte; haciendo en el décimoquinto repartimiento de tierras con aguas sacadas del río, por una acerquia para riegos de Santiago y de Salamanca (literal en los títulos originales); pero para ésta no se pudo hacer llegar, en virtud de los obstáculos encontrados que por ese entonces parecieron insuperables.</p>
+      </article>
+
+      <aside class="md:col-span-1 flex flex-col gap-y-8">
+        {laHistoriaDijo.map(({title, image}) => (
+          <img 
+            src={`/images/historia/y-la-historia-dijo/${image}`} 
+            alt={title}
+            title={title}
+            class="w-full h-44 rounded"
+          />
+        ))}
+      </aside>
+    </main>
+  </section>
+</Layout>

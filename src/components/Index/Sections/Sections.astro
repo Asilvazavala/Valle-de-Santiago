@@ -13,12 +13,12 @@ import { sections } from './Sections-data.astro';
             src={section.image} 
             alt={section.title}
             title={section.title} 
-            class="absolute inset-0 w-full h-full -z-10 opacity-70 md:group-hover:opacity-100 rounded-xl"
+            class="absolute inset-0 w-full h-full -z-10 lg:opacity-80 md:group-hover:opacity-100 rounded-xl"
           />
 
           <h2 class="text-4xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-            font-semibold text-secondary/50 drop-shadow z-30 text-center font-MontserratAlternates
-              md:group-hover:text-secondary/80 md:group-hover:backdrop-blur-xl">
+            font-semibold text-secondary/80 lg:text-secondary/50 drop-shadow z-30 text-center font-MontserratAlternates
+              lg:group-hover:text-secondary/80 md:group-hover:backdrop-blur-xl">
             {section.title}
           </h2>
         </article>
