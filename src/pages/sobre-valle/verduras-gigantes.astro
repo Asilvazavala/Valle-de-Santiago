@@ -44,6 +44,8 @@ const pathParts = pathname.split('/').filter(Boolean);
       <aside class="md:col-span-1 flex flex-col gap-y-8">
         {verdurasGigantes.map(({title, image}) => (
           <img 
+            loading="lazy" 
+            decoding="async"
             src={`/images/sobre-valle/verduras-gigantes/${image}`} 
             alt={title}
             title={title}

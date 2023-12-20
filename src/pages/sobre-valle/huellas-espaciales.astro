@@ -41,6 +41,8 @@ const pathParts = pathname.split('/').filter(Boolean);
       <aside class="md:col-span-1 flex flex-col gap-y-8">
         {huellasEspaciales.map(({title, image}) => (
           <img 
+            loading="lazy" 
+            decoding="async"
             src={`/images/sobre-valle/huellas-espaciales/${image}`} 
             alt={title}
             title={title}

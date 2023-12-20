@@ -53,6 +53,8 @@ const pathParts = pathname.split('/').filter(Boolean);
       <aside class="md:col-span-1 flex flex-col gap-y-8">
         {volcanesYHoyas.map(({title, image}) => (
           <img 
+            loading="lazy" 
+            decoding="async"
             src={`/images/sitios-de-interes/volcanes-y-hoyas/${image}`} 
             alt={title}
             title={title}

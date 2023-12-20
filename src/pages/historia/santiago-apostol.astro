@@ -54,6 +54,8 @@ const pathParts = pathname.split('/').filter(Boolean);
       <aside class="md:col-span-1 flex flex-col gap-y-8">
         {santiagoApostol.map(({title, image}) => (
           <img 
+            loading="lazy" 
+            decoding="async"
             src={`/images/historia/santiago-apostol/${image}`} 
             alt={title}
             title={title}

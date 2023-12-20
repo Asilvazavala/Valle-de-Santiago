@@ -162,7 +162,9 @@ const pathParts = pathname.split('/').filter(Boolean);
 
       <aside class="md:col-span-1 flex flex-col gap-y-8">
         {planMunicipalDesarrollo.map(({title, image}) => (
-          <img 
+          <img  
+            loading="lazy" 
+            decoding="async"
             src={`/images/sobre-el-autor/plan-municipal-de-desarrollo/${image}`} 
             alt={title}
             title={title}

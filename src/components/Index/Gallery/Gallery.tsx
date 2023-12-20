@@ -57,6 +57,8 @@ export default function Gallery () {
           {GalleryImages.map(({id, image, description}, index) => (
             <SwiperSlide key={id}>
               <img 
+                loading="lazy" 
+                decoding="async"
                 src={`/images/inicio/gallery/${image}`}
                 alt={description}
                 title={description}

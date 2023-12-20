@@ -38,6 +38,8 @@ const Carousel = () => {
               bg-cover bg-center rounded-xl relative">
               <a href={slide.link}>
                 <img 
+                  loading="lazy" 
+                  decoding="async"
                   className="w-full h-[300px] md:h-[400px] rounded-xl" 
                   src={`/images/inicio/carousel/${slide.image}`} 
                   alt={slide.description}
@@ -68,6 +70,8 @@ const Carousel = () => {
             className="text-center text-lg bg-white flex justify-center items-center bg-cover 
             bg-center w-[25%] h-full opacity-40 rounded-lg cursor-pointer">
             <img 
+              loading="lazy" 
+              decoding="async"
               className="w-full h-full rounded-lg" 
               src={`/images/inicio/carousel/${slide.image}`} 
               alt={slide.description}

@@ -10,6 +10,8 @@ import { sections } from './Sections-data.astro';
           delay-150 transform shadow-2xl rounded-xl md:-ml-16 md:hover:-translate-x-16 
           md:hover:-translate-y-8">
           <img 
+            loading="lazy" 
+            decoding="async"
             src={section.image} 
             alt={section.title}
             title={section.title} 
@@ -33,6 +35,8 @@ import { sections } from './Sections-data.astro';
       <swiper-slide class="relative flex justify-center items-center rounded font-bold text-2xl">
         <a href={section.link}>
           <img 
+            loading="lazy" 
+            decoding="async"
             src={section.image} 
             alt={section.title}
             title={section.title} 

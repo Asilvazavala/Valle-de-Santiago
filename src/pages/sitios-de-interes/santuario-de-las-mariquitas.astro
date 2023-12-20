@@ -53,6 +53,8 @@ const pathParts = pathname.split('/').filter(Boolean);
 
         {santuario.map(({title, image}) => (
           <img 
+            loading="lazy" 
+            decoding="async"
             src={`/images/sitios-de-interes/santuario-de-las-mariquitas/${image}`} 
             alt={title}
             title={title}
