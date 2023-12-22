@@ -32,13 +32,13 @@ export default function Hero () {
           >
             <a href={link}>
               <img 
-                className="w-full h-full object-cover absolute top-0 left-0 animate-scalePlus" 
+                className="w-full h-[90vh] object-cover absolute top-0 left-0 animate-scalePlus" 
                 src={`/images/inicio/carousel/${image}`} 
                 alt={description}
                 title={description}
               />
 
-                <div className="absolute transform z-40 font-MontserratAlternates bottom-28 w-[80vw] left-8 
+                <div className="absolute transform z-40 font-MontserratAlternates bottom-36 w-[80vw] left-8 
                  md:left-16 md:w-[50vw] lg:w-[40vw] md:top-1/2 md:-translate-y-1/2">
                   <article className="relative p-4 bg-gradient-to-br from-primary to-secondary
                   text-white text-xl md:text-3xl rounded-xl flex justify-center items-center gap-x-2

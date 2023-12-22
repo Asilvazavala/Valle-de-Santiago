@@ -19,7 +19,7 @@ export default {
 				scalePlus: {
 					'0%': { transform: 'scale(1)' },
           '100%': { transform: 'scale(1.1)' },
-				}
+				},
 			},
 			animation: {
         wiggle: 'wiggle 4s ease-in-out infinite',
