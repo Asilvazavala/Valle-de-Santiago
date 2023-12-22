@@ -1,25 +1,41 @@
-<footer class="bg-primary py-4 text-white font-medium w-full">
-  <section class="flex justify-center items-center">
-    <article class="flex flex-col text-center gap-y-4">
-      <div class="flex flex-col text-center lg:flex-row md:gap-x-20 gap-y-4">
-        <h3>2023 ©  Municipio de Valle de Santiago, Guanajuato</h3>
-        <h3>Autor: Antonio Silva Tavera | Diseño: José Antonio Silva Zavala</h3>
-      </div>
+<footer class="bg-primary py-20 md:py-8 text-white font-medium w-full relative">
+  <section class="containerSpace grid grid-cols-1 lg:grid-cols-3 gap-x-10 gap-y-12">
+    <article class="flex flex-col gap-1 justify-center items-center">
+      <h3>Autor: <span class="text-white/70">Antonio Silva Tavera</span></h3>
+      <h3>Diseño: <span class="text-white/70">José Antonio Silva Zavala</span></h3>
+      <a target="_blank" class="underline lg:hover:opacity-70 transition w-fit" href="mailto:asilvat@valledesantiago.org.mx">asilvat@valledesantiago.org.mx</a>
+    </article>
+   
+    <article class="flex flex-col gap-1 justify-center items-center">
+      <p>Valle de Santiago, Gto</p>
+      <p class="flex items-center gap-2"><i class="bx bx-envelope"></i>CP: 38400</p>
+      <a 
+        target="_blank"
+        href="https://www.google.com.mx/maps/place/Valle+de+Santiago,+Gto./@20.3937121,-101.2390669,13z/data=!3m1!4b1!4m6!3m5!1s0x842c8d0935957e15:0x3a870577baeca000!8m2!3d20.392169!4d-101.1900528!16s%2Fg%2F113qbm70p?entry=ttu" 
+        class="w-fit flex items-center gap-2">
+        <i class="bx bxs-map"></i><span class="underline lg:hover:opacity-70 transition">Ubicación</span>
+      </a>
+    </article>
 
-      <div class="flex flex-col lg:flex-row justify-between items-center gap-y-4">
-        <div class="flex items-start justify-center lg:justify-start gap-2 text-4xl">
-          <a href="https://www.facebook.com/elpaisdelassieteluminarias" target="_blank"><i class='bx bxl-facebook-circle cursor-pointer lg:hover:text-blue-500 transition-colors'></i></a>
-          <a href="https://twitter.com/antoniosilva61" target="_blank"><i class='bx bxl-twitter cursor-pointer lg:hover:text-blue-700 transition-colors'></i></a>
-          <a href="https://www.youtube.com/@AntonioSilvaTavera" target="_blank"><i class='bx bxl-youtube cursor-pointer lg:hover:text-red-500 transition-colors'></i></a>
-          <a href="https://www.instagram.com/asilvat" target="_blank"><i class='bx bxl-instagram cursor-pointer lg:hover:text-purple-500 transition-colors'></i></a>
-        </div>
-        <a 
-          href="https://valledesantiago.org.mx/" 
-          target="_blank"
-          class="underline lg:hover:opacity-70 transition w-fit"
-        >Echa un vistazo al sitio original
-        </a>
-      </div>
+    <article class="flex flex-col gap-1 justify-center items-center">
+      <aside class="flex items-center justify-center lg:justify-start gap-2 text-4xl">
+        <a href="https://www.facebook.com/elpaisdelassieteluminarias" target="_blank"><i class='bx bxl-facebook-circle cursor-pointer lg:hover:text-blue-500 transition-colors'></i></a>
+        <a href="https://twitter.com/antoniosilva61" target="_blank"><i class='bx bxl-twitter cursor-pointer lg:hover:text-blue-700 transition-colors'></i></a>
+        <a href="https://www.youtube.com/@AntonioSilvaTavera" target="_blank"><i class='bx bxl-youtube cursor-pointer lg:hover:text-red-500 transition-colors'></i></a>
+        <a href="https://www.instagram.com/asilvat" target="_blank"><i class='bx bxl-instagram cursor-pointer lg:hover:text-purple-500 transition-colors'></i></a>
+      </aside>
+      <a 
+        href="https://valledesantiago.org.mx/" 
+        target="_blank"
+        class="underline lg:hover:opacity-70 transition w-fit"
+      >Echa un vistazo al sitio original
+      </a>
     </article>
   </section>
+  <a 
+    href='#navbar' 
+    class="absolute bottom-2 right-2 md:bottom-8 md:right-8 px-2 py-1 lg:hover:bg-white/70 transition
+     bg-white rounded-full text-primary text-4xl">
+    <i class='bx bxs-chevron-up'></i>
+  </a>
 </footer>

@@ -1,16 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import VideoHero from '../components/Index/VideoHero.astro';
+import Hero from '../components/Index/Hero/Hero.tsx';
 import Sections from '../components/Index/Sections/Sections.astro';
 import Gallery from '../components/Index/Gallery/Gallery';
 import AboutPage from '../components/Index/AboutPage.astro';
-import Carousel from '../components/Index/Carousel/Carousel.tsx';
+import MapaValle from '../components/Index/MapaValle/MapaValle.tsx';
 ---
 
 <Layout title="El País de las 7 luminarias.">
-	<VideoHero />
+	<Hero client:visible />
 	<Sections />
 	<Gallery client:visible />
-	<Carousel client:visible />
+	<MapaValle client:only />
 	<AboutPage />
 </Layout>

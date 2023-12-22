@@ -1,7 +1,6 @@
 ---
 import Footer from '../components/Shared/Footer.astro';
-import Header from '../components/Shared/Header/Header.astro';
-import Navbar from '../components/Shared/Navbar/Navbar.astro';
+import Navbar from '../components/Shared/Navbar/Navbar.tsx';
 import { ViewTransitions } from 'astro:transitions';
 interface Props {
 	title: string;
@@ -29,8 +28,7 @@ const { title } = Astro.props;
 		<ViewTransitions />
 	</head>
 	<body>
-		<Header />
-		<Navbar />
+		<Navbar client:visible />
 		<slot />
 		<Footer />
 	</body>
@@ -53,6 +51,7 @@ const { title } = Astro.props;
 	html {
 		background: #fff;
 		background-size: 224px;
+		scroll-behavior: smooth;
 	}
 
 	html, body {
@@ -85,6 +84,19 @@ const { title } = Astro.props;
 		animation-timeline: scroll(root);
 		animation-range: 0 200px;
 	}
+
+	.animate-slide-up {
+  	animation: slideUp 7.5s ease-in-out;
+	}
+
+	@keyframes slideUp {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(10px, 50px, 0);
+  }
+}
 
 	@keyframes reveal {
   from {

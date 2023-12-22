@@ -1,4 +1,4 @@
-import { carouselData } from './Carousel-data.astro';
+import { carouselData } from './MapaValle-data.astro';
 import { useState } from 'react';
 import Title from '../../Shared/Title';
 
@@ -9,14 +9,14 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import { FreeMode, Navigation, Thumbs, Autoplay } from 'swiper/modules';
 
-const Carousel = () => {
+const MapaValle = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
     <div className="containerSpace mt-20 flex flex-col justify-center items-center scrollAnimation">
       <Title 
-        title='NOTICIAS' 
-        image={<i className="bx bx-news"></i>}
+        title='MAPA' 
+        image={<i className='bx bx-map-alt'></i>}
       />
 
       <Swiper
@@ -84,4 +84,4 @@ const Carousel = () => {
   )
 };
 
-export default Carousel;
+export default MapaValle;

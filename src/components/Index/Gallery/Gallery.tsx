@@ -62,7 +62,7 @@ export default function Gallery () {
                 src={`/images/inicio/gallery/${image}`}
                 alt={description}
                 title={description}
-                className='w-72 h-52 md:h-72 rounded-xl cursor-pointer'
+                className='w-72 h-52 md:h-72 rounded-xl cursor-pointer object-cover'
                 onClick={() => openModal(index)}
               />
             </SwiperSlide>

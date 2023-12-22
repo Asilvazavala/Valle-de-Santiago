@@ -24,8 +24,8 @@ export default {
 			colors: {
 				primary: "#9E3451",
 				secondary: "#691D33",
-				blueLight: "#008dff",
-				blueStrong: "#02256A",
+				// primary: "#008dff",
+				// secondary: "#02256A",
 				gray: "#A0A0A0"
 			},
 			fontFamily: {

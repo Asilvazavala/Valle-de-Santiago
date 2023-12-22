@@ -13,7 +13,7 @@ export default function NavbarMobile() {
   };
 
   return (
-    <header className="lg:hidden bg-primary py-3 md:px-6">
+    <header className="lg:hidden bg-primary py-3 md:px-6 fixed top-0 z-[9999] w-full">
       <section className="flex justify-between gap-3 items-center">
         <a href="/">
           <img 
