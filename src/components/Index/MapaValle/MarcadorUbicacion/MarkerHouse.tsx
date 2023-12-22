@@ -25,21 +25,19 @@ export function MarkerHouse(props: MarkerHouseProps) {
             <span className='mr-4 text-secondary'>
               <FaMapMarkedAlt />
             </span>
-            <h5 className='text-md text-secondary'>{name}</h5>
+            <h5 className='text-md text-secondary max-w-[150px]'>{name}</h5>
           </article>
 
           <img 
             src={`/images/inicio/gallery/${image}`}
             alt={name}
-            width={100}
-            height={100}
-            className='w-full h-auto mb-4 object-cover rounded'
+            className='w-full h-[130px] mb-4 object-cover rounded'
           />
 
           <a 
             href={`/properties/${id}`}
             style={{ color: 'white' }}
-            className='px-3 py-2 text-white rounded-lg bg-secondary transition-all hover:bg-black
+            className='px-3 py-2 text-white rounded-lg bg-secondary transition hover:bg-secondary/80
             w-full flex justify-center items-center'>
             Ver lugar
           </a>
