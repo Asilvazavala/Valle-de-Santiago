@@ -8,7 +8,7 @@ export function MarkerHouse(props: MarkerHouseProps) {
   const  { selectMarker } = props;
   const fnMap = useMap();
   const customIcon = icon({
-    iconUrl: '/assets/marker.svg',
+    iconUrl: '/images/general/marker.svg',
     iconSize: [40, 40]
   })
 

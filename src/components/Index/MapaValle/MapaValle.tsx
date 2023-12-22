@@ -18,7 +18,7 @@ export default function MapaValle() {
   }
 
   return (
-    <div className="containerSpace ">
+    <div className="containerSpace scrollAnimation">
       <div className='flex justify-center items-center'>
         <Title 
           title='MAPA' 
