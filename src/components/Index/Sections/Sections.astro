@@ -40,7 +40,7 @@ import { sections } from './Sections-data.astro';
             src={section.image} 
             alt={section.title}
             title={section.title} 
-            class="absolute inset-0 w-full h-full -z-10 rounded-xl"
+            class="absolute inset-0 w-full h-full -z-10 rounded-xl object-cover"
           />
           <h2 class="text-secondary/100 backdrop-blur-xl z-10 font-MontserratAlternates">
             {section.title}
@@ -51,4 +51,4 @@ import { sections } from './Sections-data.astro';
   </swiper-container>  
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<script defer async src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>

@@ -13,7 +13,7 @@ export default function Navbar() {
       fixed top-0 w-full'>
         <div className='py-4 containerSpace flex justify-between items-center relative'>
           <button 
-            onClick={() => setIsSidebarOpen(true)}
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
             className={`text-white font-medium hover:text-white/70 
             transition flex items-center justify-center ${isSidebarOpen && 'opacity-0'}`}>
             <i className='bx bx-menu-alt-left text-2xl'></i>
@@ -33,7 +33,7 @@ export default function Navbar() {
         }`}>
 
           {isSidebarOpen && 
-            <section className="lg:flex hidden relative z-50">
+            <section className="lg:flex hidden relative z-50 overflow-x-hidden">
               <button 
                 onClick={() => setIsSidebarOpen(false)}
                 className="absolute top-0 right-0 text-white hover:text-white/80 transition">
