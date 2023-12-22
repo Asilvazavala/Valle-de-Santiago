@@ -6,7 +6,7 @@ export default function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div id="navbar">
+    <div id="navbar" className='mb-16'>
       <header className='hidden lg:block z-[9998] bg-gradient-to-r from-primary to-secondary fixed top-0 w-full'>
         <div className='py-4 containerSpace flex justify-between items-center'>
           <button 
