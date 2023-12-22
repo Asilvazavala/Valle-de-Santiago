@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/effect-cube';
 import 'swiper/css/pagination';
 
-import { EffectCube, Pagination, Thumbs, FreeMode } from 'swiper/modules';
+import { EffectCube, Pagination, Thumbs, FreeMode, Navigation } from 'swiper/modules';
 
 interface ModalProps {
   onClose: () => void;
@@ -21,6 +21,7 @@ const Modal: React.FC<ModalProps> = ({
       <aside className="relative max-w-screen-md w-full overflow-hidden">
         <Swiper
           loop={true}
+          navigation
           effect={'cube'}
           freeMode={true}
           watchSlidesProgress={true}
@@ -31,14 +32,14 @@ const Modal: React.FC<ModalProps> = ({
             shadowOffset: 20,
             shadowScale: 0.94,
           }}
-          modules={[EffectCube, Pagination, Thumbs, FreeMode]}
+          modules={[EffectCube, Pagination, Thumbs, FreeMode, Navigation]}
           className="mySwiper w-full h-full"
           initialSlide={selectedImage ?? 0}
         >
           {GalleryImages.map(({ image, description, id }) => (
-            <SwiperSlide key={id} className='bg-center bg-cover'>
+            <SwiperSlide key={id} className='bg-center bg-cover lg:mt-20'>
               <img 
-                className='w-full h-[50vh] lg:h-[80vh]' 
+                className='w-full h-[50vh] lg:h-[80vh] ' 
                 src={`/images/inicio/gallery/${image}`} 
                 title={description}
                 alt={description}

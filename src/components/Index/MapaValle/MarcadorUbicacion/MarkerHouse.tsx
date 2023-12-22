@@ -35,7 +35,7 @@ export function MarkerHouse(props: MarkerHouseProps) {
           />
 
           <a 
-            href={`/properties/${id}`}
+            href="/sitios-de-interes/volcanes-y-hoyas"
             style={{ color: 'white' }}
             className='px-3 py-2 text-white rounded-lg bg-secondary transition hover:bg-secondary/80
             w-full flex justify-center items-center'>

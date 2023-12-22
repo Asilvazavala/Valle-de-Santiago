@@ -8,9 +8,20 @@ export default {
           '0%, 100%': { transform: 'rotate(-15deg)' },
           '50%': { transform: 'rotate(15deg)' },
         },
+				fadeIn: {
+					'0%': { opacity: '0' },
+          '100%': { opacity: '100' },
+				},
+				fadeOut: {
+					'0%': { opacity: '100' },
+          '100%': { opacity: '0' },
+				}
 			},
 			animation: {
         wiggle: 'wiggle 4s ease-in-out infinite',
+        fastWiggle: 'wiggle 1s ease-in-out infinite',
+        fadeIn: 'fadeIn .7s ease-in-out',
+        fadeOut: 'fadeOut .7s ease-in-out',
       },
 			boxShadow: {
         '3xl': 
@@ -22,10 +33,8 @@ export default {
 				`
       },
 			colors: {
-				primary: "#9E3451",
-				secondary: "#691D33",
-				// primary: "#008dff",
-				// secondary: "#02256A",
+				primary: "#304D30",
+				secondary: "#163020",
 				gray: "#A0A0A0"
 			},
 			fontFamily: {
