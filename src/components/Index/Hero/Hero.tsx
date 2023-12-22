@@ -11,6 +11,7 @@ export default function Hero () {
   return (
     <article className="h-screen">
       <Swiper
+        loop={true}
         spaceBetween={30}
         effect={'fade'}
         grabCursor={true}
@@ -20,7 +21,7 @@ export default function Hero () {
         modules={[EffectFade, Pagination, Autoplay]}
         className="mySwiper w-full h-screen p-12"
         autoplay={{
-          delay: 7500,
+          delay: 5500,
           disableOnInteraction: false,
         }}
       >
