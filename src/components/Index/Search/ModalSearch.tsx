@@ -8,7 +8,7 @@ const ModalSearch: React.FC<ModalSearchProps> = ({
   modalSearchOpen
 }) => {
   return (
-    <section className="fixed top-0 -left-6 lg:-left-16 w-screen h-screen flex items-center justify-center
+    <section className="fixed top-0 -left-4 lg:-left-16 w-screen h-screen flex items-center justify-center
      bg-white bg-opacity-100 overflow-hidden z-[9999]">
       <form 
         className={`flex flex-col gap-y-4 justify-center items-center w-full h-full relative transition

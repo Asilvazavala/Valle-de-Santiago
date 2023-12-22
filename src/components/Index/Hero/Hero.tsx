@@ -38,7 +38,7 @@ export default function Hero () {
                 title={description}
               />
 
-                <div className="absolute transform z-40 font-MontserratAlternates bottom-36 w-[80vw] left-8 
+                <div className="absolute transform z-40 font-MontserratAlternates bottom-44 w-[80vw] left-8 
                  md:left-16 md:w-[50vw] lg:w-[40vw] md:top-1/2 md:-translate-y-1/2">
                   <article className="relative p-4 bg-gradient-to-br from-primary to-secondary
                   text-white text-xl md:text-3xl rounded-xl flex justify-center items-center gap-x-2
