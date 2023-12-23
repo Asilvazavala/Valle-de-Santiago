@@ -25,13 +25,15 @@ export default function Hero () {
           disableOnInteraction: false,
         }}
       >
-        {heroData.map(({description, image, link}) => (
+        {heroData.map(({description, image, link}, index) => (
           <SwiperSlide 
             key={image} 
             className="bg-center bg-cover w-full relative overflow-hidden"
           >
             <a href={link}>
               <img 
+                loading="lazy" 
+                decoding="async"
                 className="w-full h-[90vh] object-cover absolute top-0 left-0 animate-scalePlus" 
                 src={`/images/inicio/carousel/${image}`} 
                 alt={description}

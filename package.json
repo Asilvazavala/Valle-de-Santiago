@@ -16,6 +16,7 @@
     "@types/react": "^18.2.42",
     "@types/react-dom": "^18.2.17",
     "astro": "^4.0.3",
+    "boxicons": "^2.1.4",
     "js-confetti": "^0.12.0",
     "leaflet": "^1.9.4",
     "react": "^18.2.0",
