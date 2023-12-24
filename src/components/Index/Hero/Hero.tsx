@@ -34,7 +34,7 @@ export default function Hero () {
               <img 
                 loading="lazy" 
                 decoding="async"
-                className="w-full h-[90vh] object-cover absolute top-0 left-0 animate-scalePlus" 
+                className="w-full h-[90vh] object-cover absolute top-0 left-0 animate-zoomIn" 
                 src={`/images/inicio/carousel/${image}`} 
                 alt={description}
                 title={description}

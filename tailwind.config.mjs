@@ -16,7 +16,7 @@ export default {
 					'0%': { opacity: '100' },
           '100%': { opacity: '0' },
 				},
-				scalePlus: {
+				zoomIn: {
 					'0%': { transform: 'scale(1)' },
           '100%': { transform: 'scale(1.1)' },
 				},
@@ -26,7 +26,7 @@ export default {
         fastWiggle: 'wiggle 1s ease-in-out infinite',
         fadeIn: 'fadeIn .7s ease-in-out',
         fadeOut: 'fadeOut .7s ease-in-out',
-        scalePlus: 'scalePlus 6s ease-in-out infinite',
+        zoomIn: 'zoomIn 6s ease-in-out infinite',
       },
 			boxShadow: {
         '3xl': 
