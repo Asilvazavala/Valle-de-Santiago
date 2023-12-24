@@ -37,7 +37,7 @@ export const GalleryImages: GalleryProps[] = [
   },
   {
     id: 7,
-    image: "santiago-apostol.jpeg",
+    image: "santiago-apostol.webp",
     description: "Santiago apóstol."
   },
   {
