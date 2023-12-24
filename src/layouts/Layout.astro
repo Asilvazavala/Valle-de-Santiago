@@ -41,13 +41,13 @@ const { title } = Astro.props;
 	}
 
 	::-webkit-scrollbar {
-  width: 12px;
-}
+  	width: 12px;
+	}
 
-::-webkit-scrollbar-thumb {
-  background-color: #304D30; 
-  border-radius: 6px;
-}
+	::-webkit-scrollbar-thumb {
+  	background-color: #304D30; 
+  	border-radius: 6px;
+	}
 
 	html {
 		background: #fff;
@@ -62,16 +62,6 @@ const { title } = Astro.props;
 	section {
 		margin: 0 64px;
 	}
-
-	@font-face {
-  font-family: 'Pacifico';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Pacifico Regular'), local('Pacifico-Regular'),
-    url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2)
-      format('woff2');
-  font-display: swap;
-}
 
 	.containerSpace {
 		width: 80%;
@@ -90,30 +80,17 @@ const { title } = Astro.props;
 		animation-range: entry 10% cover 40%;
 	}
 
-	.scrollAnimationTitle {
-		animation: enhance-header linear both;
-		animation-timeline: scroll(root);
-		animation-range: 0 200px;
-	}
-
 	@keyframes reveal {
-  from {
-    opacity: 0;
-    transform: translateY(70px) scale(0.5);
-  }
+		from {
+			opacity: 0;
+			transform: translateY(70px) scale(0.5);
+		}
 
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes enhance-header {
-  to {
-    background: rgba(0, 0, 0, .01);
-    backdrop-filter: blur(5px);
-  }
-}
+		to {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+		}
+	}
 
 	@media screen and (width < 800px) {
 		section {

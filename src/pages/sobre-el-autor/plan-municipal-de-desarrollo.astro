@@ -9,7 +9,7 @@ const pathParts = pathname.split('/').filter(Boolean);
 
 <Layout title="Plan municipal de desarrollo">
   <section>
-    <p class="text-gray mt-2">
+    <p class="text-gray pt-2">
       {pathParts.map((part, index) => (
         <span>
           {part}
@@ -18,11 +18,13 @@ const pathParts = pathname.split('/').filter(Boolean);
       ))}
     </p>
 
-    <main class="mt-8 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+    <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
       <article class="md:col-span-2">
-        <h2 class="scrollAnimationTitle sticky top-0 left-0 text-3xl text-MontserratAlternates text-primary font-semibold uppercase mb-8">
-          SAM - SERVICIOS Y ASESORÍAS PARA MUNICIPIOS
-        </h2>
+        <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mb-4 relative w-fit">
+            SAM - SERVICIOS Y ASESORÍAS PARA MUNICIPIOS
+          <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
+        </aside>
 
         <h5 class="mb-4 text-lg font-semibold">Somos un organismo integrado por profesionales con alta capacitación y experiencia en las especialidades de:</h5>
         <ul class="list-disc pl-8 mb-4">

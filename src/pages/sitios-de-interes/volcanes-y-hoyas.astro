@@ -9,7 +9,7 @@ const pathParts = pathname.split('/').filter(Boolean);
 
 <Layout title="Volcanes y hoyas">
   <section>
-    <p class="text-gray mt-2">
+    <p class="text-gray pt-2">
       {pathParts.map((part, index) => (
         <span>
           {part}
@@ -18,12 +18,13 @@ const pathParts = pathname.split('/').filter(Boolean);
       ))}
     </p>
 
-    <main class="mt-8 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+    <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
       <article class="md:col-span-2">
-        <h2 class="scrollAnimationTitle sticky top-0 left-0 text-3xl text-MontserratAlternates text-primary font-semibold uppercase">
-          Volcanes y hoyas
-        </h2>
-        <h4 class="text-black/60 text-sm mb-8">Por: Antonio Silva Tavera</h4>
+        <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mb-4 relative w-fit">
+            Volcanes y hoyas
+          <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
+        </aside>
         
         <h3 class="font-semibold text-lg mb-4">DESCRIPCIÓN DE LOS VOLCANES DE VALLE DE SANTIAGO</h3>
         <p class="mb-4">El campo volcánico de Michoacán-Guanajuato, en general, contiene más de 1400 aparatos volcánicos, incluidos los conos de escoria históricamente activos de Paricutín y Jorullo, este campo cubre un área de aproximadamente 200 x 250 km de los Estados de Michoacán y Guanajuato en el centro-oeste de México. Los denominados conos de escoria son la forma predominante de origen volcánico, pero pequeños volcanes, domos de lava, maars y anillos de Toba (muchos en el área de Valle de Santiago), y flujos de lava sin aparato implosivo también están presentes. Los volcanes son en su mayoría del Pleistoceno [1] y morfologías similares a pequeños volcanes de tipo islandés, aunque los escudos de Michoacán-Guanajuato tienen ángulos de inclinación mayor y menores diámetros basales que aquellos. El de Jorullo, que surgió en el siglo XVIII, y el de Paricutín, que creció por encima de un maizal durante 1943-52, son los dos más conocidos de los aproximadamente 1400 volcanes pequeños diseminados por el campo volcánico.</p>
