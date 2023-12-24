@@ -20,7 +20,9 @@ export default function NavbarMobile() {
         <Confetti />
 
         <aside className="flex gap-x-2">
-          <Search />
+          <div className={`${isMenuOpen && 'hidden'} flex`}>
+            <Search />
+          </div>
 
           <i
             onClick={() => setIsMenuOpen(!isMenuOpen)} 
@@ -30,7 +32,7 @@ export default function NavbarMobile() {
 
           <i
             onClick={() => setIsMenuOpen(!isMenuOpen)}  
-            className={`bx bx-x scale-0 text-4xl text-white z-50 fixed top-4 right-4 transition 
+            className={`bx bx-x scale-0 text-4xl text-white z-50 fixed top-[14px] right-4 transition 
             duration-700 ${isMenuOpen ?"scale-100 block delay-200" : "delay-0"}`}>
           </i>
         </aside>
@@ -43,8 +45,8 @@ export default function NavbarMobile() {
               {item.href !== ''
                 ? <li className="flex w-full text-2xl py-2
                   border-b border-white px-8">
-                    <a href={item.href} className="w-full text-white flex items-center gap-x-2">
-                      <span className="text-white" dangerouslySetInnerHTML={{ __html: item.image }}></span>
+                    <a href={item.href} className="w-full text-white flex justify-start items-center gap-x-2">
+                      <span className="text-white flex" dangerouslySetInnerHTML={{ __html: item.image }}></span>
                       {item.title}
                     </a>
                   </li>
@@ -55,11 +57,11 @@ export default function NavbarMobile() {
                       className="flex justify-between items-center"
                       onClick={() => toggleSubmenu(index)}
                     >
-                      <div className="flex justify-center items-center gap-x-2">
-                        <span className="text-white" dangerouslySetInnerHTML={{ __html: item.image }}></span>
+                      <div className="flex justify-start items-center gap-x-2">
+                        <span className="text-white flex" dangerouslySetInnerHTML={{ __html: item.image }}></span>
                         <span>{item.title}</span>
                       </div>
-                      <span className="text-white" dangerouslySetInnerHTML={{ __html: item.icon }}></span>
+                      <span className="text-white flex" dangerouslySetInnerHTML={{ __html: item.icon }}></span>
 
                     </article>
 

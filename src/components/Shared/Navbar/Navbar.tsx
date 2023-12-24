@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div id="navbar" className='mb-16'>
+    <div id="navbar" className='mb-16 lg:mb-20'>
       <header className='hidden lg:block z-[9998] bg-gradient-to-r from-primary to-secondary 
       fixed top-0 w-full'>
         <div className='py-4 containerSpace flex justify-between items-center relative'>
@@ -47,15 +47,15 @@ export default function Navbar() {
                         ? <a href={link.href}>
                             <li className="flex items-center justify-center gap-x-2 py-3
                               border-transparent border-b-[3px] lg:hover:border-b-white transition-colors">
-                              <span className="flex items-center justify-center text-xl" dangerouslySetInnerHTML={{ __html: link.image }}></span>
+                              <span className="flex text-xl" dangerouslySetInnerHTML={{ __html: link.image }}></span>
                               {link.title}
                             </li>
                           </a>
                         : <li className="flex items-center justify-center gap-x-2 py-3 group relative w-fit
                             border-transparent border-b-[3px] lg:hover:border-b-white transition-colors">
-                            <span className="flex items-center justify-center text-xl" dangerouslySetInnerHTML={{ __html: link.image }}></span>
+                            <span className="flex text-xl" dangerouslySetInnerHTML={{ __html: link.image }}></span>
                             {link.title}
-                            <span className="flex items-center justify-center" dangerouslySetInnerHTML={{ __html: link.icon }}></span>
+                            <span className="flex" dangerouslySetInnerHTML={{ __html: link.icon }}></span>
                             
                             {link.submenu.length > 0 && (
                               <ul className="group-hover:block absolute hidden top-12 bg-primary 

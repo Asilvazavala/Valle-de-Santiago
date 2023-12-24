@@ -44,7 +44,7 @@ export default function Hero () {
                  md:left-16 md:w-[50vw] lg:w-[40vw] md:top-1/2 md:-translate-y-1/2">
                   <article className="relative p-4 bg-gradient-to-br from-primary to-secondary
                   text-white text-xl md:text-3xl rounded-xl flex justify-center items-center gap-x-2
-                  opacity-90 lg:opacity-80 lg:hover:opacity-100 transition">
+                  opacity-80 lg:opacity-80 lg:hover:opacity-100 transition">
                     {description}
                     <aside className="absolute inset-0 border-4 border-primary rounded-xl"></aside>
                   </article>
