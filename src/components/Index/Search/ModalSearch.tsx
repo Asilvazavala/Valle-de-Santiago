@@ -1,3 +1,6 @@
+import { searchData, type searchDataProps } from './search-data.astro';
+import { useState } from 'react';
+
 interface ModalSearchProps {
   onClose: () => void;
   modalSearchOpen: boolean;
@@ -7,33 +10,97 @@ const ModalSearch: React.FC<ModalSearchProps> = ({
   onClose,
   modalSearchOpen
 }) => {
+  const [currentSearch, setCurrentSearch] = useState('');
+  const [searchResults, setSearchResults] = useState<searchDataProps[]>([]);
+  const [isSearching, setIsSearching] = useState(false);
+
+  const handleSearch = (query: string) => {
+    if (query.trim() !== '') {
+      const newSearch = searchData.filter(
+        (search) => search.title.toLowerCase().includes(query.toLowerCase()));
+      setSearchResults(newSearch);
+    } else {
+      setSearchResults([]);
+    }
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    handleSearch(currentSearch);
+    setIsSearching(true);
+    e.stopPropagation();
+  };
+
+  const handleChange = (e) => {
+    setCurrentSearch(e.target.value);
+    setIsSearching(false);
+  }
+
   return (
     <section className="fixed top-0 -left-4 lg:-left-16 w-screen h-screen flex items-center justify-center
-     bg-white bg-opacity-100 overflow-hidden z-[9999]">
+     bg-white bg-opacity-100 overflow-x-hidden z-[9999]">
       <form 
-        className={`flex flex-col gap-y-4 justify-center items-center w-full h-full relative transition
-           ${modalSearchOpen ? 'animate-fadeIn' : 'animate-fadeOut'}`}
-        id="handleSubmit"
+        onSubmit={handleSubmit}
+        className={`flex flex-col gap-y-4 justify-start items-center w-full h-full relative 
+        transition overflow-x-hidden
+        ${modalSearchOpen ? 'animate-fadeIn' : 'animate-fadeOut'}`}
       >
-        <header className="flex justify-center items-center">
-          <input 
-            type="text" 
-            title="Buscar"
-            placeholder="¿Qué estás buscando?"
-            className="px-4 py-2 w-[75vw] md:w-[40vw] outline-none text-xl border-b-gray 
-            border-b-2 font-medium md:text-2xl"
-          />
+        <header className="flex justify-center items-center mt-16 w-full">
+          <div className="flex justify-center items-center w-full">
+            <input 
+              type="text" 
+              title="Buscar"
+              placeholder="¿Qué estás buscando?"
+              className="px-4 py-2 w-[75vw] md:w-[40vw] outline-none text-xl border-b-gray 
+              border-b-2 font-medium md:text-2xl"
+              onChange={(e) => setCurrentSearch(e.target.value)}
+            />
+            
+            <button type="submit">
+              <i className='bx bx-search text-secondary text-3xl lg:text-4xl cursor-pointer'></i>
+            </button>
+          </div>
           
-          <i className='bx bx-search text-secondary text-3xl lg:text-4xl cursor-pointer'></i>
+          <i 
+            onClick={onClose} 
+            className='bx bx-x-circle text-5xl cursor-pointer absolute top-0 right-5 text-primary transition  
+            md:right-28 lg:hover:text-primary/80 md:text-6xl md:top-14 lg:top-0 lg:relative'>  
+          </i>
         </header>
 
-        <i 
-          onClick={onClose} 
-          className='bx bx-x-circle text-5xl  cursor-pointer absolute top-5 right-5 text-primary transition  
-          md:right-28 lg:hover:text-primary/80 md:text-6xl '>  
-        </i>
-        
-        <span className="flex flex-col text-center md:text-sm text-xs text-gray max-w-[75vw] lg:max-w-[40vw]">Escribe lo que estás buscando y presiona "Enter" o la lupa para buscar o bien, "Esc" para cancelar</span>
+        {currentSearch.length < 1 &&
+          <span className="flex flex-col text-center md:text-sm text-xs text-gray max-w-[75vw] lg:max-w-[40vw]">
+            Escribe lo que estás buscando y presiona "Enter" o la lupa para buscar
+          </span>
+        }
+
+        {isSearching && searchResults.length > 0 && (
+          <div className={`mt-2 px-4 md:px-0 
+          ${currentSearch.length > 0 ? 'animate-fadeIn' : 'animate-fadeOut'}`}>
+            <h2 className="font-medium text-black/50 mb-2">
+              {searchResults.length} {searchResults.length === 1 ? 'Resultado' : 'Resultados'}
+            </h2>
+            <ul>
+              {searchResults.map(({ title, description, href}, index) => (
+                <li key={index} className='flex max-[600px]:max-w-xs max-w-3xl border-b border-b-gray pb-2 mb-10'>
+                  <header className='flex flex-col'>
+                    <h3 className='text-primary text-xl font-semibold'>{title}</h3>
+                    <p className='text-sm line-clamp-2'>{description}</p>
+                    <a href={href} className='font-bold underline lg:hover:text-black/70 transition'>
+                      Ver más...
+                    </a>
+                  </header>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {isSearching && searchResults.length === 0 && (
+          <span className='w-fit text-red-800 bg-red-400 text-center font-medium px-4 py-2 rounded-full animate-fadeIn'>
+            No hay resultados de esta búsqueda
+          </span>
+        )}
       </form>
     </section>
   )
