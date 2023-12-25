@@ -5,14 +5,10 @@ import { descubreCentroHistorico } from '../../components/Sitios-de-interes/desc
 
 <Layout title="Descubre tu centro histórico">
   <section>
-    <a href="/" class="text-gray pt-2 flex justify-start items-center gap-x-1 w-fit">
-      <i class='bx bx-chevrons-left'></i> Regresar
-    </a>
-
     <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
       <article class="md:col-span-2">
         <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
-        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mb-4 relative w-fit">
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mt-6 mb-4 relative w-fit">
             Descubre tu centro histórico
           <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
         </aside>
@@ -38,9 +34,12 @@ import { descubreCentroHistorico } from '../../components/Sitios-de-interes/desc
         <p class="mb-4">Sumario: Se presenta un plano de la ciudad de Valle de Santiago con su fortificación, en la que se incluyen "la parroquia y varias capillas" e incluye las siguientes notas: "Todo lo que va de media tinta es lo que los rebeldes han destruido; y lo más obscuro es lo que está levantado. Por la parte del poniente sigue un arrabal adonde [está] situado el combento de la Merced, que por estar fuera de toda la fortificación no se han puesto". Al verso anotado en tinta de bugalla: "Santiago" y a lápiz: "Nº 58".</p>
         <p class="mb-4">En la segunda imagen de abajo, es de advertirse que los nombres de las calles que aparecen son los actuales, se observa claramente la desolación que tenía el actual centro histórico a principios de 1818, producto de la guerra de independencia, la cual era terrible y evidente. Las áreas mostradas en negro eran las únicas que se mantenían, medianamente, en pie. Así, a principios del siglo XIX, más del 80 % del centro estaba en ruinas (destruido por los independentistas, a decir de los españoles).</p>
         <p class="mb-4">Otro asunto interesante que se desprende del levantamiento de Manuel Sancho, es la descrita por nuestro citado Baltasar Castillo, en la extensión del ahora llamado Portal Hidalgo, donde se ubica la Presidencia Municipal, hacia el oriente. Coincide con uno de los bastiones que se edificaron para la defensa y, suponemos por ello, deben de existir algunos vestigios ahí.</p>
+        <a href="/" class="text-gray flex justify-start items-center gap-x-1 w-fit mb-6">
+          <i class='bx bx-chevrons-left'></i> Regresar
+        </a>
       </article>
 
-      <aside class="md:col-span-1 flex flex-col gap-y-8">
+      <aside class="md:col-span-1 flex flex-col gap-y-8 lg:mt-6">
         {descubreCentroHistorico.map(({title, image}) => (
           <img 
             loading="lazy" 

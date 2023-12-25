@@ -5,14 +5,10 @@ import { poblacion } from '../../components/Sobre-valle/poblacion-data.astro';
 
 <Layout title="Población">
   <section>
-    <a href="/" class="text-gray pt-2 flex justify-start items-center gap-x-1 w-fit">
-      <i class='bx bx-chevrons-left'></i> Regresar
-    </a>
-
     <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
       <article class="md:col-span-2">
         <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
-        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mb-4 relative w-fit">
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mt-6 mb-4 relative w-fit">
             Población
           <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
         </aside>
@@ -35,9 +31,12 @@ import { poblacion } from '../../components/Sobre-valle/poblacion-data.astro';
         <h5 class="mb-4 text-lg font-semibold">CONCLUSIONES</h5>
         <p class="mb-4">En la anterior gráfica se compara la población por grupos quinquenales de edad correspondiente a los años 1990 y 2010, donde se aprecia que la población perteneciente a los grupos de edad ubicados de 0 a 24 años ha disminuido en un periodo de 20 años, mientras que la población de los grupos de edad a partir de los 25 años presentaron crecimiento. Esto abre para el municipio la oportunidad de tener una mayor cantidad de mano de obra y un alto potencial de ahorro, pero además trae consigo retos, particularmente en materia geriátrica, gerontológica y de empleo, como ya se señalaba.</p>
         <p class="mb-4">La razón de dependencia es de 60.5, lo que quiere decir que por cada 100 personas en edad productiva, de 15 a 64 años, hay 60 en edad de dependencia, menores de 15 años y de 65 años y más.</p>
+        <a href="/" class="text-gray flex justify-start items-center gap-x-1 w-fit mb-6">
+          <i class='bx bx-chevrons-left'></i> Regresar
+        </a>
       </article>
 
-      <aside class="md:col-span-1 flex flex-col gap-y-8">
+      <aside class="md:col-span-1 flex flex-col gap-y-8 lg:mt-6">
         {poblacion.map(({title, image}) => (
           <img 
             loading="lazy" 

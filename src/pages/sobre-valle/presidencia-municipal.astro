@@ -5,14 +5,10 @@ import { presidenciaMunicipal } from '../../components/Sobre-valle/presidencia-m
 
 <Layout title="Presidencia municipal">
   <section>
-    <a href="/" class="text-gray pt-2 flex justify-start items-center gap-x-1 w-fit">
-      <i class='bx bx-chevrons-left'></i> Regresar
-    </a>
-
     <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
       <article class="md:col-span-2">
         <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
-        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mb-4 relative w-fit">
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mt-6 mb-4 relative w-fit">
             Presidencia municipal
           <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
         </aside>
@@ -32,9 +28,12 @@ import { presidenciaMunicipal } from '../../components/Sobre-valle/presidencia-m
         <p class="mb-4">Los artistas Silvia Derbez y Eugenio Derbez, el político Luís Ernesto Derbez, secretario de relaciones exteriores en el gobierno foxista, son personajes descendientes de los barcelonetas y, seguramente, de nuestro personaje motivo de la narración actual.</p>
         <p class="mb-4">Existe la creencia entre el personal administrativo más antiguo en el edificio de la presidencia que hay una persona del sexo masculino, de aspecto circunspecto y entrado en años, que suele aparecerse por las noches en el inmueble y gritar de manera apenas audible, mientras recorre los diferentes espacios principalmente en planta alta, algo así como "tusonvoleg", que bien pudiera ser "tous sont voleurs" que en francés significa "todos son unos rateros". No se sabe bien a bien a qué o a quiénes se refiere.</p>
         <p class="mb-4">Finalmente, fueron tan importantes los recursos y la influencia cultural de los emigrados para el valle de la Barcelonnette que actualmente se celebra Le Jour du Mexique (el Día de México) con uno de los más rumbosos festivales de la región, el teatro principal se llama "El Zócalo" (así, en español) y varias de las residencias más ostentosas recuerdan a México por su estilo y sus materiales.</p>
+        <a href="/" class="text-gray flex justify-start items-center gap-x-1 w-fit mb-6">
+          <i class='bx bx-chevrons-left'></i> Regresar
+        </a>
       </article>
 
-      <aside class="md:col-span-1 flex flex-col gap-y-8">
+      <aside class="md:col-span-1 flex flex-col gap-y-8 lg:mt-6">
         {presidenciaMunicipal.map(({title, image}) => (
           <img 
             loading="lazy" 

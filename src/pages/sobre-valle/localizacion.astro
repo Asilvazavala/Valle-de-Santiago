@@ -5,14 +5,10 @@ import { localizacion } from '../../components/Sobre-valle/localizacion-data.ast
 
 <Layout title="Localización">
   <section>
-    <a href="/" class="text-gray pt-2 flex justify-start items-center gap-x-1 w-fit">
-      <i class='bx bx-chevrons-left'></i> Regresar
-    </a>
-
     <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
       <article class="md:col-span-2">
         <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
-        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mb-4 relative w-fit">
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mt-6 mb-4 relative w-fit">
             Localización
           <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
         </aside>
@@ -27,9 +23,12 @@ import { localizacion } from '../../components/Sobre-valle/localizacion-data.ast
         <p class="mb-4">Esta superficie es de acuerdo con el Marco Geoestadístico Municipal 2010 del INEGI. Sin embargo, es anecdótico reseñar las diferentes superficies atribuidas al municipio: Fulgencio Vargas en “Camémbaro, monografía del municipio de Valle de Santiago, Gto.” de 1935 le atribuye 698.89 km2; Higinio Vázquez Vera en “Monografía de Valle de Santiago” de 1973 señala 819.94 km2; un escritor reciente, Óscar Cortés (“Monografía de Valle de Santiago”, 2002), asienta una superficie de 835.74 km2. El Sistema Nacional de Información Municipal (SNIM), 835.70 km2; el INAFED, dependiente de la Secretaría de Gobernación federal, en su sitio <a href="www.e-local.gob.mx" target="_blank" class="text-gray underline">e-local/</a> señala 815.52 km2; La Coordinación de Protección Civil de la Secretaría de Seguridad Pública del Estado apunta 842.21 km2 como superficie del municipio y el Plan Municipal de Desarrollo de Valle de Santiago de 2004 anota 764.73 km2.</p>
         <p class="mb-4">INEGI. Prontuario de información geográfica municipal de los Estados Unidos Mexicanos. Valle de Santiago, Guanajuato, clave geoestadística 11042. México, 2009.</p>
         <p class="mb-4">Fuente: INEGI, Marco Geoestadístico Nacional, Catálogo de claves de entidades federativas, municipios y localidades, consultado el 5 de marzo de 2013 en <a href="http://www.inegi.org.mx/geo/contenidos/geoestadistica/catalogoclaves.aspx" class="text-gray underline" target="_blank">INEGI</a> Las coordenadas y la altura sobre el nivel del mar son referidas al centroide de la mancha urbana, un punto que se ubica aproximadamente al centro de la manzana delimitada por las calles Álvaro Obregón al norte, Vicente Guerrero al sur, Petróleos al oriente y José Ma. Magaña al poniente.</p>
+        <a href="/" class="text-gray flex justify-start items-center gap-x-1 w-fit mb-6">
+          <i class='bx bx-chevrons-left'></i> Regresar
+        </a>
       </article>
 
-      <aside class="md:col-span-1 flex flex-col gap-y-8">
+      <aside class="md:col-span-1 flex flex-col gap-y-8 lg:mt-6">
         {localizacion.map(({title, image}) => (
           <img 
             loading="lazy" 

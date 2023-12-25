@@ -5,14 +5,10 @@ import { hoteles } from '../../components/Sobre-valle/hoteles-data.astro';
 
 <Layout title="Hoteles">
   <section>
-    <a href="/" class="text-gray pt-2 flex justify-start items-center gap-x-1 w-fit">
-      <i class='bx bx-chevrons-left'></i> Regresar
-    </a>
-
     <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
       <article class="md:col-span-2">
         <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
-        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mb-4 relative w-fit">
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mt-6 mb-4 relative w-fit">
             Hoteles
           <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
         </aside>
@@ -59,9 +55,12 @@ import { hoteles } from '../../components/Sobre-valle/hoteles-data.astro';
           <li>Capacidad: 17 habitaciones</li>
           <li>Otros: Habitaciones con TV. Ubicado a una cuadra del centro de la ciudad. Estacionamiento propio y restaurant.</li>
         </ul>  
+        <a href="/" class="text-gray flex justify-start items-center gap-x-1 w-fit mb-6">
+          <i class='bx bx-chevrons-left'></i> Regresar
+        </a>
       </article>
 
-      <aside class="md:col-span-1 flex flex-col gap-y-8">
+      <aside class="md:col-span-1 flex flex-col gap-y-8 lg:mt-6">
         {hoteles.map(({title, image}) => (
           <img 
             loading="lazy" 

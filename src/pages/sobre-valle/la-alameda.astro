@@ -5,14 +5,10 @@ import { laAlameda } from '../../components/Sobre-valle/la-alameda-data.astro';
 
 <Layout title="La alameda">
   <section>
-    <a href="/" class="text-gray pt-2 flex justify-start items-center gap-x-1 w-fit">
-      <i class='bx bx-chevrons-left'></i> Regresar
-    </a>
-
     <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
       <article class="md:col-span-2">
         <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
-        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mb-4 relative w-fit">
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mt-6 mb-4 relative w-fit">
             La alameda
           <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
         </aside>
@@ -30,9 +26,12 @@ import { laAlameda } from '../../components/Sobre-valle/la-alameda-data.astro';
         <h5 class="mb-4 text-lg font-semibold">Leyenda: La marrana y sus puerquitos.</h5>
         <p class="mb-4">Se comenta popularmente que por las noches una piara de cerdos sale de su refugio, en un lugar no descubierto aún, comandados por una enorme cerdo hembra seguida por sus cerditos en busca de comida. Gusta esconderse entre las sombras lóbregas de la vegetación de la Alameda y atacar principalmente a niños solos que tiene la ocurrencia de atravesar a esas horas el sitio.</p>
         <p class="mb-4">Esta leyenda ha perdurado durante varias generaciones sin que nadie sepa hasta ahora si es la misma piara que inexplicablemente ha sobrevivido a través de los años o también existe la reencarnación entre los cerdos, algo por demás raro o es una historia inventada por padres para evitar que sus hijos anden a deshoras por esos rumbos.</p>
+        <a href="/" class="text-gray flex justify-start items-center gap-x-1 w-fit mb-6">
+          <i class='bx bx-chevrons-left'></i> Regresar
+        </a>
       </article>
 
-      <aside class="md:col-span-1 flex flex-col gap-y-8">
+      <aside class="md:col-span-1 flex flex-col gap-y-8 lg:mt-6">
         {laAlameda.map(({title, image}) => (
           <img 
             loading="lazy" 

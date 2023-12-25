@@ -1,0 +1,78 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { autoria } from '../../components/Sobre-el-autor/autoria-data.astro';
+---
+
+<Layout title="Autoría">
+  <section>
+    <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+      <article class="md:col-span-2">
+        <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mt-6 mb-4 relative w-fit">
+            Autoría
+          <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
+        </aside>
+        <h3 class="font-semibold text-lg mb-4">A PROPÓSITO DEL AUTOR</h3>
+
+        <p class="mb-4">El arquitecto Antonio Silva Tavera nació en 1961 en la ciudad de León, Gto., pero ha radicado desde casi siempre en esta bella zona del sur del estado de Guanajuato. El autor cuenta con la licenciatura en arquitectura desde 1984 y dos maestrías: en Administración de la Construcción y en Gestión Pública Aplicada y la especialidad en Ingeniería Catastral. Ha tomado multitud de cursos de toda índole y una mayor cantidad de cosas sin terminar (como la presente) según certifican cuadros colgados en muros, según hacen constar papeles regados en diversos cajones, bajo colchones y en los más absurdos e inimaginables sitios.</p>
+        <p class="mb-4">Pues resulta que dentro de todo ese mare magnum también le ha dado al autor por "hacerle al cuento" en el mundillo de la computación y, más específicamente, en la onda ciberespacial desde hace 20 años. Y heme aquí, escribiendo desaciertos y pretendiendo hacer lo que no sé hacer.</p>
+        <p class="mb-4">De lo que sí estoy cierto es que quiero profundamente a mi pueblo y aprecio a su gente. También tengo la seguridad que su difusión por este enorme "ojo electrónico", que es la Internet, en algo habrá de beneficiarle.</p>
+        <p class="mb-4">De esta misma manera y de esta misma forma quisiera agradecer a todos aquellos que me alentaron a adentrarme en este trabajo (aunque no sé si debiera puesto que exige demasiado), también a aquellos que colaboraron con sus trabajos (algunos, los menos, de manera involuntaria y quizás forzados); no podría olvidar, ya andando en estos asuntos tan espinosos de los agradecimientos, las excepcionales lecciones de vida que he recibido de mi familia. Pero mucho más que esto y más allá de todo a mis dos hijos, José Antonio y Vicente Augusto, y a Laura, la más hermosa mujer que haya venido del sur. Punto.</p>
+        <h5 class="mt-4 text-lg font-semibold">Síntesis Currículum Académico</h5>
+        <ul class="list-disc pl-8 mb-4">
+          <li>1979-1984 Licenciado en Arquitectura en la Universidad de Guanajuato</li>
+          <li>1982-1983 Estudios de arquitectura en la Université Laval en Quebéc, Canadá</li>
+          <li>1985-1987 Obtención del Certificat de Langue Francaise de la Federación de Alianzas Francesas</li>
+          <li>1988-2005 Cursos varios de computación (Sistemas Operativos, AutoCAD, AutoCAD Architecture, Estructuras CYPE, Precios Unitarios Neodata, Programación en Visual Basic, etc.)</li>
+          <li>1989-1991 Cursos de teoría musical</li>
+          <li>1997-1998 Estudios en la Especialidad en Valuación Inmobiliaria, Facultad de Topografía de la Universidad de Guanajuato</li>
+          <li>1999-2000 Diplomado para Empresarios no Financieros impartido por CUDEN/CMIC</li>
+          <li>2002-2003 Diplomado de Marketing Político por Internet (Universidad El Príncipe de Buenoa Aires y la Universidad de Georgetown en Washington, D.C.)</li>
+          <li>2003- Obtención del reconocimiento al Profesionista Colegiado Distinguido otorgado por el Gobierno del Estado de Guanajuato a través de la Secretaría de Educación Estatal</li>
+          <li>2004-2005 Diplomado en Técnicas Digitales Avanzadas de Representación Arquitectónica en la Universidad Iberoamericana campus León</li>
+          <li>2004-2006 Maestría en Gestión Pública Aplicada en el ITESM campus Irapuato obtenida con mención honorífica de excelencia</li>
+          <li>2006- Diplomado en Planeación Urbana y Gestión del Suelo en las Ciudades Mexicanas impartido por el Lincoln Institute of Land Policy y la Secretaría de Desarrollo Social (SEDESOL)</li>
+          <li>2007-2009 Maestría en Administración de la Construcción por el Instituto Tecnológico de la Construcción (CMIC) - en proceso de titulación</li>
+          <li>2008-2009 Especialidad en Ingeniería Catastral por la Universidad Autónoma de Querétaro y el Lincoln Institute of Land Policy de Massachusetts - en proceso de tesina</li>
+          <li>2010- Curso sobre Definición de Políticas de Suelo en Pequeñas Ciudades impartido online por el Lincoln Institute of Land Policy de Massachusetts</li>
+          <li>2010- Reconocimiento como Profesionista Colegiado Distinguido del año del Bicentenario otorgado por el Gobierno del Estado de Guanajuato</li>
+        </ul>
+        <h5 class="mt-4 text-lg font-semibold">Experiencia Obra Privada</h5>
+        <ul class="list-disc pl-8 mb-4">
+          <li>(1986) Estudio y diseño de estaciones del sistema Interurbano de Transporte del estado de Guanajuato en la Secretaría de Programación del mismo estado.</li>
+          <li>(1988) Lotificación de fraccionamientos urbanos en la ciudad de Valle de Santiago, Gto.</li>
+        </ul>
+        <h5 class="mt-4 text-lg font-semibold">Diseño y construcción de:</h5>
+        <ul class="list-disc pl-8 mb-4">
+          <li>Casas habitación en la ciudad de Valle de Santiago, Gto.</li>
+          <li>Locales para comercio en la misma ciudad.</li>
+          <li>Edificios de departamentos en la misma ciudad.</li>
+        </ul>
+        <h5 class="mt-4 text-lg font-semibold">Experiencia Obra Pública</h5>
+        <ul class="list-disc pl-8 mb-4">
+          <li>28 aulas tipo CAPFCE para escuela primaria rural en diferentes localidades.</li>
+          <li>6 servicios sanitarios rurales para escuela.</li>
+          <li>3 Canchas de Usos Múltiples (2000)</li>
+          <li>1 Módulo Deportivo (2001)</li>
+          <li>1 Oficinas administrativas Unidad Deportiva Jaral del Progreso, Gto. (1999)</li>
+        </ul>
+        <a href="/" class="text-gray flex justify-start items-center gap-x-1 w-fit mt-4 mb-6">
+          <i class='bx bx-chevrons-left'></i> Regresar
+        </a>
+      </article>
+
+      <aside class="md:col-span-1 flex flex-col gap-y-8 lg:mt-6">
+        {autoria.map(({title, image}) => (
+          <img 
+            loading="lazy" 
+            decoding="async"
+            src={`/images/sobre-el-autor/autoria/${image}`} 
+            alt={title}
+            title={title}
+            class="w-full h-44 rounded object-contain"
+          />
+        ))}
+      </aside>
+    </main>
+  </section>
+</Layout>

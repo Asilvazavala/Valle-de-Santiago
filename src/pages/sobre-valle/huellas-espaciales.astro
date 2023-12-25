@@ -5,14 +5,10 @@ import { huellasEspaciales } from '../../components/Sobre-valle/huellas-espacial
 
 <Layout title="Huellas espaciales">
   <section>
-    <a href="/" class="text-gray pt-2 flex justify-start items-center gap-x-1 w-fit">
-      <i class='bx bx-chevrons-left'></i> Regresar
-    </a>
-
     <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
       <article class="md:col-span-2">
         <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
-        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mb-4 relative w-fit">
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mt-6 mb-4 relative w-fit">
             Huellas espaciales
           <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
         </aside>
@@ -27,9 +23,12 @@ import { huellasEspaciales } from '../../components/Sobre-valle/huellas-espacial
         <p class="mb-4">De acuerdo a la hipótesis de la científica y doctora en astroarqueología Guadalupe Rivera de Iturbe cada 1,040 años (20 "siglos" mesoamericanos), las estrellas de la Osa Mayor, quedan ubicadas exactamente arriba de los cráteres más importantes - y más conocidos- del municipio guanajuatense de Valle de Santiago</p>
         <p class="mb-4">Partiendo de la evidencia de que muchas ciudades de la antigüedad - por ejemplo, las griegas- fueron construidas de acuerdo a un mapa zodiacal, la investigadora ha realizado un levantamiento topográfico de la república mexicana, descubriendo que en el país existen varias que corresponden a un signo zodiacal.</p>
         <p class="mb-4">En un libro de geografía escolar del siglo pasado, cuyo autor es Ignacio Ramírez "El Nigromante", se encuentra en una de las láminas de ese libro un mapa de los cráteres del Valle de Santiago que establece su ubicación exacta por medio del trazo de ciertas líneas.</p>
+        <a href="/" class="text-gray flex justify-start items-center gap-x-1 w-fit mb-6">
+          <i class='bx bx-chevrons-left'></i> Regresar
+        </a>
       </article>
 
-      <aside class="md:col-span-1 flex flex-col gap-y-8">
+      <aside class="md:col-span-1 flex flex-col gap-y-8 lg:mt-6">
         {huellasEspaciales.map(({title, image}) => (
           <img 
             loading="lazy" 

@@ -5,14 +5,10 @@ import { santiagoApostol } from '../../components/historia/santiago-apostol-data
 
 <Layout title="Santiago Apóstol">
   <section>
-    <a href="/" class="text-gray pt-2 flex justify-start items-center gap-x-1 w-fit">
-      <i class='bx bx-chevrons-left'></i> Regresar
-    </a>
-
     <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
       <article class="md:col-span-2">
         <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary
-        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mb-4 relative w-fit">
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mt-6 mb-4 relative w-fit">
             Santiago Apóstol
           <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
         </aside>
@@ -41,9 +37,12 @@ import { santiagoApostol } from '../../components/historia/santiago-apostol-data
         <p class="mb-4">Sin embargo, obvia Don Nemesio, que ese mismo santo compostelano, al paso del tiempo fue visto luchando, en el primer cuarto del siglo XIX, al lado de los insurgentes y en contra de sus otrora protegidos. En efecto, en la misma zona de El Bajío y casi hasta con la misma yegua. Por lo que queda la interrogante sobre si Santiago abraza las mejores causas o simplemente ello es producto de su naturaleza belicosa.</p>
         <p class="mb-4">Pero éstas no sería ni las primeras ni las últimas ciudades que en América se fundaran en nombre del apóstol, quien de hecho logró toda una conquista geográfica. Podemos encontrar más de 200 ciudades, provincias, iglesias, sierras, bahías, ríos, valles, haciendas y minas con su nombre. Por mencionar algunos: Santiago de Cuba, Santiago de Chile, Santiago de Sánchez en Argentina, y Santiago de Cusco en Perú. Incluso, encontramos uno de los primeros centros de estudio superior en la Nueva España: el Colegio de Santiago de Tlatelolco.</p>
         <p class="mb-4">Así fue como la devoción por Santiago apóstol se extendió por toda Hispanoamérica y especialmente en esta zona de México. Devoción que nos sigue hasta nuestros días, y ha hecho del muerto de Compostela uno de los asuntos de encuentro entre católicos más importante del mundo.</p>
+        <a href="/" class="text-gray flex justify-start items-center gap-x-1 w-fit mb-6">
+          <i class='bx bx-chevrons-left'></i> Regresar
+        </a>
       </article>
 
-      <aside class="md:col-span-1 flex flex-col gap-y-8">
+      <aside class="md:col-span-1 flex flex-col gap-y-8 lg:mt-6">
         {santiagoApostol.map(({title, image}) => (
           <img 
             loading="lazy" 

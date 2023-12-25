@@ -5,14 +5,10 @@ import { enlaces } from '../../components/Sobre-el-autor/enlaces-data.astro';
 
 <Layout title="Enlaces">
   <section>
-    <a href="/" class="text-gray pt-2 flex justify-start items-center gap-x-1 w-fit">
-      <i class='bx bx-chevrons-left'></i> Regresar
-    </a>
-
     <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
       <article class="md:col-span-2">
         <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
-        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mb-4 relative w-fit">
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mt-6 mb-4 relative w-fit">
             Enlaces
           <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
         </aside>
@@ -30,9 +26,12 @@ import { enlaces } from '../../components/Sobre-el-autor/enlaces-data.astro';
         <p class="mt-4">2. Conciencia, porque no es suficientemente bueno el conocer bien del tema, el tener la ciencia y el conocimiento. Si este no se conduce por caminos éticos y no se actúa con moralidad y valores, muy pronto terriblemente pobre puede resultar la aportación. Quien no tiene bien cimentados, entendidos y actuados los más altos valores de la ética no debería de dedicarse a lo público, pues no solo se traiciona a sí mismo sino que termina traicionándonos a todos. Sin embargo, el actuar “buenamente”, tampoco es suficiente. Quizás en un monasterio aquello fuese más útil que en la vida pública, donde se requiere forzosamente de la pericia que da el conocimiento.</p>
         <p class="mt-4">Por eso, y ya concluyo, se necesita al menos ciencia y conciencia, conocimiento y ética, para que el fruto producto del trabajo individual o comunitario, como ciudadanos o como funcionarios, sea bueno y útil.</p>
         <p class="mt-4">Ciencia y conciencia para un mejor mañana, Antonio Silva Tavera, septiembre de 2010.</p>
+        <a href="/" class="text-gray flex justify-start items-center gap-x-1 w-fit mb-6 mt-4">
+          <i class='bx bx-chevrons-left'></i> Regresar
+        </a>
       </article>
 
-      <aside class="md:col-span-1 flex flex-col gap-y-8">
+      <aside class="md:col-span-1 flex flex-col gap-y-8 lg:mt-6">
         {enlaces.map(({title, image}) => (
           <img 
             loading="lazy" 
