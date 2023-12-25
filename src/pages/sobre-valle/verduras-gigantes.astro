@@ -1,22 +1,13 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { verdurasGigantes } from '../../components/Sobre-valle/verduras-gigantes-data.astro';
-
-const url = Astro.url;
-const { pathname } = url;
-const pathParts = pathname.split('/').filter(Boolean);
 ---
 
 <Layout title="Verduras gigantes">
   <section>
-    <p class="text-gray pt-2">
-      {pathParts.map((part, index) => (
-        <span>
-          {part}
-          {index < pathParts.length - 1 ? ' > ' : ''}
-        </span>
-      ))}
-    </p>
+    <a href="/" class="text-gray pt-2 flex justify-start items-center gap-x-1 w-fit">
+      <i class='bx bx-chevrons-left'></i> Regresar
+    </a>
 
     <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
       <article class="md:col-span-2">

@@ -1,0 +1,88 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { museoLocal } from '../../components/Sobre-valle/museo-local-data.astro';
+---
+
+<Layout title="Museo local">
+  <section>
+    <a href="/" class="text-gray pt-2 flex justify-start items-center gap-x-1 w-fit">
+      <i class='bx bx-chevrons-left'></i> Regresar
+    </a>
+
+    <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+      <article class="md:col-span-2">
+        <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mb-4 relative w-fit">
+            Museo local
+          <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
+        </aside>
+
+        <h5 class="mt-4 text-lg font-semibold">BREVE HISTORIA DEL EDIFICIO</h5>
+        <p class="mt-4">Datos arquitectónicos. Casa-habitación de un solo nivel construida a principios del siglo XX, de fachada sencilla consta de zaguán con espacios definidos a ambos lados, un patio lateral y el resto de las habitaciones al costado izquierdo. Al fondo se ubica otro espacio techado.</p>
+        <p class="mt-4">Aquí se ubicaba la presidencia municipal antes de trasladarse a su actual sitio en el portal Hidalgo donde la conocemos frente al jardín principal (cuyo nombre oficial es el de Jardín Independencia).</p>
+        <h5 class="mt-4 text-lg font-semibold">HISTORIA DEL MUSEO</h5>
+        <p class="mt-4">Este museo surge debido a las inquietudes de un grupo de vallenses interesados en difundir y conservar su patrimonio. Durante su conformación fueron asesorados por los antropólogos Yolanda Ramos, coordinadora del programa Museos Locales y Escolares del INAH; Héctor Díaz Polanco, quien estudiaba la dinámica agrícola de la región y José Corona Nuñez, especialista de las culturas prehispánicas del occidente.</p>
+        <p class="mt-4">El museo se inaguró en la calle Arteaga No. 48, el 26 de julio de 1975. Mostraba temas de vulcanografía regional y de la historia prehispánica, colonial y contemporánea de la localidad, con colecciones donadas por la comunidad y el patronato del museo, permaneció así durante seis años. En 1981 el museo se trasladó a un edificio que no reunía las condiciones idóneas para su instalación, por lo cual queda sin mostrar sus colecciones durante largo tiempo.</p>
+        <p class="mt-4">El inicio de los trabajos de restauración en el nuevo edificio datan de 1988, año en que se ha logrado conocer el desarrollo de los grupos agrícolas que habitaron la región antes de la llegada de los españoles, por lo cual, se plantea reelaborar el guión con información actualizada. Se abre al público en 1991.</p>
+        <p class="mt-4">El objetivo es mostrar la importancia que la agricultura ha tenido en la vida del pueblo vallense.</p>
+        <h5 class="mt-4 text-lg font-semibold">CONTENIDO</h5>
+        <p class="mt-4">En la primera sala se explican los procesos geológicos que conforman esta región, en donde sobresale un conjunto de conos volcánicos conocidos popularmente como Las Siete Luminarias.</p>
+        <p class="mt-4">Así mismo, se representan en un cuadro cronológico comparativo algunas características de la región junto con otras del centro y occidente de México. Se ubica el Bajío en su contexto mesoamericano.</p>
+        <p class="mt-4">En la segunda sala, se presentan materiales arqueológicos pertenecientes a los primeros pueblos sedimentarios que compartieron una relación muy estrecha con la cultura de Chupícuaro. Aquí se pueden apreciar las expresiones regionales de esta época.</p>
+        <p class="mt-4">En la tercera sala, se muestran los cambios ocurridos durante el primer milenio de la era, el abandono por parte de los grupos sedentarios, la ocupación de los grupos chichimecas y la llegada de los españoles a estas tierras.</p>
+        <h5 class="mt-4 text-lg font-semibold">COLECCIONES</h5>
+        <p class="mt-4">El museo cuenta con una colección de piezas prehispánicas de la región donadas por el patronato que lo apoya, así como también con una colección de fotografías históricas y actuales.</p>
+        <h5 class="mt-4 text-lg font-semibold">PIEZAS RELEVANTES</h5>
+        <p class="mt-4">Un monolito de basalto totalmente labrado conocido localmente como La Estela de Pantoja, encontrada en las inmediaciones del río Lerma y trasladada al patio del Rancho San José de Pantoja, donde estuvo en exhibición largo tiempo. Los motivos grabados sugieren una representación de Quetzalcóatl.</p>
+        <h5 class="mt-4 text-lg font-semibold">LA ESTELA DE PANTOJA</h5>
+        <p class="mt-4">El número 13, presente en la estela de Pantoja, es sagrado en Mesoamérica, pues alude a los trece cielos que recubren el mundo. En el treceavo cielo habitan los dioses supremos de la dualidad, padre y madre de todo lo que existe. En el barrio de la merced existía la tradición de que si un marido era infiel había que colectar trece cordones umbilicales y, con ellos, preparar una sopa. Al comer esta sopa, el marido infiel quedaba atado mágicamente a su esposa, convirtiéndose en un esposo ejemplar. Los trece cordones umbilicales representaban el poder de los 13 cielos. Esta creencia popular demuestra como el pensamiento mágico inscrito en la estela de Pantoja ha sobrevivido en las creencias de Valle de Santiago.</p>
+        <p class="mt-4">La franja de petate muestra 8 tiras de petate en las caras frontal y trasera, mientras que los lados poseen 5 tiras de petate. Esto significa que 5 años solares son equivalentes a 8 periodos siderales del planeta venus. Además 5+8 = 13 y 13 son los cielos que recubren la tierra según el pensamiento mesoamericano. De esta manera la estela de Pantoja es un monumento astronómico que hace alusión a Venus, el planeta del dios Quetzalcoatl y al sol, el astro rey.</p>
+        <p class="mt-4">La estela de Pantoja fue esculpida por órdenes de los gobernantes de Peralta entre los siglos VI-VIII, en tiempos de Teotihuacan. En ella se representó a Quetzalcoatl, la serpiente emplumada. La franja de petate sobre los cascabeles de la serpiente representa el señorío, pues los reyes se sentaban sobre un petate. En nahuatl la estela se leería como Topiltzin Quetzalcoatl, Topiltzin= "nuestro señor venerable" = `petate y Quetzalcoatl = serpiente preciosa o serpiente emplumada. De esta manera toda la estela se lee como "nuestro venerable señor Serpiente preciosa".</p>
+        <p class="mt-4">El pasado 15 de enero de 2016 fue expuesta la pieza en el Museo de la Alhóndiga de Granaditas en la ciudad de Guanajuato capital. La explicación corrió por parte del arqueólogo Cruces quien explicó el resultado de sus investigaciones sobre el monolito tallado más grande que haya sido encontrado en el estado de Guanajuato. Él sostiene que no representa a Quetzalcoatl pues le faltan elementos iconográficos que den luz a que se trate de dicha deidad prehispánica, entre ellos, la lengua bífida, los elementos decorativos y además de que los glifos que presenta el monolito, tanto el rectangular como el circular, hablan de representaciones de la guerra.</p>
+        <p class="mt-4">La parte superior, tomando en cuenta de como estuvo expuesto por décadas en el museo, no había sido observada por la mayorías de los visitantes y él demuestra, en su explicación, que la pieza tiene posición horizontal tal y como es ahora expuesta.</p>
+        <p class="mt-4">Quedan, sin embargo, dudas importantes sobre este importante monolito. ¿Por qué tiene tallados todos sus lados? La piedra basáltica con la que fue hecho, no es de la zona ¿de dónde fue obtenida? Siendo del periodo epiclásico ¿por qué verla a través de los ojos de la cultura náhual? Una piedra de esas dimensiones no pudo haber sido creada de manera aislada ¿de qué formaba parte?</p>
+        <h5 class="mt-4 text-lg font-semibold">PERSONAJES PARTICIPANTES</h5>
+        <p class="mt-4">Dr. Benjamín Lara, Profr. J. Asunción Baltazar (QEPD), Sr. Arturo Ramírez, Dr. Héctor Díaz Polanco e Historiador José Corona Nuñez.</p>
+        <h5 class="mt-4 text-lg font-semibold">SERVICIOS</h5>
+        <p class="mt-4">El museo cuenta con dos salas de exposiciones temporales. En sus instalaciones se encuentra también el Archivo Municipal.</p>
+        <h5 class="mt-4 text-lg font-semibold">HORARIO</h5>
+        <p class="mt-4">De martes a domingo de 9 a 16 horas</p>
+        <p>Para visitas de 9:30 a 15:30 horas</p>
+        <h5 class="mt-4 text-lg font-semibold">PROMEDIO DE VISITANTES POR AÑO</h5>
+        <p class="mt-4">8, 000 personas</p>
+        <h5 class="mt-4 text-lg font-semibold">COSTO DE ACCESO</h5>
+        <p class="mt-4">La entrada es gratuita. No se permite el acceso con cámaras de ninguna índole.</p>
+        <h5 class="mt-4 text-lg font-semibold">SEMBLANZA GENERAL</h5>
+        <p class="mt-4">Desde los vestigios de una cultura denominada Chupícuaro, cuna de la dinastía actual se encuentra en esta ciudad y que datan de una antiguedad de más de 1500 años antes de Cristo, por lo que se hace una atenta invitación a la ciudadanía y estudiantes en general a conocer sus raíces, pues sólo de esta manera se aprende a querer a nuestro pueblo. La antigua Camémbaro que en lengua tarasca significa lugar de estafiate, ocupa un amplio valle del sur del estado de Guanajuato, con una extensión de 835 kilómetros cuadrados y una población actual de más de 127 mil habitantes (2005).</p>
+        <p class="mt-4">La fertilidad de estas tierras llamó la atención de los pobladores españoles que se asentaron en este lugar en 1606. La producción más común es del mezquite árbol muy codiciado por la excelencia de sus maderas para muebles finos, pochote, naranjo, maíz, sorgo, frijol, camote, haba y hortalizas además del trigo. Siendo su fuente principal para captar divisas la agricultura ya que la ganaderia representa sólo un porcentaje menor y se desarrolla en crianza de vacunos, caprinos, cerdos y aves.</p>
+        <p class="mt-4">La explotación de bancos de materiales pétreos, ya es preocupación de ecologistas, pues el deterioro de sus volcanes representan ya un 75 por ciento. De los más de 150 poblados que lo conforman los más importantes son Magdalena de Araceo, Noria de Mosqueda, Las Jícamas, Charco de Pantoja y Rincón de Parangueo.</p>
+        <p class="mt-4">El escudo Heráldico representa la imagen de Santiago Apóstol patrono de Valle. Las Siete Luminarias son sus volcanes, el libro expresa historia y cultura. El lema en latín se traduce "El triunfo es nuestro con estas tres cosas". Sin embargo, el escudo más difundido es el denominado escudo turístico que tiene representada la constelación de la osa mayor y los cráteres y que no sigue en rigor las leyes de la heráldica tradicional.</p>
+        <p class="mt-4">Hombres célebres que han aportado beneficios a la patria y que han sido originarios de este lugar : Pedro Lascurain de Retana, benefactor del colegio del estado, actualmente Universidad de Guanajuato. José María Magaña, héroe insurgente, José María Yáñez, defensor de la patria en Guaymas y Tabasco, Félix Galván López, secretario de la defensa nacional en el periodo de José López Portillo como Presidente de la República Mexicana. Baltazar Aguilar Ortiz, músico. reconocido de fama internacional quien cuenta con una orquesta en esta ciudad actualmente.</p>
+        <p class="mt-4">Aunado a esto el Museo tiene las bases para hacer de este lugar un sitio turístico que en conjunto con sus volcanes de reconocido valor internacional que en Europa se le conoce como el Jardín de los Volcanes, por ser única su conformación en el mundo, lo que le dá más valor a nuestro pueblo, la custodia de estos valores están en manos de una gran mujer que ha luchado incansablemente para cristalizar su trayecto de darle a la comunidad un sitio de alto valor histórico que cuenta entre otras cosas con un entierro completo de un sacerdote o chamán, y una colección de pipas únicas en el mundo, ya que se cree que los antiguos habitantes fumaban no precisamene tabaco en sus ceremonias religiosas, todo esto digno de admirarse.</p>
+        <p class="mt-4">Un reconocimiento a la srita. Elvira Soto quien durante mucho tiempo tuvo a su cargo la custodia, por parte del INAH, del museo de nuestra ciudad.</p>
+      </article>
+
+      <aside class="md:col-span-1 flex flex-col gap-y-8">
+        <iframe
+          class="w-full h-48"
+          src="https://www.youtube.com/embed/6WhZ59dY6DE"
+          frameborder="0"
+          title="YouTube video player"
+          allow="autoplay; encrypted-media;"
+          allowfullscreen
+        ></iframe>
+        
+        {museoLocal.map(({title, image}) => (
+          <img 
+            loading="lazy" 
+            decoding="async"
+            src={`/images/sobre-valle/museo-local/${image}`} 
+            alt={title}
+            title={title}
+            class="w-full h-44 rounded object-contain"
+          />
+        ))}
+      </aside>
+    </main>
+  </section>
+</Layout>

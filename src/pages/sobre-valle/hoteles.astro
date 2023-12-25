@@ -1,0 +1,78 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { hoteles } from '../../components/Sobre-valle/hoteles-data.astro';
+---
+
+<Layout title="Hoteles">
+  <section>
+    <a href="/" class="text-gray pt-2 flex justify-start items-center gap-x-1 w-fit">
+      <i class='bx bx-chevrons-left'></i> Regresar
+    </a>
+
+    <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+      <article class="md:col-span-2">
+        <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mb-4 relative w-fit">
+            Hoteles
+          <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
+        </aside>
+        
+        <h3 class="font-semibold text-lg">Guía Fácil de Hoteles para Hospedaje en Valle de Santiago.</h3>
+        <p class="mb-4 text-gray">Nota: Está información se brinda sólo como una referencia al posible interesado en visitar nuestra ciudad, por lo mismo, el que mantiene estas páginas se excluye de cualquier responsabilidad directa o indirecta derivada de una mala prestación de servicios.</p>
+        <h5 class="mb-4 text-lg font-semibold">1. Hotel Posada de la Parroquia</h5>
+        <ul class="list-disc pl-8 mb-4">
+          <li>Categoría: n.d.</li>
+          <li>Ubicación: Carranza Núm. 52</li>
+          <li>Teléfono para Reservaciones: 01 (456) 643 02 08.</li>
+          <li>Capacidad: n.d.</li>
+          <li>Otros: Tipo rústico se ubica a una cuadra y media del Centro de la ciudad.</li>
+        </ul>  
+        <h5 class="mb-4 text-lg font-semibold">2. Hotel Real del Valle</h5>
+        <ul class="list-disc pl-8 mb-4">
+          <li>Categoría: 3 estrellas</li>
+          <li>Ubicación: Mena núm. 154</li>
+          <li>Teléfono para Reservaciones: 01 (456) 643 10 87</li>
+          <li>Capacidad: 20 habitaciones</li>
+          <li>Otros: Habitaciones alfombradas y con TV. A una cuadra y media del Jardín Principal</li>
+        </ul>  
+        <h5 class="mb-4 text-lg font-semibold">3. Hotel SanLú</h5>
+        <ul class="list-disc pl-8 mb-4">
+          <li>Categoría: 4 estrellas</li>
+          <li>Ubicación: Uruapan núm. 16</li>
+          <li>Teléfono para Reservaciones: 01 (456) 643 06 69</li>
+          <li>Capacidad: 20 habitaciones alfombradas dobles y 2 habitaciones alfombradas triples</li>
+          <li>Otros: Único que cuenta con estacionamiento propio dentro de sus instalaciones y restaurant. Televisión por cable.</li>
+        </ul>  
+        <h5 class="mb-4 text-lg font-semibold">4. Hotel Camémbaro</h5>
+        <ul class="list-disc pl-8 mb-4">
+          <li>Categoría: n.d.</li>
+          <li>Ubicación: Esq. Uruapan y Heroico Colegio Militar</li>
+          <li>Teléfono para Reservaciones: 01 (456) 643 04 22</li>
+          <li>Capacidad: n.d.</li>
+          <li>Otros: n.d.</li>
+        </ul>  
+        <h5 class="mb-4 text-lg font-semibold">5. Hotel Casagrande</h5>
+        <ul class="list-disc pl-8 mb-4">
+          <li>Categoría: 3 estrellas</li>
+          <li>Ubicación: Av. Diaz Mirón Núm. 24</li>
+          <li>Teléfono para Reservaciones: 01 (456) 643 51 33</li>
+          <li>Capacidad: 17 habitaciones</li>
+          <li>Otros: Habitaciones con TV. Ubicado a una cuadra del centro de la ciudad. Estacionamiento propio y restaurant.</li>
+        </ul>  
+      </article>
+
+      <aside class="md:col-span-1 flex flex-col gap-y-8">
+        {hoteles.map(({title, image}) => (
+          <img 
+            loading="lazy" 
+            decoding="async"
+            src={`/images/sobre-valle/hoteles/${image}`} 
+            alt={title}
+            title={title}
+            class="w-full h-44 rounded object-contain"
+          />
+        ))}
+      </aside>
+    </main>
+  </section>
+</Layout>

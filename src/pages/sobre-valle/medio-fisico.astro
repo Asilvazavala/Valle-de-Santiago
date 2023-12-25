@@ -1,10 +1,44 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-
+import { medioFisico } from '../../components/Sobre-valle/medio-fisico-data.astro';
 ---
 
-<Layout title="Medio físico">
-  <div class="containerSpace h-screen">
-    <p>Medio físico</p>
-  </div>
+<Layout title="Medío físico">
+  <section>
+    <a href="/" class="text-gray pt-2 flex justify-start items-center gap-x-1 w-fit">
+      <i class='bx bx-chevrons-left'></i> Regresar
+    </a>
+
+    <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+      <article class="md:col-span-2">
+        <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mb-4 relative w-fit">
+            Medío físico
+          <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
+        </aside>
+
+        <p class="mt-4">Los recursos naturales y humanos del municipio son elementos fundamentales para su desarrollo económico y social. A continuación se describen brevemente dos de las características primordiales en el medio físico natural del municipio consideradas como relevantes: la fisiografía y los usos de suelo.</p>
+        <h5 class="mt-4 text-lg font-semibold">Fisiografía</h5>
+        <p class="mt-4">Valle de Santiago se encuentra dentro de la provincia del Eje Neo volcánico (100%) y de las dos sub provincias: Bajío Guanajuatense (47.9%) y Sierras y Bajíos Michoacanos (52.1%).</p>
+        <p class="mt-4">El sistema de topo formas del municipio está compuesto por la sierra volcánica de laderas tendidas con lomerío (43.5%), la Llanura aluvial (35.5%), el Lomerío de aluvión antiguo (12.4%), la Sierra volcánica de laderas escarpadas con cráteres (7.9%), el Vaso lacustre (0.6%) y la sierra volcánica de laderas tendidas (0.1%).</p>
+        <p class="mt-4">Las principales elevaciones son el Cerro de Las Torres, el Cerro Perimal, el Cerro de El Picacho, el Cerro de El Tule, el Cerro Blanco, el Cerro de Los Cuates, el Cerro de La Tetilla y el Cerro La Mina.</p>
+        <p class="mt-4">Sólo cinco localidades en el municipio, todas pertenecientes a la Región Municipal 3, se ubican arriba de los dos mil metros de altura sobre el nivel del mar.</p>
+        <h5 class="mt-4 text-lg font-semibold">Usos de Suelo</h5>
+        <p class="mt-4">El uso de suelo agrícola ocupa casi tres cuartas partes del territorio, con el 72.2% de la superficie municipal, el área de pastizal es del 6%, la zona urbana 1.9%, el área de selva 17.9%, la zona de bosque 0.5% y la de matorral 0.9%. El 0.6% restante tiene un uso indeterminado en la fuente consultada.</p>
+      </article>
+
+      <aside class="md:col-span-1 flex flex-col gap-y-8">
+        {medioFisico.map(({title, image}) => (
+          <img 
+            loading="lazy" 
+            decoding="async"
+            src={`/images/sobre-valle/medio-fisico/${image}`} 
+            alt={title}
+            title={title}
+            class="w-full h-44 rounded object-contain"
+          />
+        ))}
+      </aside>
+    </main>
+  </section>
 </Layout>

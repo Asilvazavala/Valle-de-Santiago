@@ -1,0 +1,49 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { laAlameda } from '../../components/Sobre-valle/la-alameda-data.astro';
+---
+
+<Layout title="La alameda">
+  <section>
+    <a href="/" class="text-gray pt-2 flex justify-start items-center gap-x-1 w-fit">
+      <i class='bx bx-chevrons-left'></i> Regresar
+    </a>
+
+    <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+      <article class="md:col-span-2">
+        <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mb-4 relative w-fit">
+            La alameda
+          <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
+        </aside>
+        
+        <h3 class="font-semibold text-lg mb-4">ANTECEDENTES</h3>
+        <p class="mb-4">En sesión de Ayuntamiento el 4 de marzo de 1872 teniendo como jefe político a Don Zenón Guerrero que manifestó retomar el proyecto de la Alameda que estaba trazada desde la fundación de la ciudad de 1607, reuniendo fondos para cubrir gastos teniendo un perímetro de 400 metros, se construyó la barda que circunda la Alameda, siendo de cal y canto entre noviembre y diciembre de 1888.</p>
+        <p class="mb-4">Se plantaron 43 fresnos que en la actualidad solamente quedan 2 de aquellos. En la actualidad cuenta con árboles de la especie de Laurel de la India (ficus retusa nítida) algunos de 30 metros de altura, sabino de los ríos (Sauz), y algunas jacarandas. Este parque es de los más grandes del Estado de Guanajuato y con los árboles de mayor altura.</p>
+        <p class="mb-4">Entre el 2008 y el 2009 este parque fue remodelado teniendo un cambio favorable en su fisonomía para beneficio de las familias vallenses que suelen acudir a refugiarse bajo las frondosas sombras de sus laureles ahora, desafortunadamente, ya no tantos debido al retiro de varios de ellos durante los trabajos de la remodelación referida.</p>
+        <p class="mb-4">A la fecha no existe ningún estudio conocido que pondere la correlación entre la muerte de estos árboles y la remodelación referida. Lo que si se puede afirmar es que a partir de dicha remodelación se han dado más incidentes de laureles muertos. Nunca antes habían sido arrasados por vientos, borrascas o cualquier otro efecto metereológico. Es una asignatura pendiente la investigación de ese desastre ecológico.</p>
+        <p class="mb-4">Al margen aparecen dos fotografías que constatan la muerte de esos árboles. ¿Quiénes, que fuimos niños, no tenían su árbol preferido? ¿quiénes, que somos vallenses, no recuerdan la generosidad de su sombra? Lo que arrojaba a la reflexión poética de preguntarse a dónde irán las sombras de estos enormes laures durante la noche.</p>
+        <p class="mb-4">En conciencia, sabemos que no son eternos los árboles de esta especie ni de ninguna. Pero, en conciencia también, no entendemos que estos mueran justamente después de una intervención, que por cierto, fue buena en lo general. Es un tema pendiente.</p>
+        <h5 class="mb-4 text-lg font-semibold">Los Perros del Agua</h5>
+        <p class="mb-4">Comen como patos, parecen pájaros, se paran como garzas, viven como búhos y graznan como perros. Estas aves siempre han vivido en las copas de los árboles de la Alameda, nunca se habían posado en el suelo, porque salen a comer en la noche. En estos días han estado bajando a pararse en las fuentes nuevas de esta Alameda. (Ojalá algún científico nos dijera si hay en otras partes, porque en los libros no aparecen. Esta Alameda es su hábitat único en toda la región).</p>
+        <p class="mb-4">Se puede apreciar que tienen vista de águila o halcón, pies de gallina o gallo, pico corto, pero como de garza. Plumaje como el águila azteca.... Se muestran mansos y vuelan lentamente, con largas alas. Toda una extraña criatura, según dijeron fueron aves alteradas en su genética por seres extraterrestres. (Fotos Jorge Juárez).</p>
+        <h5 class="mb-4 text-lg font-semibold">Leyenda: La marrana y sus puerquitos.</h5>
+        <p class="mb-4">Se comenta popularmente que por las noches una piara de cerdos sale de su refugio, en un lugar no descubierto aún, comandados por una enorme cerdo hembra seguida por sus cerditos en busca de comida. Gusta esconderse entre las sombras lóbregas de la vegetación de la Alameda y atacar principalmente a niños solos que tiene la ocurrencia de atravesar a esas horas el sitio.</p>
+        <p class="mb-4">Esta leyenda ha perdurado durante varias generaciones sin que nadie sepa hasta ahora si es la misma piara que inexplicablemente ha sobrevivido a través de los años o también existe la reencarnación entre los cerdos, algo por demás raro o es una historia inventada por padres para evitar que sus hijos anden a deshoras por esos rumbos.</p>
+      </article>
+
+      <aside class="md:col-span-1 flex flex-col gap-y-8">
+        {laAlameda.map(({title, image}) => (
+          <img 
+            loading="lazy" 
+            decoding="async"
+            src={`/images/sobre-valle/la-alameda/${image}`} 
+            alt={title}
+            title={title}
+            class="w-full h-44 rounded object-contain"
+          />
+        ))}
+      </aside>
+    </main>
+  </section>
+</Layout>

@@ -86,8 +86,8 @@ const ModalSearch: React.FC<ModalSearchProps> = ({
           
           <i 
             onClick={onClose} 
-            className='bx bx-x-circle text-4xl lg:text-5xl cursor-pointer absolute top-0 right-5 text-primary transition  
-            md:right-28 lg:hover:text-primary/80 md:text-6xl md:top-14 lg:top-0 lg:relative'>  
+            className='bx bx-x-circle text-4xl md:text-5xl cursor-pointer absolute top-0 right-5 text-primary transition  
+            md:right-28 lg:hover:text-primary/80 md:top-16 lg:top-0 lg:relative'>  
           </i>
         </header>
 
@@ -97,7 +97,7 @@ const ModalSearch: React.FC<ModalSearchProps> = ({
           </span>
         }
 
-        <div className="text-gray font-medium text-sm">
+        <div className="text-gray font-medium md:text-sm text-xs">
           {searchResults.length === 0 && currentSearch === '' && recentSearches.length > 0 && (
             <>
               <h3>Últimas búsquedas:</h3>
@@ -121,7 +121,7 @@ const ModalSearch: React.FC<ModalSearchProps> = ({
                 <li key={index} className='flex max-[600px]:max-w-xs max-w-3xl border-b border-b-gray pb-2 mb-10'>
                   <header className='flex flex-col'>
                     <h3 className='text-primary text-xl font-semibold'>{title}</h3>
-                    <p className='text-sm line-clamp-2'>{description}</p>
+                    <p className='text-sm line-clamp-3 lg:line-clamp-2'>{description}</p>
                     <a href={href} className='font-bold underline lg:hover:text-black/70 transition'>
                       Ver más...
                     </a>

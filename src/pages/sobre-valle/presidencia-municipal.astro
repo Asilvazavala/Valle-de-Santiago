@@ -1,0 +1,51 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { presidenciaMunicipal } from '../../components/Sobre-valle/presidencia-municipal-data.astro';
+---
+
+<Layout title="Presidencia municipal">
+  <section>
+    <a href="/" class="text-gray pt-2 flex justify-start items-center gap-x-1 w-fit">
+      <i class='bx bx-chevrons-left'></i> Regresar
+    </a>
+
+    <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+      <article class="md:col-span-2">
+        <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mb-4 relative w-fit">
+            Presidencia municipal
+          <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
+        </aside>
+        
+        <h3 class="font-semibold text-lg mb-4">ANTECEDENTES</h3>
+        <p class="mb-4">Tuvo un costo de $25,000 pesos adquirido por el entonces Presidente Municipal José Moreno Mújica (1944-1945), cuando era propiedad en sucesión del señor Lezín Dervez (NOTA: aquí ya veremos más adelante la interesantísima historia de este personaje).</p>
+        <p class="mb-4">Fue declarado recinto oficial siendo Gobernador del Estado el C. Lic. Jesús Castorena. Presidente el Dr. Juan Pérez Vela M. En el ejercicio del H. Ayuntamiento 1948-1949, el día 29 de mayo de 1948.</p>
+        <p class="mb-4">Los datos más lejanos se remontan a la época de la Independencia, cuando fue casi demolida esta casa y después regalada como “sitio”, a la señora Bárbara de Lara en 1819 y trasmitida por herencia a sus hijas que emparentaron con la familia González.</p>
+        <p class="mb-4">Tiempo después fue enajenada a Don Leopoldo Mújica Moreno, quienes la venden a otras personas, por medio de las cuales llega a poder del señor Don Lezín Dervez, que era súbdito francés y tenia la costumbre de izar la bandera francesa en su edificio, cuando ocurría algún disturbio político local. A su muerte hereda a la señora Mercedes R. Viuda de Dervez la cual enajena la propiedad al H. Ayuntamiento.</p>
+        <p class="mb-4">El adoquinado para el tránsito peatonal, que circunda tres de los cuatro lados del jardín principal, fue hecho a finales de los ochenta para proporcionar a los vallenses y sus familias un área de sano esparcimiento.</p>
+        <p class="mb-4">En la pasada administración municipal, 2000-2003, se pintaron todas las fachadas de los portales con los colores que se muestran en las imágenes dándole al entorno un aire nostálgico. En la actual, 2006-2009, han sido repintados los portales, cambiados los pisos, ocultado las instalaciones y, en general, readecuados los edificios del sitio.</p>
+        <p class="mb-4">El señorío de los vetustos edificios decimonónicos de la zona, el ambiente apacible y la tranquilidad que se respira es característico de nuestra ciudad provinciana.</p>
+        <h5 class="mb-4 text-lg font-semibold">Sobre Lezín Dervez... cuyo nombre real debería de ser Lecín Derbez (la "c" con la cedilla francesa)</h5>
+        <p class="mb-4">El anterior propietario del inmueble que ahora ocupa la Presidencia Municipal era ciudadano francés originario del valle de la Barcelonnette, nada que ver con la ciudad española de Barcelona, capital de la provincia de Cataluña, pues este valle se ubica al sureste de Francia en los Alpes casi frontera con Italia.</p>
+        <p class="mb-4">De ese sitio hubo una muy interesante oleada de inmigrantes que llegaron a varias partes del país pero principalmente a las ciudades de México, Puebla y San Luís Potosí. Nuestro personaje parece haber venido, junto con dos hermanos más, de esta última ciudad y por motivos desconocidos terminó llegando a Valle de Santiago en donde puso varios negocios en donde ahora está la esquina noroeste de la manzana de la Presidencia (mueblería, maderería, etc.)</p>
+        <p class="mb-4">A estos emigrados, en general, se les llamó en México comunmente "Barcelonetas" y tuvieron importantes propiedades y fábricas en la industria textil y en el antecedente más directo de los autoservicios modernos pues fundaron "Las fábricas de Francia" y "el Palacio de Hierro".</p>
+        <p class="mb-4">Los artistas Silvia Derbez y Eugenio Derbez, el político Luís Ernesto Derbez, secretario de relaciones exteriores en el gobierno foxista, son personajes descendientes de los barcelonetas y, seguramente, de nuestro personaje motivo de la narración actual.</p>
+        <p class="mb-4">Existe la creencia entre el personal administrativo más antiguo en el edificio de la presidencia que hay una persona del sexo masculino, de aspecto circunspecto y entrado en años, que suele aparecerse por las noches en el inmueble y gritar de manera apenas audible, mientras recorre los diferentes espacios principalmente en planta alta, algo así como "tusonvoleg", que bien pudiera ser "tous sont voleurs" que en francés significa "todos son unos rateros". No se sabe bien a bien a qué o a quiénes se refiere.</p>
+        <p class="mb-4">Finalmente, fueron tan importantes los recursos y la influencia cultural de los emigrados para el valle de la Barcelonnette que actualmente se celebra Le Jour du Mexique (el Día de México) con uno de los más rumbosos festivales de la región, el teatro principal se llama "El Zócalo" (así, en español) y varias de las residencias más ostentosas recuerdan a México por su estilo y sus materiales.</p>
+      </article>
+
+      <aside class="md:col-span-1 flex flex-col gap-y-8">
+        {presidenciaMunicipal.map(({title, image}) => (
+          <img 
+            loading="lazy" 
+            decoding="async"
+            src={`/images/sobre-valle/presidencia-municipal/${image}`} 
+            alt={title}
+            title={title}
+            class="w-full h-44 rounded object-contain"
+          />
+        ))}
+      </aside>
+    </main>
+  </section>
+</Layout>
