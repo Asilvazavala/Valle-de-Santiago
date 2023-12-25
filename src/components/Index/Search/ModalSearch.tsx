@@ -24,7 +24,7 @@ const ModalSearch: React.FC<ModalSearchProps> = ({
   const handleSearch = (query: string) => {
     if (query.trim() !== '') {
       const newSearch = searchData.filter(
-        (search) => search.title.toLowerCase().includes(query.toLowerCase()));
+        (search) => search.title.toLowerCase().includes(query.trim().toLowerCase()));
       setSearchResults(newSearch);
     } else {
       setSearchResults([]);
@@ -97,7 +97,7 @@ const ModalSearch: React.FC<ModalSearchProps> = ({
           </span>
         }
 
-        <div className="text-gray font-medium">
+        <div className="text-gray font-medium text-sm">
           {searchResults.length === 0 && currentSearch === '' && recentSearches.length > 0 && (
             <>
               <h3>Últimas búsquedas:</h3>
