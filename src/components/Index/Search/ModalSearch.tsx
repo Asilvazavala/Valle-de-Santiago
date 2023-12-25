@@ -86,7 +86,7 @@ const ModalSearch: React.FC<ModalSearchProps> = ({
           
           <i 
             onClick={onClose} 
-            className='bx bx-x-circle text-5xl cursor-pointer absolute top-0 right-5 text-primary transition  
+            className='bx bx-x-circle text-4xl lg:text-5xl cursor-pointer absolute top-0 right-5 text-primary transition  
             md:right-28 lg:hover:text-primary/80 md:text-6xl md:top-14 lg:top-0 lg:relative'>  
           </i>
         </header>
