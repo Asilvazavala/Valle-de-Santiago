@@ -10,9 +10,16 @@ const ModalSearch: React.FC<ModalSearchProps> = ({
   onClose,
   modalSearchOpen
 }) => {
+  
+  const getRecentSearches = () => {
+    const recentSearches = localStorage.getItem('recentSearches');
+    return recentSearches ? JSON.parse(recentSearches) : [];
+  };
+
   const [currentSearch, setCurrentSearch] = useState('');
   const [searchResults, setSearchResults] = useState<searchDataProps[]>([]);
   const [isSearching, setIsSearching] = useState(false);
+  const [recentSearches, setRecentSearches] = useState<string[]>(getRecentSearches());
 
   const handleSearch = (query: string) => {
     if (query.trim() !== '') {
@@ -26,15 +33,30 @@ const ModalSearch: React.FC<ModalSearchProps> = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    handleSearch(currentSearch);
-    setIsSearching(true);
+  
+    if (currentSearch.trim() !== '') {
+      const recentSearches = getRecentSearches();
+      const updatedRecentSearches = [currentSearch, ...recentSearches.slice(0, 2)];
+      saveRecentSearches(updatedRecentSearches);
+  
+      setIsSearching(true)
+      handleSearch(currentSearch);
+    } else {
+      setSearchResults([]);
+    }
+  
     e.stopPropagation();
   };
 
-  const handleChange = (e) => {
-    setCurrentSearch(e.target.value);
+  const saveRecentSearches = (searches: string[]) => {
+    localStorage.setItem('recentSearches', JSON.stringify(searches));
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setIsSearching(false);
-  }
+    setCurrentSearch(e.target.value);
+  };
+  
 
   return (
     <section className="fixed top-0 -left-4 lg:-left-16 w-screen h-screen flex items-center justify-center
@@ -48,12 +70,13 @@ const ModalSearch: React.FC<ModalSearchProps> = ({
         <header className="flex justify-center items-center mt-16 w-full">
           <div className="flex justify-center items-center w-full">
             <input 
+              autoFocus={true}
               type="text" 
               title="Buscar"
               placeholder="¿Qué estás buscando?"
               className="px-4 py-2 w-[75vw] md:w-[40vw] outline-none text-xl border-b-gray 
               border-b-2 font-medium md:text-2xl"
-              onChange={(e) => setCurrentSearch(e.target.value)}
+              onChange={handleChange}
             />
             
             <button type="submit">
@@ -73,6 +96,19 @@ const ModalSearch: React.FC<ModalSearchProps> = ({
             Escribe lo que estás buscando y presiona "Enter" o la lupa para buscar
           </span>
         }
+
+        <div className="text-gray font-medium">
+          {searchResults.length === 0 && currentSearch === '' && recentSearches.length > 0 && (
+            <>
+              <h3>Últimas búsquedas:</h3>
+              <ul>
+                {recentSearches.map((search, index) => (
+                  <li key={index}>- {search}</li>
+                ))}
+              </ul>
+            </>
+          )}
+        </div>
 
         {isSearching && searchResults.length > 0 && (
           <div className={`mt-2 px-4 md:px-0 
@@ -97,7 +133,7 @@ const ModalSearch: React.FC<ModalSearchProps> = ({
         )}
 
         {isSearching && searchResults.length === 0 && (
-          <span className='w-fit text-red-800 bg-red-400 text-center font-medium px-4 py-2 rounded-full animate-fadeIn'>
+          <span className='w-fit text-green-900 bg-green-600 text-center font-medium px-4 py-2 rounded-full animate-fadeIn'>
             No hay resultados de esta búsqueda
           </span>
         )}
