@@ -1,0 +1,41 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { temploDeLaMerced } from '../../components/Sitios-de-interes/templo-de-la-merced-data.astro';
+---
+
+<Layout title="Templo de la Merced">
+  <section>
+    <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+      <article class="md:col-span-2">
+        <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mt-6 mb-4 relative w-fit">
+            Templo de la Merced
+          <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
+        </aside>
+        
+        <p class="mb-4">En realidad el templo tiene el nombre de Nuestra Señora de las Mercedes pero popularmente se le conoce como el Templo de la Merced. Su fiesta principal es el día 24 de septiembre que se celebra con una romería en el barrio y calles adyacentes.</p>
+        <p class="mb-4">Esta edificación religiosa construida con material de la región de origen volcánico como lo es el tezontle tiene una especial presencia debido a su emplazamiento sobre una colina que le otorga un carácter muy especial.</p>
+        <p class="mb-4">El solar donde se contruyó importó una cantidad de cincuenta y un pesos con seis reales, iniciándose la edificación de la nave central cuya planta es de cruz con un transepto coronado con una cúpula sobre cuatro pechinas en el año de 1852. El altar principal contiene elementos con la técnica de estofado que se repiten en los altares laterales de los extremos del transepto. La imagen de la Virgen se especula que fue traída de la localidad de Condal, España.</p>
+        <p class="mb-4">Se empezó a levantar la torre principal el 8 de marzo de 1880 concluyéndose el 20 de junio de 1888. En este lugar estaba ubicado el Hospicio de Nuestra Santísima Madre de las Mercedes desde el 19 de Agosto de 1847 para beneficio de la comunidad indígena de la Loma que se ubicaba en el barrio de la Merced siendo muy visible desde todos los puntos de la ciudad.</p>
+        <p class="mb-4">Aunque la portada principal contiene algunos elementos de estilo barroco tardío es el frontispicio truncado y los elementos laterales que le dan el estilo de un neoclásico con colores rojo y blanco debido a que son los colores de la orden mercedaria. Su anexo se construyó en los años cuarentas para ser utilizado como residencia de los sacerdotes y para recibir a las peregrinaciones el día de la fiesta advocativa.</p>
+        <a href="/" class="text-gray flex justify-start items-center gap-x-1 w-fit mb-6">
+          <i class='bx bx-chevrons-left'></i> Regresar
+        </a>
+      </article>
+
+      <aside class="md:col-span-1 flex flex-col gap-y-8 lg:mt-6">
+        {temploDeLaMerced.map(({title, image}) => (
+          <img 
+            loading="lazy" 
+            decoding="async"
+            src={`/images/sitios-de-interes/templo-de-la-merced/${image}`} 
+            alt={title}
+            title={title}
+            class="w-full h-44 rounded object-contain"
+          />
+        ))}
+      </aside>
+    </main>
+
+  </section>
+</Layout>

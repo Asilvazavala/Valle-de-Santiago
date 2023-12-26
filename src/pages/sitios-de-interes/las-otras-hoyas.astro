@@ -1,0 +1,46 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { lasOtrasHoyas } from '../../components/Sitios-de-interes/las-otras-hoyas-data.astro';
+---
+
+<Layout title="Las otras hoyas">
+  <section>
+    <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+      <article class="md:col-span-2">
+        <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mt-6 mb-4 relative w-fit">
+            Las otras hoyas
+          <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
+        </aside>
+        
+        <h3 class="font-semibold text-lg">La Hoya de Cíntora</h3>
+        <p class="mb-4">Otro lago-cráter a cinco kilómetros de nuestra ciudad, ubicado al suroeste se puede llegar a sus inmediaciones en automóvil. También cuenta con pinturas rupestres, algunas de ellas muy interesantes, en blanco y negro, y vestigios de yácatas o entierros purépechas.</p>
+        <h3 class="font-semibold text-lg">Hoya de San Nicolás Parangueo</h3>
+        <p class="mb-4">Este otro bello lago-cráter se encuentra a aproximadamente cuatro kilómetros y medio de Valle de Santiago. Un detalle curioso es que sus aguas cambian de color conforme se suceden las estaciones del año. Su acceso no es muy dificil, pudiéndose hacer en automóvil.</p>
+        <h3 class="font-semibold text-lg">Hoya de Solís</h3>
+        <p class="mb-4">La Hoya de Solís, a diferencia de las inmediatamente anteriores, no cuenta con agua en sus interior, el mismo es utilizado para fines agrícolas tal y como se observa en la fotografía anexa. Merece la pena mencionar el muy peculiar microclima que se encuentra en su interior.</p>
+        <h3 class="font-semibold text-lg">Hoya Blanca</h3>
+        <p class="mb-4">La información al respecto será colocada en la próxima actualización de estas páginas. Gracias por su interés.</p>
+        <h3 class="font-semibold text-lg">Hoya de Estrada</h3>
+        <p class="mb-4">Este volcán es el de pendientes más suaves de todos los que se encuentran en Valle de Santiago. Al respecto nos dice Marisol Cano Cruz (2007) "La Hoya de Estrada es uno de los cráteres de explosión (tipo maar) que conforman al Campo Volcánico de Valle de Santiago (CVVS), Guanajuato, México. Se ubica en el extremo nororiental del Campo Volcánico de Michoacán-Guanajuato, en la parte central del Cinturón Volcánico Transmexicano. El CVVS está compuesto por alrededor de 13 maares, los cuales se encuentran orientados en la dirección preferencial NW-SE, lo cual refleja un control estructural regional. El cráter Hoya de Estrada se caracteriza por ser uno de los pocos volcanes de tipo maar de composición riolítica del CVVS, además de ser una de las estructuras más someras, compuesto por un anillo piroclástico con pendientes suaves y se caracteriza por ser una estructura constructiva positiva formada arriba de la superficie pre-eruptiva, por lo que podría clasificarse como un anillo de tobas, a diferencia de los demás".</p>
+        <a href="/" class="text-gray flex justify-start items-center gap-x-1 w-fit mb-6">
+          <i class='bx bx-chevrons-left'></i> Regresar
+        </a>
+      </article>
+
+      <aside class="md:col-span-1 flex flex-col gap-y-8 lg:mt-6">
+        {lasOtrasHoyas.map(({title, image}) => (
+          <img 
+            loading="lazy" 
+            decoding="async"
+            src={`/images/sitios-de-interes/las-otras-hoyas/${image}`} 
+            alt={title}
+            title={title}
+            class="w-full h-44 rounded object-contain"
+          />
+        ))}
+      </aside>
+    </main>
+
+  </section>
+</Layout>

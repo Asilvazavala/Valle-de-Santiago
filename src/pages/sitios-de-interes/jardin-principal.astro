@@ -1,0 +1,41 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { jardinPrincipal } from '../../components/Sitios-de-interes/jardin-principal-data.astro';
+---
+
+<Layout title="Jardín principal">
+  <section>
+    <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+      <article class="md:col-span-2">
+        <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mt-6 mb-4 relative w-fit">
+            Jardín principal
+          <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
+        </aside>
+        
+        <h3 class="font-semibold text-lg mb-4">ANTECEDENTES</h3>
+        <p class="mb-4">Su trazo data desde la fundación de Valle de Santiago en 1607, pero su estructura, como un zócalo, es del año 1868. Anteriormente se le denominaba comúnmente Plaza de Armas, siendo hasta el 15 de septiembre de 1910 cuando se le cambió el nombre a Jardín Independencia por celebrarse en esa fecha el centenario de la misma.</p>
+        <p class="mb-4">Desde el año de 1869 en este lugar se reunían los vallenses que regresaban de la guerra en contra de la Intervención Francesa por tal motivo se le llamó, como en otros sitios, Plaza de Armas; su kiosco [1] original se comenzó a construir el 8 de diciembre de 1900 siendo modificado varias veces hasta que en junio de 1951, durante el gobierno municipal de Albino Tavera Amezcua, y contando con la cooperación del Gobernador del estado, Lic. José Aguilar y Maya, se terminó con la fisonomía con que lo conocemos actualmente.</p>
+        <p class="mb-4">Fue en el año de 1987, durante el gobierno de Manuel Granados Enríquez, cuando el perímetro del jardín se hizo peatonal frente a los tres portales que lo delimitan, colocándose para tal fin un adoquinado con material hecho a base de cemento blanco y polvo de cantera traído de Querétaro. En el año 2008, siendo alcalde José Luis Nieto Montoya, se remozaron los portales, las fachadas de los inmuebles y el mismo kiosco.</p>
+        <p class="mb-4">Rodeado por tres portales Portal Morelos, Portal Hidalgo, Portal Centenario (que se llama así porque se construyó para conmemorar el primer centenario de la Independencia, al cual anteriormente se le llamaba Portal Chiquito y que tuvo un costo de $ 1,800.00) y por último el Portal Guerrero que se encuentra a un lado de la Parroquia de Santiago Apóstol en la calle Melchor Ocampo.</p>
+        <a href="/" class="text-gray flex justify-start items-center gap-x-1 w-fit mb-6">
+          <i class='bx bx-chevrons-left'></i> Regresar
+        </a>
+      </article>
+
+      <aside class="md:col-span-1 flex flex-col gap-y-8 lg:mt-6">
+        {jardinPrincipal.map(({title, image}) => (
+          <img 
+            loading="lazy" 
+            decoding="async"
+            src={`/images/sitios-de-interes/jardin-principal/${image}`} 
+            alt={title}
+            title={title}
+            class="w-full h-44 rounded object-contain"
+          />
+        ))}
+      </aside>
+    </main>
+
+  </section>
+</Layout>

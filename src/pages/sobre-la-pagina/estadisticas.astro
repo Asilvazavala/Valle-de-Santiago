@@ -1,0 +1,32 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { estadisticas } from '../../components/Sobre-la-pagina/estadisticas-data.astro';
+---
+
+<Layout title="Estadísticas">
+  <section>
+    <a href="/" class="text-gray pt-2 flex justify-start items-center gap-x-1 w-fit">
+      <i class='bx bx-chevrons-left'></i> Regresar
+    </a>
+
+    <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary
+    text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mb-2 relative w-fit mt-4">
+        Estadísticas
+      <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
+    </aside>
+    <h4 class="text-black/60 text-sm">Datos de la página www.valledesantiago.net HASTA DICIEMBRE DE 2013</h4>
+
+    <main class="mt-4 grid grid-cols-1 md:grid-cols-2 pb-20 gap-10">
+      {estadisticas.map(({title, image}) => (
+        <img 
+          loading="lazy" 
+          decoding="async"
+          src={`/images/sobre-la-pagina/estadisticas/${image}`} 
+          alt={title}
+          title={title}
+          class="w-full h-full rounded object-contain"
+        />
+      ))}
+    </main>
+  </section>
+</Layout>

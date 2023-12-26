@@ -1,0 +1,59 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { volcanesYHoyas } from '../../components/Sitios-de-interes/volcanes-de-valle-de-santiago-data.astro';
+---
+
+<Layout title="Volcanes y hoyas">
+  <section>
+    <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+      <article class="md:col-span-2">
+        <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mt-6 mb-4 relative w-fit">
+            Volcanes y hoyas
+          <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
+        </aside>
+        
+        <h3 class="font-semibold text-lg mb-4">DESCRIPCIÓN DE LOS VOLCANES DE VALLE DE SANTIAGO</h3>
+        <p class="mb-4">El campo volcánico de Michoacán-Guanajuato, en general, contiene más de 1400 aparatos volcánicos, incluidos los conos de escoria históricamente activos de Paricutín y Jorullo, este campo cubre un área de aproximadamente 200 x 250 km de los Estados de Michoacán y Guanajuato en el centro-oeste de México. Los denominados conos de escoria son la forma predominante de origen volcánico, pero pequeños volcanes, domos de lava, maars y anillos de Toba (muchos en el área de Valle de Santiago), y flujos de lava sin aparato implosivo también están presentes. Los volcanes son en su mayoría del Pleistoceno [1] y morfologías similares a pequeños volcanes de tipo islandés, aunque los escudos de Michoacán-Guanajuato tienen ángulos de inclinación mayor y menores diámetros basales que aquellos. El de Jorullo, que surgió en el siglo XVIII, y el de Paricutín, que creció por encima de un maizal durante 1943-52, son los dos más conocidos de los aproximadamente 1400 volcanes pequeños diseminados por el campo volcánico.</p>
+        <p class="mb-4">El Pleistoceno, una división de la escala temporal geológica, es una época geológica que comienza hace 2.59 millones de años y finaliza aproximadamente 10,000 años A.C., precedida por el Plioceno y seguida por el Holoceno. Si bien, se considera casi en la generalidad, que los primeros pobladores de norteamérica pasaron por el estrecho de Bering alrededor del 11,500 A.C., no hay indicios plenos de que haya habido pobladores en esta zona cuando los volcanes comenzaron y terminaron su actividad.</p>
+        <h3 class="font-semibold text-lg mb-4">DESCRIPCIÓN PARTICULAR</h3>
+        <p class="mb-4">El municipio forma parte del "Bajío", en la llamada Mesa Central de la Altiplanicie mexicana, lo cruzan tres cordilleras; la más importante es la del grupo volcánico formado por 14 (catorce) cráteres inactivos, iniciándose en el Cerro de la Mina y el Cráter llamado del Rincón.</p>
+        <p class="mb-4">En las llamadas Hoyas o Albercas, nombre como se les conoce en la región, se han formado en su interior lagos, pero son, exceptuando el agua de la llamada propiamente Alberca, salitrosas e insalubres.</p>
+        <p class="mb-4">Con relación a sus ahora extintos volcanes a la región se le conoce como El País de las Siete Luminarias, sin embargo, los principales son ocho, además de contar con varios aparatos volcánicos esparcidos por toda el área.</p>
+        <p class="mb-4">Es precisamente esta área la que nos regala misterio y singularidad y forma parte especial del muy celebrado mundialmente bellísimo paisaje volcánico de México; ya alguna vez el inmortal Pablo Neruda, en su autobiografía "Confieso que he vivido", manifestaba la ocasión de especial felicidad que es encontrarse con la prueba de una naturaleza feroz. México y, en especial, el País de las Siete Luminarias (Valle de Santiago, el antiguo Camémbaro) es más que un paisaje lindo. Las leyendas, la calidez humana y, desde luego, la hospitalidad provinciana están más allá de cualquier duda.</p>
+        <p class="mb-4">A continuación y como referencia se citan los volcanes de mayor altura en el planeta. Los de Valle de Santiago, ciertamente, son cráteres enanos en tal sentido.</p>
+        <h3 class="font-semibold text-lg mb-4">LOS VOLCANES MÁS ALTOS DEL MUNDO</h3>
+        <ul class="list-disc pl-8 mb-4">
+          <li>Ojos del salado Argentina/Chile 6, 864 m</li>
+          <li>Sajama Bolivia 6, 542 m</li>
+          <li>Chimborazo Ecuador 6, 310 m</li>
+          <li>Antofalla Argentina 6, 100 m</li>
+          <li>Guallatiri Chile 6, 060 m</li>
+          <li>Socompa Argentina/Chile 6, 031 m</li>
+          <li>Láscar Chile 5, 990 m</li>
+          <li>Tacora Chile/Perú 5, 988 m</li>
+          <li>Nevado de Sabancaya Perú 5, 976 m</li>
+          <li>San José Argentina/Chile 5, 919 m</li>
+          <li>Pico de Orizaba México 5, 610 m</li>
+        </ul>
+        <a href="/" class="text-gray flex justify-start items-center gap-x-1 w-fit mb-6">
+          <i class='bx bx-chevrons-left'></i> Regresar
+        </a>
+      </article>
+
+      <aside class="md:col-span-1 flex flex-col gap-y-8 lg:mt-6">
+        {volcanesYHoyas.map(({title, image}) => (
+          <img 
+            loading="lazy" 
+            decoding="async"
+            src={`/images/sitios-de-interes/volcanes-y-hoyas/${image}`} 
+            alt={title}
+            title={title}
+            class="w-full h-44 rounded object-contain"
+          />
+        ))}
+      </aside>
+    </main>
+
+  </section>
+</Layout>

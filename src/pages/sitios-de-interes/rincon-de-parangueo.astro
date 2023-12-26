@@ -1,0 +1,45 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { rinconDeParangueo } from '../../components/Sitios-de-interes/rincon-de-parangueo-data.astro';
+---
+
+<Layout title="Rincón de Parangueo">
+  <section>
+    <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+      <article class="md:col-span-2">
+        <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mt-6 mb-4 relative w-fit">
+            Rincón de Parangueo
+          <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
+        </aside>
+        
+        <h3 class="font-semibold text-lg mb-4">El Rincón de Parangueo, la luna a través de un túnel</h3>
+        <p class="mb-4">Este bello sitio ubicado a tan sólo seis kilómetros de la ciudad es el único de los cráteres al que se accede a través de un túnel artificial de aproximadamente 450 metros de longitud.</p>
+        <p class="mb-4">El lago-cráter es enigmático, de muy singular presencia, en su interior se cultiva el mosco, insecto que es exportado a países como Alemania como alimento para aves. El agua es de un alto contenido en salitre motivo por el cual no es utilizada como riego, pero nos trae una peculiar leyenda, mezcla de mito y realidad, que a continuación transcribo:</p>
+        <h3 class="font-semibold text-lg mb-4">La leyenda del Rincón de Parangueo</h3>
+        <p class="mb-4">A finales del siglo pasado el señor hacendado, dueño de vidas y destinos, mandó analizar el agua de la llamada Hoya del Rincón de Parangueo. Eran tiempos difíciles y se requería el aprovechar el agua de una forma eficiente. Para tal misión encomendó al más fiel y responsable de sus servidores a tomar una muestra del agua de la Hoya y sin contaminarla transportarla a la Cd. de México para su ulterior análisis. Mismo que hizo nuestro humilde personaje tan sólo con la salvedad que, aparentemente coyoteado por el celoso mayordomo quien veía que poco a poco iba perdiendo terreno a los ojos del hacendado, le mandó una palomilla de cómplices quienes lo abordaron y con engaños lo embriagaron. Durante el periódo de embriaguez el mensajero perdió su jícara y con ella el valioso contenido a analizar. </p>
+        <p class="mb-4">Al darse cuenta, al día siguiente, de la ausencia de la misma, prefirió comprar otra y llenarla con agua de la zona -parece ser que esto sucedió entre Celaya y Querétaro-; una vez realizado esto último, prosiguió su camino. A su regreso, con los resultados positivos en la mano, lleno de remordimiento pero con más temor de ser descubierto en su falta, entregó los mismos a su patrón. Ante la vista de éstos el señor hacendado mando construir un túnel para que sirviera de desfogue a las aguas del cráter y, una vez concluídas las obras celebró con gran regocijo el venturoso porvenir que le deparaba tan magna edificación, pero cuál sería su sorpresa al percatarse, tan prontamente como el fiel mayordomo se encargó de hacerlo que ¡el agua con el que estaba regando sus sembradíos era salitrosa y no servía para nada!</p>
+        <p class="mb-4">Lleno de pena, vergüenza y desaliento, el otrora cumplido empleado de la hacienda de la Hoya del Rincón de Parangueo sólo pensó en el suicidio. Pensarlo y hacerlo fue una sola cosa. Su cuerpo fue encontrado al día siguiente al final del túnel que por su deslealtad y cobardía se había construído. Cuentan que la sangre que del cuerpo brotó escurrió hasta mezclarse con las aguas del lago que ahora, como una forma de tratar de enmendar el error, se tiñen de rojo para anunciar y prevenir algún desastre.</p>
+        <p class="mb-4">Un detalle más que curioso y que vale la pena comentar es que a ambos lados del citado túnel existe una banqueta de aproximadamente 30 cms. de ancho por unos 50 cms. de alto y que el viajero se pregunta curioso su uso. Normalmente los guías -muchachos de las comunidades rurales cercanas- armados con tan sólo una vela de cera y pabilo como arma contra la oscuridad imperante en el interior del túnel hacen como que no oyen la pregunta o de plano la evaden, y es que si en los primeros momentos de nuestra caminata nos explican el motivo de esas banquetas simpáticas más de uno se regresa...</p>
+        <p class="mb-4">Y bueno, resulta que por ahí mismo se conduce a los animales a abrevar o a ramonear al interior de la Hoya. No es raro que pasen bovinos u otros que rocen peligrosamente con sus cuernos los vientres de los azorados turistas quienes imploran a todos los Dioses no permitan que se les pare una mosca o cualquier otro insecto en la agachada cabeza de nuestros amigos cebues que los obligue a sacudirla con las indeseables consecuencias que se imaginan.</p>
+        <a href="/" class="text-gray flex justify-start items-center gap-x-1 w-fit mb-6">
+          <i class='bx bx-chevrons-left'></i> Regresar
+        </a>
+      </article>
+
+      <aside class="md:col-span-1 flex flex-col gap-y-8 lg:mt-6">
+        {rinconDeParangueo.map(({title, image}) => (
+          <img 
+            loading="lazy" 
+            decoding="async"
+            src={`/images/sitios-de-interes/rincon-de-parangueo/${image}`} 
+            alt={title}
+            title={title}
+            class="w-full h-44 rounded object-contain"
+          />
+        ))}
+      </aside>
+    </main>
+
+  </section>
+</Layout>

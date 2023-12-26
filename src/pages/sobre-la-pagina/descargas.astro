@@ -1,0 +1,54 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { descargas } from '../../components/Sobre-la-pagina/descargas-data.astro';
+---
+
+<Layout title="Descargas">
+  <section class="pt-4">
+    <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary
+    text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mb-2 relative w-fit">
+        Descargas
+      <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
+    </aside>
+    <h3 class="font-semibold text-lg">DESCARGAS DE LIBROS Y DOCUMENTOS VALIOSOS SOBRE VALLE DE SANTIAGO, GTO.</h3>
+    <p class="text-gray">ESPACIOS HISTÓRICOS DE VALLE DE SANTIAGO</p>
+    <p class="mb-4 text-gray">J. ASCENSIÓN BALTASAR (1997)</p>
+    <ul class="list-disc pl-8 mb-4">
+      {descargas.map(({ title, url }) => (
+        <li>
+          <a 
+            class="underline lg:hover:text-gray transition" 
+            download={url}
+            href={url}
+          >
+            {title}
+          </a>
+        </li>
+      ))}
+    </ul>
+    <h3 class="font-semibold text-lg">CONOZCA VALLE DE SANTIAGO, TIERRA DE VOLCANES Y LEYENDAS</h3>
+    <p class="text-gray">J. ASCENSIÓN BALTASAR (c. 2000)</p>
+    <a 
+      class="underline lg:hover:text-gray transition" 
+      download="/files/descargas/conozca_valle_de_santiago_tierra_de_volcanes_y_ley.pdf"
+      href="/files/descargas/conozca_valle_de_santiago_tierra_de_volcanes_y_ley.pdf"
+    >
+      TOMO ÚNICO - Conozca Valle de Santiago, tierra de volcanes y leyendas
+    </a>
+    <h3 class="font-semibold text-lg mt-4">LA INSURGENCIA EN EL BAJÍO</h3>
+    <p class="text-gray">BENJAMÍN LARA GONZÁLEZ (2003)</p>
+    <a 
+      class="underline lg:hover:text-gray transition" 
+      download="/files/descargas/benjamin_lara_-_la_insurgencia_en_el_bajio_-_2003.pdf"
+      href="/files/descargas/benjamin_lara_-_la_insurgencia_en_el_bajio_-_2003.pdf"
+    >
+      TOMO ÚNICO - La Insurgencia en el Bajío
+    </a>
+    <a href="/" class="text-gray mt-4 flex justify-start items-center gap-x-1 w-fit">
+      <i class='bx bx-chevrons-left'></i> Regresar
+    </a>
+
+    <main class="mt-4 grid grid-cols-1 md:grid-cols-2 pb-20 gap-10">
+    </main>
+  </section>
+</Layout>

@@ -1,0 +1,44 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { hoyaDeAlvarez } from '../../components/Sitios-de-interes/hoya-de-alvarez-data.astro';
+---
+
+<Layout title="Hoya de Álvarez">
+  <section>
+    <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+      <article class="md:col-span-2">
+        <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mt-6 mb-4 relative w-fit">
+            Hoya de Álvarez
+          <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
+        </aside>
+        
+        <h3 class="font-semibold text-lg mb-4">La Hoya de Alvarez, los manantiales eternos</h3>
+        <p class="mb-4">Le llamamos de Alvarez, Flores, y podría llamarse Ramírez, etc. pues estos nombres son apellidos de los antiguos propietarios. Pero el nombre que ostentó tal vez desde los años del 1300 fue ese, Saratángato, que posiblemente quiera decir: lugar como cedazo que se obscurece temprano. Es un cuenco volcánico cuyos bordes miden unos dos kilómetros de diámetro exterior y su diámetro interior unos 1200 metros. Es terreno de cultivo desde tiempos ancestrales cuando las tribus nómadas se hicieron sedentarias y formaron ahí un centro ceremonial. El asentamiento humano fue posible gracias a cuatro preciosos manantiales que en todo tiempo del año rendían su útil líquido, tanto para uso agrícola como para calmar la sed de sus internos habitantes.</p>
+        <p class="mb-4">Los taludes interiores debieron ser intrincados bosques de los más variados ejemplares de la flora regional. Entre ellos los que llevaban por nombre palo amarillo, palo blanco, palo prieto, palo santo, palo dulce, palo bobo, así como los productores de gomas tales como el copal y el perimo. Abundaba el pochote y la parota, amén de gran cantidad de varales y pastos que abrigaban una rica fauna de cacería menor. Condiciones especiales por sus altos bordes, hacen todavía de ese lugar un magnífico observatorio astronómico, pues tal parece que la curvatura del aire razante produce un efecto de lente que permite ver el paisaje sideral en toda su hermosa magnitud y ello, a vista natural.</p>
+        <p class="mb-4">Los antiguos fueron aficionados al estudio de ese universo astronómico en el que se sentían inmersos y así hicieron uso de cuencas llenas de agua que les servían como observatorios del cielo sin tener que estar con la cabeza levantada. Todavía, cerca de un montículo central, los agricultores jalaron a la orilla de la sembra un monolito de más de cien kilos de peso el cual tiene un mortero labrado en la piedra y que servía para ese objeto. Se sabe también que los morteros en realidad tenían otro uso, como el de machacar plantas o semillas para hacer medicamentos, pero el tamaño que nos da el aludido nos autoriza para asignarle el uso también de espejo.</p>
+        <p class="mb-4">Cuando este lugar era de propiedad privada hubo el proyecto de convertirlo en centro vacacional propio para personas que, queriendo huir del estrés de las ciudades, pudiesen recuperar sus energías con el descanso que este ambiente les proporcionaría. No se descarta que los actuales usufructuarios del sistema ejidal pudiesen llevar a cabo aquella idea y formaran un centro turístico con los mismos propósitos, ya que las autoridades municipales, cooperan con la infraestructura para hacer accesible ese lugar. Aunque los manantiales se han visto decrecientes por la desforestación que está sufriendo el cerro de "El Tule", el cual es su principal proveedor, esto se puede solucionar con una buena campana de reforestación. También es interesante por sus pinturas geométricas y zoomorfas.</p>
+        <h3 class="font-semibold text-lg mb-4">Las leyendas de la Hoya de Álvarez</h3>
+        <p class="mb-4">En la zona se escuchan leyendas como la de la Cueva de la Muerta, mítica caverna en donde un cadáver femenino cuida celosamente de un tesoro magnífico, hay quienes incluso afirman que dicho tesoro tan existe que perteneció a algunos de los forajidos que asolaron la región a fines del siglo XIX y principios del XX quienes utilizaban estos parajes abruptos y solitarios para esconder el producto de sus fechorías.</p>
+        <p class="mb-4">Otra leyenda, también asociada a las laderas cavernosas de este cráter, es la de la Cueva del Aire, supuesta gruta natural que atraviesa de lado a lado el cono volcánico y cuyos enconados vientos impiden cruzarla. Ciertas o no, ni duda cabe que estas consejas populares dan otro toque de interés y admiración para el visitante.</p>
+        <a href="/" class="text-gray flex justify-start items-center gap-x-1 w-fit mb-6">
+          <i class='bx bx-chevrons-left'></i> Regresar
+        </a>
+      </article>
+
+      <aside class="md:col-span-1 flex flex-col gap-y-8 lg:mt-6">
+        {hoyaDeAlvarez.map(({title, image}) => (
+          <img 
+            loading="lazy" 
+            decoding="async"
+            src={`/images/sitios-de-interes/hoya-de-alvarez/${image}`} 
+            alt={title}
+            title={title}
+            class="w-full h-44 rounded object-contain"
+          />
+        ))}
+      </aside>
+    </main>
+
+  </section>
+</Layout>
