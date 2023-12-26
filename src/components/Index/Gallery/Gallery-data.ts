@@ -6,19 +6,49 @@ interface GalleryProps {
 
 export const GalleryImages: GalleryProps[] = [
   {
-    id: 1,
-    image: "Calle Carranza entre la parroquia y el jardín principal.webp",
-    description: "Calle Carranza entre la parroquia y el jardín principal."
+    id: 40,
+    image: "Valle desde las alturas15.webp",
+    description: "Jardin Principal de noche."
+  },
+  {
+    id: 35,
+    image: "Valle desde las alturas9.webp",
+    description: "Parroquía Santiago Apóstol."
+  },
+  {
+    id: 28,
+    image: "Valle desde las alturas2.webp",
+    description: "Valle desde las alturas."
+  },
+  {
+    id: 33,
+    image: "Valle desde las alturas7.webp",
+    description: "Jardín principal de día."
+  },
+  {
+    id: 37,
+    image: "Valle desde las alturas12.webp",
+    description: "Valle desde las alturas."
+  },
+  {
+    id: 12,
+    image: "Jardin principal por la tarde.webp",
+    description: "Jardin principal por la tarde."
+  },
+  {
+    id: 13,
+    image: "Jardin principal vitsa lateral.webp",
+    description: "Jardin principal vista lateral."
+  },
+  {
+    id: 14,
+    image: "Jardin principal.webp",
+    description: "Jardin principal."
   },
   {
     id: 2,
     image: "Calle Juarez junto a la parroquia.webp",
     description: "Calle Juarez junto a la parroquia."
-  },
-  {
-    id: 3,
-    image: "Calle Ocampo junto a la parroquia antigua.webp",
-    description: "Calle Ocampo junto a la parroquia antigua."
   },
   {
     id: 4,
@@ -59,21 +89,6 @@ export const GalleryImages: GalleryProps[] = [
     id: 11,
     image: "Hito y Cerro de la Batea.webp",
     description: "Hito y Cerro de la Batea."
-  },
-  {
-    id: 12,
-    image: "Jardin principal por la tarde.webp",
-    description: "Jardin principal por la tarde."
-  },
-  {
-    id: 13,
-    image: "Jardin principal vitsa lateral.webp",
-    description: "Jardin principal vitsa lateral."
-  },
-  {
-    id: 14,
-    image: "Jardin principal.webp",
-    description: "Jardin principal."
   },
   {
     id: 15,
@@ -141,11 +156,6 @@ export const GalleryImages: GalleryProps[] = [
     description: "Valle desde las alturas."
   },
   {
-    id: 28,
-    image: "Valle desde las alturas2.webp",
-    description: "Valle desde las alturas."
-  },
-  {
     id: 29,
     image: "Valle desde las alturas3.webp",
     description: "Valle desde las alturas."
@@ -166,28 +176,13 @@ export const GalleryImages: GalleryProps[] = [
     description: "Valle desde las alturas."
   },
   {
-    id: 33,
-    image: "Valle desde las alturas7.webp",
-    description: "Valle desde las alturas."
-  },
-  {
     id: 34,
     image: "Valle desde las alturas8.webp",
     description: "Valle desde las alturas."
   },
   {
-    id: 35,
-    image: "Valle desde las alturas9.webp",
-    description: "Valle desde las alturas."
-  },
-  {
     id: 36,
     image: "Valle desde las alturas11.webp",
-    description: "Valle desde las alturas."
-  },
-  {
-    id: 37,
-    image: "Valle desde las alturas12.webp",
     description: "Valle desde las alturas."
   },
   {
@@ -198,11 +193,6 @@ export const GalleryImages: GalleryProps[] = [
   {
     id: 39,
     image: "Valle desde las alturas14.webp",
-    description: "Valle desde las alturas."
-  },
-  {
-    id: 40,
-    image: "Valle desde las alturas15.webp",
     description: "Valle desde las alturas."
   },
   {
@@ -244,5 +234,35 @@ export const GalleryImages: GalleryProps[] = [
     id: 48,
     image: "Vista interior de la cupula principal de la parroquia de Santiago Apostol.webp",
     description: "Vista interior de la cupula principal de la parroquia de Santiago Apostol."
+  },
+  {
+    id: 49,
+    image: "Rincon de Parangueo.webp",
+    description: "Rincón de Parangueo."
+  },
+  {
+    id: 50,
+    image: "Hoya-de-Alvarez.webp",
+    description: "Hoya-de-Alvarez."
+  },
+  {
+    id: 51,
+    image: "Hoya de cintora.webp",
+    description: "Hoya de cintora."
+  },
+  {
+    id: 52,
+    image: "Hoya de Solis.webp",
+    description: "Hoya de Solis."
+  },
+  {
+    id: 3,
+    image: "Calle Ocampo junto a la parroquia antigua.webp",
+    description: "Calle Ocampo junto a la parroquia antigua."
+  },
+  {
+    id: 1,
+    image: "Calle Carranza entre la parroquia y el jardín principal.webp",
+    description: "Calle Carranza entre la parroquia y el jardín principal."
   },
 ];

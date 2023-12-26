@@ -27,7 +27,7 @@ export default function MapaValle() {
       </div>
       <MapContainer 
         center={coordinatePoint}
-        zoom={10}
+        zoom={11}
         scrollWheelZoom={false}
         className="h-[400px] lg:h-[500px]"
       >
