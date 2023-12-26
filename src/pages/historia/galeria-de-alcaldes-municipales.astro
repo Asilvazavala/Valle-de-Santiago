@@ -1,0 +1,19 @@
+---
+import GaleriaAlcaldesMunicipales from "../../components/historia/GaleriaAlcaldesMunicipales";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Galería de alcaldes municipales">
+  <section class="mt-28 h-screen">
+    <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary
+    text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mt-6 mb-4 relative w-fit">
+        Galería de alcaldes municipales
+      <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
+    </aside>
+    
+    <GaleriaAlcaldesMunicipales client:visible />
+    <a href="/" class="text-gray flex justify-start items-center gap-x-1 w-fit mt-6 lg:hover:text-gray/80 transition">
+      <i class='bx bx-chevrons-left'></i> Regresar
+    </a>
+  </section>
+</Layout>

@@ -1,0 +1,45 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { lasCabanuelas } from '../../components/historia/las-cabanuelas-data.astro';
+---
+
+<Layout title="Las cabañuelas">
+  <section>
+    <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+      <article class="md:col-span-2">
+        <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mt-6 mb-4 relative w-fit">
+            Las cabañuelas
+          <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
+        </aside>
+        
+        <p class="mb-4">Una de las costumbres más arraigadas entre la gente de nuestro pueblo era el de las cabañuelas. Este término -conocido como las témporas en España- es un método, porque efectivamente lo es y hasta medianamente complejo, para predecir el clima que imperaría durante todo el año.</p>
+        <p class="mb-4">Utilizado prácticamente en todo México le proporcionaba a la gente, principalmente a la dedicada a las labores del campo, la posibilidad de prever las condiciones climáticas: si estiaje o inundaciones, si lluvia o vientos, si frío o calor o si la canícula, el periodo más caluroso del año, vendría terrible. Además de ser un excelente tema de conversación entre los vecinos, hablar sobre el tiempo era hablar sobre lo que la naturaleza les tenía preparado a la comunidad entera, dependiente como era de las buenas cosechas. Nuestro municipio, de vocación agrícola inequívoca, no estaba ajeno a las predicciones climáticas a través de las cabañuelas, siendo los temporaleros los que más recurrían a ellas aunque los agricultores de la zona conocida como Las Tablas, la región de alta productividad ubicada al norte de la ciudad, también lo hacían.</p>
+        <p class="mb-4">Ciertamente, esta manera de predecir el clima carece de cualquier rigor científico, aunque para nuestros agricultores en aquellos tiempos pasados donde la existencia de técnicos y tecnología climática simplemente no existían, era un verdadero oráculo que les permitía tomar las providencias necesarias. Después vendría el Calendario Galván y, posteriormente, los reportes del sistema meteorológico, pero aún hoy en día hay quien sepa y persista en utilizar el método de las cabañuelas "por certero y de toda la vida".</p>
+        <p class="mb-4">La predicción básica era tomar los 12 primeros días de enero y correlacionarlos con los meses del año. Así, al primero de enero le correspondía el mes de enero; al dos de enero, febrero; al tres, marzo; al cuatro, abril y así sucesivamente. Si el día 9, que corresponde a septiembre, hacía mucho viento se decía que "septiembre viene ventoso, quizás con céfiros" (estos son vientos mayormente nocturnos del poniente).</p>
+        <p class="mb-4">Adicionalmente había quien le ponía más rigor al asunto de las predicciones y "las cruzaba" con la de los días 13 al 24, tomándolas en sentido inverso por eso se les conoce como "las retornadas". Esto es, al día 13 de enero le correspondía diciembre; al 14, noviembre; al 15, octubre y así hasta el día 24 que volvía a ser la predicción para enero.</p>
+        <p class="mb-4">Sin embargo, los más acuciosos llegaban a la minucia de utilizar los días sobrantes del mes de enero para no dejar lugar a dudas sobre el oráculo natural que representaban las cabañuelas. De tal manera que los días del 25 al 30 se tomaban por mitad y correspondía, en sentido ascendente de nueva vez, con los meses del año. El 25 hasta medio día, era enero; el resto del día, febrero; el 26, marzo y abril y así hasta el día 30 que representaba a noviembre y diciembre. Y para "más seguro más marrao", el día restante, el 31, se tomaban las horas correspondiéndolas, ahora en correlación descendente, con los meses. Esto significaba que desde las cero horas y hasta las dos predecían a diciembre; de las dos y hasta las cuatro de la mañana, era noviembre; de las cuatro a las seis, octubre, etcétera. Curiosamente, predecir el mes de enero a estas alturas era inútil pues ya había transcurrido.</p>
+        <p class="mb-4">Para finalizar, una vez que observaban "cómo venía el año", hacían públicas sus predicciones, si apenas comenzaban a ganarse un sitio en el mundillo de los adivinos del clima, o las reservaban y solo las compartían con la "gente grande" si eran ya unos consumados en la interpretación de las cabañuelas.</p>
+        <p class="mb-4">De cualquier modo, las conclusiones predictivas resultaban un tanto vagas y hasta raras. El uso de vocablos, poco comunes para nosotros actualmente, puedan no significarnos gran cosa o, de plano, nada pero, para una sociedad agrícola tan dependiente del clima, eran la vida misma. Por eso le dieron nombre a todos los fenómenos climáticos. Por ejemplo, para predecir marzo: Se requería observar el día 3 (su correspondiente en las cabañuelas básicas), el día 22 (su correlativo en "las retornadas"), el 26 hasta mediodía y de las 18 a las 20 horas del día 31. Llegaban a la sentencia "marzo va a tener un 'clima saludable' al principio, pero a mediados se va a descomponer con el cierzo (viento frío del norte) y ponerse granizado con el zarzagán (una especie de cierzo pero más frío), pero no llegará el aquilón (especie de norte borrascoso) si acaso terminará con bóreas (viento más apacible del norte) o con suradas (molesto y caliente viento del sur)".</p>
+        <p class="mb-4">Así con términos extraños, ciertamente, tan hermosos como subjetivos -¿cuándo termina un cierzo y comienza un zarzagán? ¿cuándo los céfiros del poniente cambian lo suficiente para convertirse en un mistral o un tramontano?(1) o ¿de cuántos grados hablamos cuando decimos "clima saludable"? -, era como se determinaban las predicciones a través de las cabañuelas. Una tradición más, no exclusiva pero si muy arraigada, de nuestro Valle de Santiago.</p>
+        <p class="mb-4">¡Cuando el gallo canta más temprano, pueque llueva mucho, pueque llueva poco o pueque llueva nada! y porque además el 13 de junio, día de San Antonio, llueva o no llueva ¡comienzan las lluvias!</p>
+        <a href="/" class="text-gray flex justify-start items-center gap-x-1 w-fit mb-6 lg:hover:text-gray/80 transition">
+          <i class='bx bx-chevrons-left'></i> Regresar
+        </a>
+      </article>
+
+      <aside class="md:col-span-1 flex flex-col gap-y-8 lg:mt-6">
+        {lasCabanuelas.map(({title, image}) => (
+          <img 
+            loading="lazy" 
+            decoding="async"
+            src={`/images/historia/las-cabanuelas/${image}`} 
+            alt={title}
+            title={title}
+            class="w-full h-44 rounded object-contain"
+          />
+        ))}
+      </aside>
+    </main>
+  </section>
+</Layout>

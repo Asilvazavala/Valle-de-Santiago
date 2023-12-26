@@ -1,0 +1,83 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { colegioDeArquitectos } from '../../components/Nuestras-instituciones/colegio-de-arquitectos-data.astro';
+---
+
+<Layout title="Colegio de arquitectos">
+  <section>
+    <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20">
+      <article class="md:col-span-2">
+        <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mt-6 mb-4 relative w-fit">
+            Colegio de arquitectos
+          <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
+        </aside>
+        <h3 class="font-semibold text-lg mb-4">COLEGIO DE ARQUITECTOS DE
+          VALLE DE SANTIAGO, A. C.</h3>
+
+        <p class="mb-4">Este es el espacio del Colegio de Arquitectos de Valle de Santiago, A. C. El actual Colegio es la consolidación de la Asociación de Arquitectos de Valle de Santiago fundada en 1992 y finiquitada en el año 2003 con el cambio de nombre a favor de la actual asociación civil. El Colegio de Arquitectos de Valle de Santiago, A. C. nace el 23 de septiembre de 2003 con la adscripción de 12 miembros de número y 7 adherentes.</p>
+        <p class="mb-4">Actualmente cuenta con miembros de este municipio de Valle de Santiago y del vecino Jaral del Progreso. El Colegio es miembro fundador del Colegio de Arquitectos del estado de Guanajuato, A. C., miembro de número con folio 070 de la Federación de Colegios de Arquitectos la República Mexicana, A. C. (FCARM) y miembro activo de la Región II que comprende los Colegios de seis estados del país, Zacatecas, San Luis Potosí, Aguascalientes, Querétaro, Michoacán y Guanajuato.</p>
+        <p class="mb-4">El Colegio cuenta con el registro oficial en la Dirección General de Profesiones de la Secretaría de Educación de Guanajuato (SEG) desde marzo de 2004.</p>
+        <p class="mb-4">Los miembros fundadores del Colegio de Arquitectos son:</p>
+        <h5 class="mt-4 text-lg font-semibold">Miembros de Número</h5>
+        <ul class="list-disc pl-8 mb-4">
+          <li>Arq. Antonio Silva Tavera</li>
+          <li>Arq. José Antonio Hernández Loeza</li>
+          <li>Arq. Ma. de los Ángeles Gallardo Arredondo</li>
+          <li>Arq. José León García</li>
+          <li>Arq. José Luis Hernández Galván</li>
+          <li>Arq. José Adrián Fabián Tamayo Soto</li>
+          <li>Arq. Carlos Acevedo Martínez</li>
+          <li>Arq. Ma. Elena Morales Morales</li>
+          <li>Arq. Ramón Muñíz Mosqueda</li>
+          <li>Arq. María Eugenia del Rocío Reynoso González</li>
+          <li>Arq. Juan Carlos Rodríguez Rocha</li>
+          <li>Arq. Martha Patricia Velázquez Cruz</li>
+        </ul>
+        <h5 class="mt-4 text-lg font-semibold">Miembros Adherentes</h5>
+        <ul class="list-disc pl-8 mb-4">
+          <li>Arq. Jorge Carmona García</li>
+          <li>Arq. Sotero Estrada García</li>
+          <li>Arq. Juan José González Arredondo</li>
+          <li>Arq. Alejandro Ledesma García</li>
+          <li>Arq. Nicolás Moreno García</li>
+          <li>Arq. José Jesús Ojeda García</li>
+          <li>Arq. afael Vázquez Razo</li>
+        </ul>
+        <h5 class="mt-4 text-lg font-semibold">PRESIDENTES de la ASOCIACIÓN de ARQUITECTOS</h5>
+        <ul class="list-disc pl-8 mb-4">
+          <li>Arq. Carlos Acevedo Martínez 1992-1994</li>
+          <li>Arq. Antonio Silva Tavera 1994-2004</li>
+        </ul>
+        <h5 class="mt-4 text-lg font-semibold">PRESIDENTES del COLEGIO de ARQUITECTOS</h5>
+        <ul class="list-disc pl-8 mb-4">
+          <li>Arq. Antonio Silva Tavera 2004-2006</li>
+          <li>Arq. Antonio Silva Tavera 2006-2008</li>
+          <li>Arq. José León García 2008-2010</li>
+          <li>Arq. Ma. de los Ángeles Gallardo Arredondo 2010-2012</li>
+          <li>Arq. Juan Carlos Solís Solís 2012-2014</li>
+          <li>Arq. Antonio Silva Tavera 2014-2016</li>
+        </ul>
+        <p class="mb-4">Actualmente el colegio está en fase de idoneidad para poder certificar a sus miembros colegiados y a cualquier profesionista del ramo con licenciatura en arquitectura. Esta certificación está avalada por la SEG y es paralela al proceso de certificación de la CONARC/FCARM que tiene validez para todo el territorio nacional y para certificación TLC y APEC en el plano internacional.</p>
+        <p class="mb-4">De igual manera se está procediendo a conformar acuerdos de colaboración con diversas instituciones tanto locales como estatales. De entre ellos destacan el signado con la UTSOE y la delegación del INAH en el estado.</p>
+
+        <a href="/" class="text-gray flex justify-start items-center gap-x-1 w-fit mt-4 mb-6">
+          <i class='bx bx-chevrons-left'></i> Regresar
+        </a>
+      </article>
+
+      <aside class="md:col-span-1 flex flex-col gap-y-8 lg:mt-6">
+        {colegioDeArquitectos.map(({title, image}) => (
+          <img 
+            loading="lazy" 
+            decoding="async"
+            src={`/images/nuestras-instituciones/colegio-de-arquitectos/${image}`} 
+            alt={title}
+            title={title}
+            class="w-full h-auto rounded object-contain"
+          />
+        ))}
+      </aside>
+    </main>
+  </section>
+</Layout>

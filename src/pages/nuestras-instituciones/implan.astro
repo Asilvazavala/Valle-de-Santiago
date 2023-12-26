@@ -1,0 +1,39 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="IMPLAN">
+  <section>
+    <main class="mt-4 grid grid-cols-1 md:grid-cols-3 pb-20 gap-x-20 h-screen">
+      <article class="md:col-span-2">
+        <aside class="py-2 px-4 bg-gradient-to-br from-primary to-secondary uppercase
+        text-white text-xl md:text-2xl rounded-xl font-MontserratAlternates mt-6 mb-4 relative w-fit">
+            IMPLAN
+          <div class="absolute inset-0 border-4 border-primary rounded-xl"></div>
+        </aside>
+        <h3 class="font-semibold text-lg">Visita la página del IMPLAN municipal</h3>
+        <a 
+          href="https://implan.valledesantiago.gob.mx/" 
+          target="_blank" 
+          class="flex justify-start items-center gap-x-1 w-fit mb-6 underline lg:hover:text-black/80">
+          Página del IMPLAN
+        </a>
+        
+        <a href="/" class="text-gray flex justify-start items-center gap-x-1 w-fit mt-4 mb-6">
+          <i class='bx bx-chevrons-left'></i> Regresar
+        </a>
+      </article>
+
+      <aside class="md:col-span-1 flex flex-col gap-y-8 lg:mt-6">
+        <img 
+          loading="lazy" 
+          decoding="async"
+          src="/images/nuestras-instituciones/implan/Implan1.jpg" 
+          alt="Implan"
+          title="Implan"
+          class="w-full h-44 rounded object-contain"
+        />
+      </aside>
+    </main>
+  </section>
+</Layout>
