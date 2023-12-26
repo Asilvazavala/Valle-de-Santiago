@@ -13,7 +13,7 @@ export function MarkerHouse(props: MarkerHouseProps) {
   })
 
   return (
-    locationsData.map(({id, name, position, image}) => (
+    locationsData.map(({ id, name, position, image, href }) => (
       <Marker 
         key={id} 
         position={position} 
@@ -35,7 +35,7 @@ export function MarkerHouse(props: MarkerHouseProps) {
           />
 
           <a 
-            href="/sitios-de-interes/volcanes-y-hoyas"
+            href={href}
             style={{ color: 'white' }}
             className='px-3 py-2 text-white rounded-lg bg-secondary transition hover:bg-secondary/80
             w-full flex justify-center items-center'>
