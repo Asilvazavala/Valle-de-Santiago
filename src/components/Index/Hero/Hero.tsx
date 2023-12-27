@@ -8,6 +8,19 @@ import 'swiper/css/navigation';
 import { EffectFade, Pagination, Autoplay } from 'swiper/modules';
 
 export default function Hero () {
+  const handleSlideChange = (swiper) => {
+    const activeSlideIndex = swiper.activeIndex;
+    const animatedElements = document.querySelectorAll('.heroImg');
+  
+    animatedElements.forEach((element, index) => {
+      if (index === activeSlideIndex) {
+        element.classList.add('animate-zoomIn');
+      } else {
+        element.classList.remove('animate-zoomIn');
+      }
+    });
+  };
+
   return (
     <article className="h-screen">
       <Swiper
@@ -24,6 +37,7 @@ export default function Hero () {
           delay: 5000,
           disableOnInteraction: false,
         }}
+        onSlideChange={handleSlideChange}
       >
         {heroData.map(({description, image, link}) => (
           <SwiperSlide 
@@ -34,7 +48,7 @@ export default function Hero () {
               <img 
                 loading="lazy" 
                 decoding="async"
-                className="w-full h-[90vh] object-cover absolute top-0 left-0 animate-zoomIn" 
+                className="w-full h-[90vh] object-cover absolute top-0 left-0 heroImg" 
                 src={`/images/inicio/carousel/${image}`} 
                 alt={description}
                 title={description}
