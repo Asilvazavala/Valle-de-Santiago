@@ -36,10 +36,10 @@ const Modal: React.FC<ModalProps> = ({
           className="mySwiper w-full h-full"
           initialSlide={selectedImage ?? 0}
         >
-          {GalleryImages.map(({ image, description, id }) => (
+          {GalleryImages.map(({ id, image, description, colorDescription }) => (
             <SwiperSlide key={id} className='bg-center bg-cover lg:mt-20'>
               <img 
-                className='w-full h-[50vh] lg:h-[80vh] ' 
+                className="w-full h-[50vh] lg:h-[80vh]" 
                 src={`/images/inicio/gallery/${image}`} 
                 title={description}
                 alt={description}
@@ -64,7 +64,7 @@ const Modal: React.FC<ModalProps> = ({
                 </span>
               </a>
 
-              <span className="text-lg absolute bottom-0 backdrop-blur-xl text-black">
+              <span className={`text-lg absolute bottom-0 backdrop-blur-xl ${colorDescription}`}>
                 {description}
               </span>
             </SwiperSlide>        

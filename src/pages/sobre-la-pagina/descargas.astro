@@ -17,8 +17,9 @@ import { descargas } from '../../components/Sobre-la-pagina/descargas-data.astro
       {descargas.map(({ title, url }) => (
         <li>
           <a 
+            target="_blank"
+            rel="noopener"
             class="underline lg:hover:text-gray transition" 
-            download={url}
             href={url}
           >
             {title}
@@ -29,18 +30,20 @@ import { descargas } from '../../components/Sobre-la-pagina/descargas-data.astro
     <h3 class="font-semibold text-lg">CONOZCA VALLE DE SANTIAGO, TIERRA DE VOLCANES Y LEYENDAS</h3>
     <p class="text-gray">J. ASCENSIÓN BALTASAR (c. 2000)</p>
     <a 
+      target="_blank"
+      rel="noopenenr"
       class="underline lg:hover:text-gray transition" 
-      download="/files/descargas/conozca_valle_de_santiago_tierra_de_volcanes_y_ley.pdf"
-      href="/files/descargas/conozca_valle_de_santiago_tierra_de_volcanes_y_ley.pdf"
+      href="https://drive.google.com/file/d/1S1DCB2lr4fSKMOOQk5uvB3ntkDoRaPuo/view?usp=drive_link"
     >
       TOMO ÚNICO - Conozca Valle de Santiago, tierra de volcanes y leyendas
     </a>
     <h3 class="font-semibold text-lg mt-4">LA INSURGENCIA EN EL BAJÍO</h3>
     <p class="text-gray">BENJAMÍN LARA GONZÁLEZ (2003)</p>
     <a 
+      target="_blank"
+      rel="noopenenr"
       class="underline lg:hover:text-gray transition" 
-      download="/files/descargas/benjamin_lara_-_la_insurgencia_en_el_bajio_-_2003.pdf"
-      href="/files/descargas/benjamin_lara_-_la_insurgencia_en_el_bajio_-_2003.pdf"
+      href="https://drive.google.com/file/d/1S6e8VnhRfnc_HDs0IMX77OT0N9D4qQrv/view?usp=drive_link"
     >
       TOMO ÚNICO - La Insurgencia en el Bajío
     </a>
