@@ -21,11 +21,11 @@ export default function Hero () {
         modules={[EffectFade, Pagination, Autoplay]}
         className="mySwiper w-full h-screen p-12"
         autoplay={{
-          delay: 5500,
+          delay: 5000,
           disableOnInteraction: false,
         }}
       >
-        {heroData.map(({description, image, link}, index) => (
+        {heroData.map(({description, image, link}) => (
           <SwiperSlide 
             key={image} 
             className="bg-center bg-cover w-full relative overflow-hidden"
