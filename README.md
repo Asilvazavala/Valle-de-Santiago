@@ -11,7 +11,7 @@ Tecnologías: Astro, React, TypeScript & TailwindCSS.
 Proyecto creado con:
 
 ```sh
-npm create astro@latest -- --template basics
+npm create astro@latest -- --template basics --typescript --tailwind
 ```
 
 Todos los comandos son ejecutados en la raíz del proyecto, desde la terminal:
@@ -27,19 +27,17 @@ Todos los comandos son ejecutados en la raíz del proyecto, desde la terminal:
 
 ## 👀 Comandos de las dependencias
 
-| Command                          | Action                 |
-| :------------------------------- | :--------------------- |
-| `npx astro add tailwind`         | Installs TailwindCSS   |
-| `npm install @astrojs/ts-plugin` | Installs TypeScript    |
-| `npm install swiper`             | Installs Swiper        |
-| `npm i js-confetti`              | Installs js-confetti   |
-| `npm i leaflet`                  | Installs leaflet       |
-| `npm i @types/leaflet`           | Installs leaflet types |
+| Command                | Action                 |
+| :--------------------- | :--------------------- |
+| `npm install swiper`   | Installs Swiper        |
+| `npm i js-confetti`    | Installs js-confetti   |
+| `npm i leaflet`        | Installs leaflet       |
+| `npm i @types/leaflet` | Installs leaflet types |
 
 Instalar todas las dependencias:
 
 ```sh
-npm install @astrojs/ts-plugin swiper js-confetti leaflet @types/leaflet
+npm install swiper js-confetti leaflet @types/leaflet
 ```
 
 ## 🎆 Imágenes del proyecto
