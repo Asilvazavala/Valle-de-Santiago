@@ -1,44 +1,20 @@
-# Astro Starter Kit: Basics
+# Acerca de mi Portafolio
+
+Proyecto realizado para rediseñar una página creada hace más de 30 años por mi padre la cual habla sobre la bella ciudad donde vivimos, agregué librerías como Swiper o Leaflet, creé más de 40 artículos y aumenté la fluidez del sitio con Astro.
+
+Tecnologías: Astro, React, TypeScript & TailwindCSS.
+
+👉 Ve el proyecto aquí: [Valle de Santiago](https://valledesantiago.vercel.app/)
+
+## 🧞 Comandos básicos
+
+Proyecto creado con:
 
 ```sh
 npm create astro@latest -- --template basics
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
+Todos los comandos son ejecutados en la raíz del proyecto, desde la terminal:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
@@ -49,6 +25,27 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 👀 Comandos de las dependencias
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Command                          | Action                 |
+| :------------------------------- | :--------------------- | --- |
+| `npx astro add tailwind`         | Installs TailwindCSS   |
+| `npm install @astrojs/ts-plugin` | Installs TypeScript    |
+| `npm install swiper`             | Installs Swiper        |
+| `npm i js-confetti`              | Installs js-confetti   |
+| `npm i leaflet`                  | Installs leaflet       |
+| `npm i @types/leaflet`           | Installs leaflet types |     |
+
+Instalar todas las dependencias:
+
+```sh
+npm install @astrojs/ts-plugin swiper js-confetti leaflet @types/leaflet
+```
+
+## 🎆 Imágenes del proyecto
+
+![logo](https://github.com/Asilvazavala/Astro-Portfolio/blob/fe24103a384aafa142ff6262d3d774e0760a9b45/public/imagenes/Projects/valle-de-santiago.webp)
+
+![logo](https://github.com/Asilvazavala/My-Portfolio/blob/906a0fd188d53e75381934341341652a4db1e025/src/imagenes/Mobile/Valle/valleMobile.png)
+
+![logo](https://github.com/Asilvazavala/My-Portfolio/blob/906a0fd188d53e75381934341341652a4db1e025/src/imagenes/Mobile/Valle/valleMobile2.png)
