@@ -1,4 +1,4 @@
-# Acerca de mi Portafolio
+# Acerca de Valle de Santiago
 
 Proyecto realizado para rediseñar una página creada hace más de 30 años por mi padre la cual habla sobre la bella ciudad donde vivimos, agregué librerías como Swiper o Leaflet, creé más de 40 artículos y aumenté la fluidez del sitio con Astro.
 
@@ -28,13 +28,13 @@ Todos los comandos son ejecutados en la raíz del proyecto, desde la terminal:
 ## 👀 Comandos de las dependencias
 
 | Command                          | Action                 |
-| :------------------------------- | :--------------------- | --- |
+| :------------------------------- | :--------------------- |
 | `npx astro add tailwind`         | Installs TailwindCSS   |
 | `npm install @astrojs/ts-plugin` | Installs TypeScript    |
 | `npm install swiper`             | Installs Swiper        |
 | `npm i js-confetti`              | Installs js-confetti   |
 | `npm i leaflet`                  | Installs leaflet       |
-| `npm i @types/leaflet`           | Installs leaflet types |     |
+| `npm i @types/leaflet`           | Installs leaflet types |
 
 Instalar todas las dependencias:
 
