@@ -27,7 +27,7 @@ export default function NavbarMobile() {
               src="/images/general/Logo-Valle.webp"
               alt="Logo-Valle"
               title="Logo-Valle"
-              className="h-auto w-20 object-cover"
+              className="h-auto w-28 object-cover"
             />
           </a>
           <Confetti />

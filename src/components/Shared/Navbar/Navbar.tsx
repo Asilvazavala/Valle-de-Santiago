@@ -20,7 +20,7 @@ export default function Navbar() {
                 src="/images/general/Logo-Valle.webp"
                 alt="Logo-Valle"
                 title="Logo-Valle"
-                className="h-auto w-24 object-cover"
+                className="h-auto w-36 object-cover"
               />
             </a>
             <button
