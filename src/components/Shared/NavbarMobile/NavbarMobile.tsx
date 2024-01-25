@@ -21,7 +21,7 @@ export default function NavbarMobile() {
     top-0 z-[9998] w-full"
     >
       <section className="flex justify-between gap-4 items-center">
-        <div className="flex gap-2">
+        <div className="flex gap-3 justify-center items-center">
           <a href="/">
             <img
               src="/images/general/Logo-Valle.webp"

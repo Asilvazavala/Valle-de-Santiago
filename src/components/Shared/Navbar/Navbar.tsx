@@ -14,7 +14,7 @@ export default function Navbar() {
       fixed top-0 w-full"
       >
         <div className="py-4 containerSpace flex justify-between items-center relative">
-          <aside className="flex gap-2">
+          <aside className="flex gap-4">
             <a href="/">
               <img
                 src="/images/general/Logo-Valle.webp"
